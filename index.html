@@ -9,106 +9,149 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;700&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600;700&display=swap');
 			
 			/* Global High-Contrast Resets */
 			body, input, select, textarea {
 				font-family: 'Inter', sans-serif !important;
-				background-color: #0B0C10 !important; 
-				color: #F1F1F1 !important; /* Super bright text for extreme clarity */
+				background-color: #0d0d0d !important; 
+				color: #f3f4f6 !important; /* Bright off-white body text */
 			}
 			
-			/* Ultra-Bold, Punchy Headings */
+			/* Ultra-Bold, Wide Headings */
 			h1, h2, h3, h4, h5, h6, .logo {
 				font-family: 'Syne', sans-serif !important;
 				font-weight: 800 !important;
-				color: #D4AF37 !important; /* Premium Gold Headings */
-				letter-spacing: 1px !important;
+				color: #D4AF37 !important; /* Luxury Gold Headings */
+				letter-spacing: 0.5px !important;
 				text-transform: uppercase !important;
 			}
 			
-			/* Clean Template Containers Override */
-			#wrapper, #main, #header, #nav, .post, article { 
-				background-color: #0B0C10 !important; 
-				border-color: #1A1C23 !important;
-			}
-			
-			/* Clear Section Separators */
-			hr {
-				border-color: #D4AF37 !important;
-				opacity: 0.3;
-			}
-
-			/* Highlight Strong Bold Terms clearly */
-			strong {
-				color: #FFFFFF !important;
-				font-weight: 700 !important;
+			/* Force Deep Black Background across template blocks */
+			#wrapper, #main, #header, #nav, .post, article, #footer { 
+				background-color: #0d0d0d !important; 
+				border-color: #1f2937 !important;
 			}
 
 			p {
-				color: #E2E8F0 !important; /* Bright grayish-white for crisp readability */
+				color: #e5e7eb !important; /* Crisp readability */
 				font-size: 1.1rem !important;
 				line-height: 1.75 !important;
 			}
 
-			/* Nav bar links high visibility */
+			strong {
+				color: #ffffff !important;
+				font-weight: 700 !important;
+			}
+
+			/* --- NAVIGATION --- */
 			#nav ul.links li a {
-				color: #A0AEC0 !important;
+				color: #9ca3af !important;
 				font-weight: 600 !important;
 			}
 			#nav ul.links li.active a {
 				color: #D4AF37 !important;
-				background-color: #111318 !important;
+				background-color: #111827 !important;
 			}
 			
-			/* Interaction Hover Effects */
-			a:hover, .logo:hover { color: #FFFFFF !important; }
-			
-			/* Dark Premium Green Highlight Section */
+			/* --- THE FOOTER & CONTACT ZONE (CRITICAL FIX) --- */
+			#footer section {
+				border-color: #1f2937 !important;
+				background-color: #0d0d0d !important;
+			}
+
+			/* Make footer headers perfectly bright white */
+			#footer h3, #footer h3 a {
+				color: #ffffff !important;
+				font-family: 'Syne', sans-serif !important;
+				font-weight: 800 !important;
+				font-size: 1.5rem !important;
+				margin-bottom: 1.5rem !important;
+				letter-spacing: 1px !important;
+			}
+
+			/* Address, hours, and descriptions visibility */
+			#footer p, #footer address, #footer label {
+				color: #f3f4f6 !important;
+				font-size: 1.05rem !important;
+				font-weight: 500 !important;
+			}
+
+			/* Premium Input Fields - Solid Black with Thick Borders */
+			#footer input[type="text"], #footer textarea {
+				background-color: #111827 !important;
+				border: 2px solid #374151 !important;
+				color: #ffffff !important;
+				border-radius: 6px !important;
+				padding: 12px !important;
+				font-size: 1.1rem !important;
+			}
+			#footer input[type="text"]:focus, #footer textarea:focus {
+				border-color: #D4AF37 !important;
+			}
+
+			/* Form Submit Button */
+			#footer input[type="submit"] {
+				background-color: #ffffff !important;
+				color: #000000 !important;
+				font-family: 'Syne', sans-serif !important;
+				font-weight: 800 !important;
+				border: none !important;
+				letter-spacing: 1px !important;
+				border-radius: 4px !important;
+				transition: all 0.2s ease !important;
+			}
+			#footer input[type="submit"]:hover {
+				background-color: #D4AF37 !important;
+			}
+
+			/* High-Visibility Black Mobile Calling Blocks */
+			.contact-link-box {
+				display: flex;
+				align-items: center;
+				background-color: #111827 !important; /* Deep dark gray box background */
+				border: 2px solid #374151 !important;
+				padding: 14px 18px !important;
+				margin-bottom: 12px !important;
+				border-radius: 8px !important;
+				text-decoration: none !important;
+				transition: border-color 0.2s ease !important;
+			}
+			.contact-link-box:hover {
+				border-color: #D4AF37 !important;
+			}
+			.contact-number-text {
+				font-family: 'Syne', sans-serif !important;
+				font-weight: 800 !important;
+				font-size: 1.45rem !important;
+				color: #ffffff !important; /* Solid bright white numbers */
+				letter-spacing: 0.5px !important;
+				margin-left: 14px !important;
+			}
+
+			/* --- SECTIONS --- */
 			.dark-green-section {
-				background-color: #091F12 !important; /* Rich Dark Forest Green */
+				background-color: #061A0E !important; /* Premium Dark Emerald Background */
+				border: 2px solid #14532d !important;
 				border-top: 3px solid #D4AF37 !important;
 				border-bottom: 3px solid #D4AF37 !important;
 				padding: 3.5rem 1.5rem !important;
 				margin: 2rem 0 !important;
-				border-radius: 6px;
+				border-radius: 8px;
+			}
+			.dark-green-section h3 {
+				color: #D4AF37 !important;
+			}
+			.dark-green-section p {
+				color: #ffffff !important;
 			}
 
-			/* Dark Charcoal Accent Section for Legacy */
 			.charcoal-section {
-				background-color: #111318 !important;
+				background-color: #111827 !important;
 				border-left: 4px solid #D4AF37 !important;
 				padding: 3rem 1.5rem !important;
 				margin: 2rem 0 !important;
 				border-radius: 4px;
-			}
-
-			/* Premium Input Boxes */
-			input[type="text"], textarea {
-				background: #1A1C23 !important;
-				border: 2px solid #2D313E !important;
-				color: #FFFFFF !important;
-			}
-			input[type="text"]:focus, textarea:focus {
-				border-color: #D4AF37 !important;
-			}
-
-			/* Big Thumb-Friendly Phone/WhatsApp targets */
-			.contact-link {
-				display: block;
-				background: #111318 !important;
-				border: 1px solid #2D313E !important;
-				padding: 12px 16px !important;
-				margin-bottom: 1rem;
-				border-radius: 6px;
-				font-weight: 700;
-				font-size: 1.2em !important;
-				color: #FFFFFF !important;
-				letter-spacing: 1px !important;
-			}
-			.contact-link:hover {
-				border-color: #D4AF37 !important;
-				background: #1A1C23 !important;
 			}
 		</style>
 	</head>
@@ -118,7 +161,7 @@
 
 				<div id="intro">
 						<h1><img src="images/logo.jpg.webp" alt="S.K.KARA Logo" style="max-width:280px; border-radius: 8px; border: 2px solid #D4AF37;"></h1>
-						<p style="text-transform: uppercase; font-weight: 800; font-size: 1.25em !important; color: #FFFFFF !important; letter-spacing: 1px; margin-top: 15px;">Premium Loha Kara Manufacturer in Amritsar (Pb) INDIA.</p>
+						<p style="text-transform: uppercase; font-weight: 700; font-size: 1.25em !important; color: #FFFFFF !important; letter-spacing: 1px; margin-top: 15px;">Premium Loha Kara Manufacturer in Amritsar (Pb) INDIA.</p>
 						<p style="font-size: 0.9em !important; letter-spacing: 4px; text-transform: uppercase; margin-top: -10px; color: #D4AF37 !important;">Strength • Faith • Waheguru</p>
 						<ul class="actions">
 							<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">View Catalog</a></li>
@@ -144,7 +187,7 @@
 
 				<div id="main">
 
-						<article class="post featured" style="border-bottom: 1px solid #1A1C23 !important;">
+						<article class="post featured" style="border-bottom: 1px solid #1f2937 !important;">
 								<header class="major">
 									<h2 style="color: #FFFFFF !important; font-size: 2.25em !important;">Crafted with Devotion,<br />Forged with Strength</h2>
 									<p style="margin-top: 15px;">Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, <strong>S.K.KARA</strong> has been manufacturing authentic, premium quality Loha Karas for generations in Amritsar. We use high-grade iron and specialized traditional forging techniques to deliver exceptional durability, weight balance, and a brilliant premium finish.</p>
@@ -156,7 +199,7 @@
 							</article>
 
 						<section class="posts">
-								<article style="background-color: #111318 !important; padding: 1.5rem !important; border-radius: 6px;">
+								<article style="background-color: #111827 !important; padding: 1.5rem !important; border-radius: 6px;">
 									<header>
 										<h3 style="font-size: 1.4em !important; color: #D4AF37 !important;"><a href="https://wa.me/9814056600" target="_blank">CLASSIC HEAVY<br />LOHA KARA</a></h3>
 									</header>
@@ -166,7 +209,7 @@
 										<li><a href="https://wa.me/9814056600" target="_blank" class="button small" style="background: #D4AF37 !important; color: #000 !important; font-weight:700 !important;">ORDER THIS STYLE</a></li>
 									</ul>
 								</article>
-								<article style="background-color: #111318 !important; padding: 1.5rem !important; border-radius: 6px;">
+								<article style="background-color: #111827 !important; padding: 1.5rem !important; border-radius: 6px;">
 									<header>
 										<h3 style="font-size: 1.4em !important; color: #D4AF37 !important;"><a href="https://wa.me/9914415500" target="_blank">PREMIUM POLISHED<br />AMRITSARI EDITION</a></h3>
 									</header>
@@ -176,7 +219,7 @@
 										<li><a href="https://wa.me/9914415500" target="_blank" class="button small" style="background: #D4AF37 !important; color: #000 !important; font-weight:700 !important;">ORDER THIS STYLE</a></li>
 									</ul>
 								</article>
-								<article style="background-color: #111318 !important; padding: 1.5rem !important; border-radius: 6px;">
+								<article style="background-color: #111827 !important; padding: 1.5rem !important; border-radius: 6px;">
 									<header>
 										<h3 style="font-size: 1.4em !important; color: #D4AF37 !important;"><a href="https://wa.me/9814056600" target="_blank">SLEEK & SLIM<br />EVERYDAY FIT</a></h3>
 									</header>
@@ -186,7 +229,7 @@
 										<li><a href="https://wa.me/9814056600" target="_blank" class="button small" style="background: #D4AF37 !important; color: #000 !important; font-weight:700 !important;">ORDER THIS STYLE</a></li>
 									</ul>
 								</article>
-								<article style="background-color: #111318 !important; padding: 1.5rem !important; border-radius: 6px;">
+								<article style="background-color: #111827 !important; padding: 1.5rem !important; border-radius: 6px;">
 									<header>
 										<h3 style="font-size: 1.4em !important; color: #D4AF37 !important;"><a href="https://wa.me/9914415500" target="_blank">CUSTOM SIZE<br />& PATTERN ORDERS</a></h3>
 									</header>
@@ -202,11 +245,11 @@
 								<div class="row">
 									<div class="col-6 col-12-small" style="text-align: left; padding: 10px 20px;">
 										<h3 style="color: #D4AF37 !important; font-size: 1.5em !important; margin-bottom: 10px;">ਪੰਜਾਬੀ ਸੈਕਸ਼ਨ (Order Help)</h3>
-										<p style="color: #FFFFFF !important;">ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ।</p>
+										<p>ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ।</p>
 									</div>
 									<div class="col-6 col-12-small" style="text-align: left; padding: 10px 20px;">
 										<h3 style="color: #D4AF37 !important; font-size: 1.5em !important; margin-bottom: 10px;">हिंदी अनुभाग (Order Help)</h3>
-										<p style="color: #FFFFFF !important;">यदि आप आर्डर देना चाहते हैं या कड़े के सही साइज के बारे में कोई जानकारी लेना चाहते हैं, तो कृपया नीचे दिए गए व्हाट्सएप बटन पर क्लिक करके हमसे सीधा संपर्क करें।</p>
+										<p>यदि आप आर्डर देना चाहते हैं या कड़े के सही साइज के बारे में कोई जानकारी लेना चाहते हैं, तो कृपया नीचे दिए गए व्हाट्सएप बटन पर क्लिक करके हमसे सीधा संपर्क करें।</p>
 									</div>
 								</div>
 								<div style="margin-top: 2.5rem; text-align: center;">
@@ -217,52 +260,64 @@
 						<section id="legacy" class="charcoal-section">
 								<header class="major" style="text-align: center;">
 									<h2 style="color: #FFFFFF !important;">Our Multi-Generational Legacy</h2>
-									<p style="max-width: 800px; margin: 20px auto 0 auto; color: #E2E8F0 !important;">Operating directly out of the historic manufacturing hub of <strong>Amritsar, Punjab</strong>, <strong>S.K.KARA</strong> stands as a benchmark of genuine multi-generational iron craft. We do not mass-produce generic steel trinkets; we manufacture authentic, heavy iron (Loha) Karas built with high-grade strength and cultural precision. Our factory channels years of master forging directly into your orders.</p>
+									<p style="max-width: 800px; margin: 20px auto 0 auto;">Operating directly out of the historic manufacturing hub of <strong>Amritsar, Punjab</strong>, <strong>S.K.KARA</strong> stands as a benchmark of genuine multi-generational iron craft. We do not mass-produce generic steel trinkets; we manufacture authentic, heavy iron (Loha) Karas built with high-grade strength and cultural precision. Our factory channels years of master forging directly into your orders.</p>
 								</header>
 							</section>
 
 					</div>
 
-				<footer id="footer" style="border-top: 2px solid #1A1C23 !important; padding-top: 3rem !important;">
+				<footer id="footer">
 						<section>
 							<form method="post" action="mailto:info@skkara.com" enctype="text/plain">
-								<h3 style="color: #FFFFFF !important; margin-bottom: 20px;">Email Business Inquiry</h3>
+								<h3>Email Business Inquiry</h3>
 								<div class="fields">
 									<div class="field">
-										<label for="name" style="color: #FFFFFF !important;">Your Name / Business Name</label>
+										<label for="name">Your Name / Business Name</label>
 										<input type="text" name="name" id="name" required />
 									</div>
 									<div class="field">
-										<label for="phone" style="color: #FFFFFF !important;">Mobile Number</label>
+										<label for="phone">Mobile Number</label>
 										<input type="text" name="phone" id="phone" required />
 									</div>
 									<div class="field">
-										<label for="message" style="color: #FFFFFF !important;">Requirement Details (Quantity & Sizes)</label>
+										<label for="message">Requirement Details (Quantity & Sizes)</label>
 										<textarea name="message" id="message" rows="3" placeholder="Specify your bulk trade or single retail order details..."></textarea>
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="SUBMIT FORM" style="background: #FFFFFF !important; color: #000000 !important; font-weight: 800 !important;" /></li>
+									<li><input type="submit" value="SUBMIT FORM" /></li>
 								</ul>
 							</form>
 						</section>
 						<section class="split contact">
 							<section class="alt">
-								<h3 style="color: #FFFFFF !important;">Factory & Office Address</h3>
-								<p style="color: #E2E8F0 !important;"><strong>S.K.KARA</strong><br />
+								<h3>Factory & Office Address</h3>
+								<p><strong>S.K.KARA</strong><br />
 								East Mohan Nagar, Amritsar,<br />
 								Punjab, INDIA.</p>
 							</section>
 							<section>
-								<h3 style="color: #FFFFFF !important; margin-bottom: 15px;">Call Our Desk</h3>
-								<a href="tel:+919814056600" class="contact-link"><i class="fas fa-mobile-alt" style="color: #D4AF37; margin-right: 12px;"></i>+91 98140 56600</a>
-								<a href="tel:+919914415500" class="contact-link"><i class="fas fa-mobile-alt" style="color: #D4AF37; margin-right: 12px;"></i>+91 99144 15500</a>
-								<a href="tel:+919914256600" class="contact-link"><i class="fas fa-mobile-alt" style="color: #D4AF37; margin-right: 12px;"></i>+91 99142 56600</a>
-								<a href="tel:01833598236" class="contact-link" style="margin-top: 1.5rem;"><i class="fas fa-phone-alt" style="color: #D4AF37; margin-right: 12px;"></i>0183 359 8236 <span style="font-size: 0.65em; font-weight: normal; color: #A0AEC0; text-transform: uppercase; margin-left: 5px;">(Landline)</span></a>
+								<h3>Call Our Desk</h3>
+								<a href="tel:+919814056600" class="contact-link-box">
+									<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
+									<span class="contact-number-text">+91 98140 56600</span>
+								</a>
+								<a href="tel:+919914415500" class="contact-link-box">
+									<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
+									<span class="contact-number-text">+91 99144 15500</span>
+								</a>
+								<a href="tel:+919914256600" class="contact-link-box">
+									<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
+									<span class="contact-number-text">+91 99142 56600</span>
+								</a>
+								<a href="tel:01833598236" class="contact-link-box" style="margin-top: 1.5rem;">
+									<i class="fas fa-phone-alt" style="color: #D4AF37; font-size: 1.4rem;"></i>
+									<span class="contact-number-text" style="font-size: 1.25rem !important;">0183 359 8236 <span style="font-size: 0.6em; font-weight: normal; color: #9ca3af; text-transform: uppercase;">(Landline)</span></span>
+								</a>
 							</section>
 							<section>
-								<h3 style="color: #FFFFFF !important;">Working Hours</h3>
-								<p style="color: #E2E8F0 !important;"><strong>Tuesday to Sunday:</strong> 9:00 AM – 6:00 PM<br />
+								<h3>Working Hours</h3>
+								<p><strong>Tuesday to Sunday:</strong> 9:00 AM – 6:00 PM<br />
 								<span style="color: #FF4D4D; font-weight: 700; text-transform: uppercase; display: inline-block; margin-top: 5px;">Monday: Closed (Weekly Off)</span></p>
 							</section>
 							<section>
@@ -275,8 +330,8 @@
 						</section>
 					</footer>
 
-				<div id="copyright" style="border-top: 1px solid #1A1C23 !important;">
-						<ul style="font-weight: 700; color: #A0AEC0 !important;"><li>&copy; S.K.KARA</li><li>OWNER: MR. KAILASH CHANDER</li></ul>
+				<div id="copyright" style="border-top: 1px solid #1f2937 !important;">
+						<ul style="font-weight: 700; color: #9ca3af !important;"><li>&copy; S.K.KARA</li><li>OWNER: MR. KAILASH CHANDER</li></ul>
 					</div>
 
 			</div>
