@@ -9,39 +9,120 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600;700&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
 			
-			/* Global High-Contrast Layout Resets */
+			/* Global Layout Resets */
 			body, input, select, textarea {
 				font-family: 'Inter', sans-serif !important;
-				background-color: #0d0d0d !important; 
+				background-color: #080808 !important; 
 				color: #f3f4f6 !important;
 			}
 			
-			/* Ultra-Bold, Wide Corporate Headings */
 			h1, h2, h3, h4, h5, h6, .logo {
 				font-family: 'Syne', sans-serif !important;
 				font-weight: 800 !important;
-				color: #D4AF37 !important; /* Premium Gold Headings */
+				color: #D4AF37 !important; /* Luxury Gold */
 				letter-spacing: 0.5px !important;
 				text-transform: uppercase !important;
 			}
 			
-			/* Deep Solid Black Backgrounds across all parent template wrappers */
 			#wrapper, #main, #header, #nav, .post, article, #footer { 
-				background-color: #0d0d0d !important; 
-				border-color: #1f2937 !important;
+				background-color: #080808 !important; 
+				border-color: #1a1a1a !important;
 			}
 
 			p {
-				color: #e5e7eb !important;
+				color: #d1d5db !important;
 				font-size: 1.1rem !important;
 				line-height: 1.75 !important;
 			}
 
-			strong {
-				color: #ffffff !important;
+			/* --- HIGH-IMPACT PREMIUM HERO SECTION --- */
+			#intro {
+				background: radial-gradient(circle at center, #111111 0%, #050505 100%) !important;
+				background-image: linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px) !important;
+				background-size: 40px 40px !important; /* Premium structural grid texture */
+				padding: 6rem 2rem 4rem 2rem !important;
+				border-bottom: 2px solid #1a1a1a !important;
+			}
+
+			.hero-badge-container {
+				display: flex;
+				justify-center: center;
+				align-items: center;
+				gap: 15px;
+				flex-wrap: wrap;
+				margin: 1.5rem auto;
+				max-width: 600px;
+			}
+
+			.hero-badge {
+				background: rgba(212, 175, 55, 0.07) !important;
+				border: 1px solid rgba(212, 175, 55, 0.3) !important;
+				padding: 6px 14px !important;
+				border-radius: 30px !important;
+				font-size: 0.75rem !important;
 				font-weight: 700 !important;
+				letter-spacing: 1.5px !important;
+				color: #D4AF37 !important;
+				text-transform: uppercase !important;
+			}
+
+			/* Live Performance Stats Counter Widgets */
+			.stats-row {
+				display: flex !important;
+				justify-content: center !important;
+				gap: 2.5rem !important;
+				flex-wrap: wrap !important;
+				margin: 2.5rem auto 1.5rem auto !important;
+				max-width: 800px !important;
+			}
+
+			.stat-card {
+				background: rgba(255, 255, 255, 0.02) !important;
+				border: 1px solid #1f2937 !important;
+				padding: 1.5rem 2rem !important;
+				border-radius: 8px !important;
+				min-width: 180px !important;
+				flex: 1 !important;
+				text-align: center !important;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+			}
+
+			.stat-number {
+				font-family: 'Syne', sans-serif !important;
+				font-weight: 800 !important;
+				font-size: 2.2rem !important;
+				color: #ffffff !important;
+				margin-bottom: 0.2rem !important;
+				display: block !important;
+			}
+
+			.stat-label {
+				font-size: 0.75rem !important;
+				text-transform: uppercase !important;
+				letter-spacing: 2px !important;
+				color: #9ca3af !important;
+				font-weight: 700 !important;
+			}
+
+			/* Pulsing Action Arrow */
+			.scrolly-btn-gold {
+				background-color: #D4AF37 !important;
+				color: #000000 !important;
+				font-family: 'Syne', sans-serif !important;
+				font-weight: 800 !important;
+				letter-spacing: 1.5px !important;
+				padding: 15px 35px !important;
+				border-radius: 4px !important;
+				text-transform: uppercase !important;
+				box-shadow: 0 0 15px rgba(212, 175, 55, 0.3) !important;
+				transition: all 0.3s ease !important;
+			}
+			.scrolly-btn-gold:hover {
+				background-color: #ffffff !important;
+				box-shadow: 0 0 25px rgba(255, 255, 255, 0.5) !important;
+				transform: translateY(-2px);
 			}
 
 			/* --- NAVIGATION --- */
@@ -51,28 +132,27 @@
 			}
 			#nav ul.links li.active a {
 				color: #D4AF37 !important;
-				background-color: #111827 !important;
+				background-color: #111111 !important;
 			}
 			
-			/* --- CLEAN MODERN FOOTER CONTAINER (ANTI-COLLISION) --- */
+			/* --- ANTI-COLLISION FOOTER GRID --- */
 			.skkara-footer-grid {
 				display: flex !important;
 				flex-wrap: wrap !important;
 				gap: 3rem !important;
 				width: 100% !important;
 				padding: 2rem 0 !important;
-				background-color: #0d0d0d !important;
-				clear: both !important; /* Forces template elements away */
+				background-color: #080808 !important;
+				clear: both !important;
 			}
 
 			.skkara-footer-column {
-				flex: 1 1 450px !important; /* Ensures flexible wrapping without squishing */
+				flex: 1 1 450px !important;
 				min-width: 320px !important;
-				background-color: #0d0d0d !important;
+				background-color: #080808 !important;
 				margin-bottom: 2rem !important;
 			}
 
-			/* Form Elements Fix */
 			.skkara-field {
 				margin-bottom: 1.5rem !important;
 			}
@@ -87,8 +167,8 @@
 			}
 			.skkara-field input[type="text"], .skkara-field textarea {
 				width: 100% !important;
-				background-color: #111827 !important;
-				border: 2px solid #374151 !important;
+				background-color: #111111 !important;
+				border: 2px solid #262626 !important;
 				color: #ffffff !important;
 				border-radius: 6px !important;
 				padding: 14px !important;
@@ -98,7 +178,6 @@
 				border-color: #D4AF37 !important;
 			}
 
-			/* Submit Button */
 			.skkara-submit-btn {
 				background-color: #ffffff !important;
 				color: #000000 !important;
@@ -116,19 +195,17 @@
 				background-color: #D4AF37 !important;
 			}
 
-			/* Info Row Blocks to isolate address, phone, hours safely */
 			.skkara-info-block {
 				margin-bottom: 2.5rem !important;
 				clear: both !important;
 				display: block !important;
 			}
 
-			/* Premium High-Visibility Phone Target Elements */
 			.contact-link-box {
 				display: flex !important;
 				align-items: center !important;
-				background-color: #111827 !important;
-				border: 2px solid #374151 !important;
+				background-color: #111111 !important;
+				border: 2px solid #262626 !important;
 				padding: 16px 20px !important;
 				margin-bottom: 14px !important;
 				border-radius: 8px !important;
@@ -144,30 +221,23 @@
 				font-family: 'Syne', sans-serif !important;
 				font-weight: 800 !important;
 				font-size: 1.45rem !important;
-				color: #ffffff !important; /* Perfect Solid White Phone Digits */
+				color: #ffffff !important;
 				letter-spacing: 0.5px !important;
 				margin-left: 16px !important;
 			}
 
-			/* --- SECTIONS --- */
+			/* --- CONTENT BLOCKS --- */
 			.dark-green-section {
-				background-color: #061A0E !important;
-				border: 2px solid #14532d !important;
+				background-color: #03140a !important;
+				border: 2px solid #0f3a1e !important;
 				border-top: 3px solid #D4AF37 !important;
 				border-bottom: 3px solid #D4AF37 !important;
 				padding: 3.5rem 1.5rem !important;
 				margin: 2rem 0 !important;
 				border-radius: 8px;
 			}
-			.dark-green-section h3 {
-				color: #D4AF37 !important;
-			}
-			.dark-green-section p {
-				color: #ffffff !important;
-			}
-
 			.charcoal-section {
-				background-color: #111827 !important;
+				background-color: #111111 !important;
 				border-left: 4px solid #D4AF37 !important;
 				padding: 3rem 1.5rem !important;
 				margin: 2rem 0 !important;
@@ -180,11 +250,36 @@
 		<div id="wrapper" class="fade-in">
 
 				<div id="intro">
-						<h1><img src="images/logo.jpg.webp" alt="S.K.KARA Logo" style="max-width:280px; border-radius: 8px; border: 2px solid #D4AF37;"></h1>
-						<p style="text-transform: uppercase; font-weight: 700; font-size: 1.25em !important; color: #FFFFFF !important; letter-spacing: 1px; margin-top: 15px;">Premium Loha Kara Manufacturer in Amritsar (Pb) INDIA.</p>
-						<p style="font-size: 0.9em !important; letter-spacing: 4px; text-transform: uppercase; margin-top: -10px; color: #D4AF37 !important;">Strength • Faith • Waheguru</p>
-						<ul class="actions">
-							<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">View Catalog</a></li>
+						<div style="margin-bottom: 1.5rem;">
+							<img src="images/logo.jpg.webp" alt="S.K.KARA Official Logo" style="max-width:240px; border-radius: 8px; border: 2px solid #D4AF37; box-shadow: 0 10px 30px rgba(0,0,0,0.7);" />
+						</div>
+
+						<div class="hero-badge-container">
+							<span class="hero-badge"><i class="fas fa-gem"></i> Premium Finish</span>
+							<span class="hero-badge"><i class="fas fa-shield-alt"></i> Authentic Iron (Loha)</span>
+							<span class="hero-badge"><i class="fas fa-industry"></i> Direct Factory Supply</span>
+						</div>
+
+						<p style="text-transform: uppercase; font-weight: 700; font-size: 1.45em !important; color: #FFFFFF !important; letter-spacing: 1.5px; margin-top: 1.5rem; margin-bottom: 5px;">Premium Loha Kara Manufacturer</p>
+						<p style="font-size: 0.95em !important; letter-spacing: 5px; text-transform: uppercase; color: #D4AF37 !important; font-weight: 600; margin-bottom: 2rem;">Amritsar, Punjab, India</p>
+						
+						<div class="stats-row">
+							<div class="stat-card">
+								<span class="stat-number" style="color: #D4AF37;">3+</span>
+								<span class="stat-label">Generations of Craft</span>
+							</div>
+							<div class="stat-card">
+								<span class="stat-number">100%</span>
+								<span class="stat-label">Pure Heavy Iron</span>
+							</div>
+							<div class="stat-card">
+								<span class="stat-number">Global</span>
+								<span class="stat-label">Export Shipping</span>
+							</div>
+						</div>
+
+						<ul class="actions" style="margin-top: 3rem !important;">
+							<li><a href="#main" class="button scrolly scrolly-btn-gold">Explore Live Catalog <i class="fas fa-chevron-down" style="margin-left: 8px; font-size: 0.85em;"></i></a></li>
 						</ul>
 					</div>
 
@@ -207,7 +302,7 @@
 
 				<div id="main">
 
-						<article class="post featured" style="border-bottom: 1px solid #1f2937 !important;">
+						<article class="post featured" style="border-bottom: 1px solid #1a1a1a !important;">
 								<header class="major">
 									<h2 style="color: #FFFFFF !important; font-size: 2.25em !important;">Crafted with Devotion,<br />Forged with Strength</h2>
 									<p style="margin-top: 15px;">Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, <strong>S.K.KARA</strong> has been manufacturing authentic, premium quality Loha Karas for generations in Amritsar. We use high-grade iron and specialized traditional forging techniques to deliver exceptional durability, weight balance, and a brilliant premium finish.</p>
@@ -219,7 +314,7 @@
 							</article>
 
 						<section class="posts">
-								<article style="background-color: #111827 !important; padding: 1.5rem !important; border-radius: 6px;">
+								<article style="background-color: #111111 !important; padding: 1.5rem !important; border-radius: 6px;">
 									<header>
 										<h3 style="font-size: 1.4em !important; color: #D4AF37 !important;"><a href="https://wa.me/9814056600" target="_blank">CLASSIC HEAVY<br />LOHA KARA</a></h3>
 									</header>
@@ -229,7 +324,7 @@
 										<li><a href="https://wa.me/9814056600" target="_blank" class="button small" style="background: #D4AF37 !important; color: #000 !important; font-weight:700 !important;">ORDER THIS STYLE</a></li>
 									</ul>
 								</article>
-								<article style="background-color: #111827 !important; padding: 1.5rem !important; border-radius: 6px;">
+								<article style="background-color: #111111 !important; padding: 1.5rem !important; border-radius: 6px;">
 									<header>
 										<h3 style="font-size: 1.4em !important; color: #D4AF37 !important;"><a href="https://wa.me/9914415500" target="_blank">PREMIUM POLISHED<br />AMRITSARI EDITION</a></h3>
 									</header>
@@ -239,7 +334,7 @@
 										<li><a href="https://wa.me/9914415500" target="_blank" class="button small" style="background: #D4AF37 !important; color: #000 !important; font-weight:700 !important;">ORDER THIS STYLE</a></li>
 									</ul>
 								</article>
-								<article style="background-color: #111827 !important; padding: 1.5rem !important; border-radius: 6px;">
+								<article style="background-color: #111111 !important; padding: 1.5rem !important; border-radius: 6px;">
 									<header>
 										<h3 style="font-size: 1.4em !important; color: #D4AF37 !important;"><a href="https://wa.me/9814056600" target="_blank">SLEEK & SLIM<br />EVERYDAY FIT</a></h3>
 									</header>
@@ -249,7 +344,7 @@
 										<li><a href="https://wa.me/9814056600" target="_blank" class="button small" style="background: #D4AF37 !important; color: #000 !important; font-weight:700 !important;">ORDER THIS STYLE</a></li>
 									</ul>
 								</article>
-								<article style="background-color: #111827 !important; padding: 1.5rem !important; border-radius: 6px;">
+								<article style="background-color: #111111 !important; padding: 1.5rem !important; border-radius: 6px;">
 									<header>
 										<h3 style="font-size: 1.4em !important; color: #D4AF37 !important;"><a href="https://wa.me/9914415500" target="_blank">CUSTOM SIZE<br />& PATTERN ORDERS</a></h3>
 									</header>
@@ -286,7 +381,7 @@
 
 					</div>
 
-				<footer id="footer" style="padding: 4rem 2rem !important; background-color: #0d0d0d !important;">
+				<footer id="footer" style="padding: 4rem 2rem !important; background-color: #080808 !important;">
 						<div class="skkara-footer-grid">
 							
 							<div class="skkara-footer-column">
@@ -316,7 +411,7 @@
 								
 								<div class="skkara-info-block">
 									<h3 style="color: #ffffff !important;">Factory & Office Address</h3>
-									<p style="font-size: 1.1rem !important; line-height: 1.6 !important; color: #e5e7eb !important;">
+									<p style="font-size: 1.1rem !important; line-height: 1.6 !important; color: #d1d5db !important;">
 										<strong>S.K.KARA</strong><br />
 										East Mohan Nagar, Amritsar,<br />
 										Punjab, INDIA.
@@ -347,39 +442,4 @@
 									</a>
 								</div>
 								
-								<div class="skkara-info-block">
-									<h3 style="color: #ffffff !important;">Working Hours</h3>
-									<p style="color: #e5e7eb !important; font-size: 1.1rem !important;">
-										<strong>Tuesday to Sunday:</strong> 9:00 AM – 6:00 PM<br />
-										<span style="color: #FF4D4D; font-weight: 700; text-transform: uppercase; display: inline-block; margin-top: 6px;">Monday: Closed (Weekly Off)</span>
-									</p>
-								</div>
-								
-								<div class="skkara-info-block">
-									<h3 style="color: #ffffff !important;">Official Channels</h3>
-									<ul class="icons" style="margin: 0 !important; padding: 0 !important;">
-										<li style="display: inline-block; margin-right: 15px;"><a href="https://instagram.com/skkara.india" target="_blank" class="icon brands fa-instagram" style="color: #FFFFFF !important; font-size: 1.5rem;"><span class="label">Instagram</span></a></li>
-										<li style="display: inline-block;"><a href="https://wa.me/9814056600" target="_blank" class="icon brands fa-whatsapp" style="color: #25D366 !important; font-size: 1.5rem;"><span class="label">WhatsApp</span></a></li>
-									</ul>
-								</div>
-
-							</div>
-						</div>
-					</footer>
-
-				<div id="copyright" style="border-top: 1px solid #1f2937 !important; padding: 2rem 0 !important; background-color: #0d0d0d !important;">
-						<ul style="font-weight: 700; color: #9ca3af !important;"><li>&copy; S.K.KARA</li><li>OWNER: MR. KAILASH CHANDER</li></ul>
-					</div>
-
-			</div>
-
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+								<div class
