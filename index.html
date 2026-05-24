@@ -11,30 +11,30 @@
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600;700&display=swap');
 			
-			/* Global High-Contrast Resets */
+			/* Global High-Contrast Layout Resets */
 			body, input, select, textarea {
 				font-family: 'Inter', sans-serif !important;
 				background-color: #0d0d0d !important; 
-				color: #f3f4f6 !important; /* Bright off-white body text */
+				color: #f3f4f6 !important;
 			}
 			
-			/* Ultra-Bold, Wide Headings */
+			/* Ultra-Bold, Wide Corporate Headings */
 			h1, h2, h3, h4, h5, h6, .logo {
 				font-family: 'Syne', sans-serif !important;
 				font-weight: 800 !important;
-				color: #D4AF37 !important; /* Luxury Gold Headings */
+				color: #D4AF37 !important; /* Premium Gold Headings */
 				letter-spacing: 0.5px !important;
 				text-transform: uppercase !important;
 			}
 			
-			/* Force Deep Black Background across template blocks */
+			/* Deep Solid Black Backgrounds across all parent template wrappers */
 			#wrapper, #main, #header, #nav, .post, article, #footer { 
 				background-color: #0d0d0d !important; 
 				border-color: #1f2937 !important;
 			}
 
 			p {
-				color: #e5e7eb !important; /* Crisp readability */
+				color: #e5e7eb !important;
 				font-size: 1.1rem !important;
 				line-height: 1.75 !important;
 			}
@@ -54,68 +54,88 @@
 				background-color: #111827 !important;
 			}
 			
-			/* --- THE FOOTER & CONTACT ZONE (CRITICAL FIX) --- */
-			#footer section {
-				border-color: #1f2937 !important;
+			/* --- CLEAN MODERN FOOTER CONTAINER (ANTI-COLLISION) --- */
+			.skkara-footer-grid {
+				display: flex !important;
+				flex-wrap: wrap !important;
+				gap: 3rem !important;
+				width: 100% !important;
+				padding: 2rem 0 !important;
 				background-color: #0d0d0d !important;
+				clear: both !important; /* Forces template elements away */
 			}
 
-			/* Make footer headers perfectly bright white */
-			#footer h3, #footer h3 a {
-				color: #ffffff !important;
-				font-family: 'Syne', sans-serif !important;
-				font-weight: 800 !important;
-				font-size: 1.5rem !important;
+			.skkara-footer-column {
+				flex: 1 1 450px !important; /* Ensures flexible wrapping without squishing */
+				min-width: 320px !important;
+				background-color: #0d0d0d !important;
+				margin-bottom: 2rem !important;
+			}
+
+			/* Form Elements Fix */
+			.skkara-field {
 				margin-bottom: 1.5rem !important;
+			}
+			.skkara-field label {
+				display: block !important;
+				color: #ffffff !important;
+				font-weight: 700 !important;
+				margin-bottom: 0.5rem !important;
+				text-transform: uppercase !important;
+				font-size: 0.9rem !important;
 				letter-spacing: 1px !important;
 			}
-
-			/* Address, hours, and descriptions visibility */
-			#footer p, #footer address, #footer label {
-				color: #f3f4f6 !important;
-				font-size: 1.05rem !important;
-				font-weight: 500 !important;
-			}
-
-			/* Premium Input Fields - Solid Black with Thick Borders */
-			#footer input[type="text"], #footer textarea {
+			.skkara-field input[type="text"], .skkara-field textarea {
+				width: 100% !important;
 				background-color: #111827 !important;
 				border: 2px solid #374151 !important;
 				color: #ffffff !important;
 				border-radius: 6px !important;
-				padding: 12px !important;
+				padding: 14px !important;
 				font-size: 1.1rem !important;
 			}
-			#footer input[type="text"]:focus, #footer textarea:focus {
+			.skkara-field input[type="text"]:focus, .skkara-field textarea:focus {
 				border-color: #D4AF37 !important;
 			}
 
-			/* Form Submit Button */
-			#footer input[type="submit"] {
+			/* Submit Button */
+			.skkara-submit-btn {
 				background-color: #ffffff !important;
 				color: #000000 !important;
 				font-family: 'Syne', sans-serif !important;
 				font-weight: 800 !important;
 				border: none !important;
+				padding: 14px 28px !important;
 				letter-spacing: 1px !important;
 				border-radius: 4px !important;
-				transition: all 0.2s ease !important;
+				cursor: pointer !important;
+				text-transform: uppercase !important;
+				transition: background-color 0.2s ease !important;
 			}
-			#footer input[type="submit"]:hover {
+			.skkara-submit-btn:hover {
 				background-color: #D4AF37 !important;
 			}
 
-			/* High-Visibility Black Mobile Calling Blocks */
+			/* Info Row Blocks to isolate address, phone, hours safely */
+			.skkara-info-block {
+				margin-bottom: 2.5rem !important;
+				clear: both !important;
+				display: block !important;
+			}
+
+			/* Premium High-Visibility Phone Target Elements */
 			.contact-link-box {
-				display: flex;
-				align-items: center;
-				background-color: #111827 !important; /* Deep dark gray box background */
+				display: flex !important;
+				align-items: center !important;
+				background-color: #111827 !important;
 				border: 2px solid #374151 !important;
-				padding: 14px 18px !important;
-				margin-bottom: 12px !important;
+				padding: 16px 20px !important;
+				margin-bottom: 14px !important;
 				border-radius: 8px !important;
 				text-decoration: none !important;
 				transition: border-color 0.2s ease !important;
+				width: 100% !important;
+				max-width: 420px !important;
 			}
 			.contact-link-box:hover {
 				border-color: #D4AF37 !important;
@@ -124,14 +144,14 @@
 				font-family: 'Syne', sans-serif !important;
 				font-weight: 800 !important;
 				font-size: 1.45rem !important;
-				color: #ffffff !important; /* Solid bright white numbers */
+				color: #ffffff !important; /* Perfect Solid White Phone Digits */
 				letter-spacing: 0.5px !important;
-				margin-left: 14px !important;
+				margin-left: 16px !important;
 			}
 
 			/* --- SECTIONS --- */
 			.dark-green-section {
-				background-color: #061A0E !important; /* Premium Dark Emerald Background */
+				background-color: #061A0E !important;
 				border: 2px solid #14532d !important;
 				border-top: 3px solid #D4AF37 !important;
 				border-bottom: 3px solid #D4AF37 !important;
@@ -266,71 +286,88 @@
 
 					</div>
 
-				<footer id="footer">
-						<section>
-							<form method="post" action="mailto:info@skkara.com" enctype="text/plain">
-								<h3>Email Business Inquiry</h3>
-								<div class="fields">
-									<div class="field">
+				<footer id="footer" style="padding: 4rem 2rem !important; background-color: #0d0d0d !important;">
+						<div class="skkara-footer-grid">
+							
+							<div class="skkara-footer-column">
+								<form method="post" action="mailto:info@skkara.com" enctype="text/plain" style="margin: 0 !important;">
+									<h3 style="color: #ffffff !important; margin-bottom: 1.5rem !important;">Email Business Inquiry</h3>
+									
+									<div class="skkara-field">
 										<label for="name">Your Name / Business Name</label>
 										<input type="text" name="name" id="name" required />
 									</div>
-									<div class="field">
+									
+									<div class="skkara-field">
 										<label for="phone">Mobile Number</label>
 										<input type="text" name="phone" id="phone" required />
 									</div>
-									<div class="field">
+									
+									<div class="skkara-field">
 										<label for="message">Requirement Details (Quantity & Sizes)</label>
-										<textarea name="message" id="message" rows="3" placeholder="Specify your bulk trade or single retail order details..."></textarea>
+										<textarea name="message" id="message" rows="4" placeholder="Specify your bulk trade or single retail order details..."></textarea>
 									</div>
+									
+									<input type="submit" value="SUBMIT FORM" class="skkara-submit-btn" />
+								</form>
+							</div>
+							
+							<div class="skkara-footer-column">
+								
+								<div class="skkara-info-block">
+									<h3 style="color: #ffffff !important;">Factory & Office Address</h3>
+									<p style="font-size: 1.1rem !important; line-height: 1.6 !important; color: #e5e7eb !important;">
+										<strong>S.K.KARA</strong><br />
+										East Mohan Nagar, Amritsar,<br />
+										Punjab, INDIA.
+									</p>
 								</div>
-								<ul class="actions">
-									<li><input type="submit" value="SUBMIT FORM" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Factory & Office Address</h3>
-								<p><strong>S.K.KARA</strong><br />
-								East Mohan Nagar, Amritsar,<br />
-								Punjab, INDIA.</p>
-							</section>
-							<section>
-								<h3>Call Our Desk</h3>
-								<a href="tel:+919814056600" class="contact-link-box">
-									<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
-									<span class="contact-number-text">+91 98140 56600</span>
-								</a>
-								<a href="tel:+919914415500" class="contact-link-box">
-									<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
-									<span class="contact-number-text">+91 99144 15500</span>
-								</a>
-								<a href="tel:+919914256600" class="contact-link-box">
-									<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
-									<span class="contact-number-text">+91 99142 56600</span>
-								</a>
-								<a href="tel:01833598236" class="contact-link-box" style="margin-top: 1.5rem;">
-									<i class="fas fa-phone-alt" style="color: #D4AF37; font-size: 1.4rem;"></i>
-									<span class="contact-number-text" style="font-size: 1.25rem !important;">0183 359 8236 <span style="font-size: 0.6em; font-weight: normal; color: #9ca3af; text-transform: uppercase;">(Landline)</span></span>
-								</a>
-							</section>
-							<section>
-								<h3>Working Hours</h3>
-								<p><strong>Tuesday to Sunday:</strong> 9:00 AM – 6:00 PM<br />
-								<span style="color: #FF4D4D; font-weight: 700; text-transform: uppercase; display: inline-block; margin-top: 5px;">Monday: Closed (Weekly Off)</span></p>
-							</section>
-							<section>
-								<h3>Official Channels</h3>
-								<ul class="icons alt">
-									<li><a href="https://instagram.com/skkara.india" target="_blank" class="icon brands alt fa-instagram" style="color: #FFFFFF !important;"><span class="label">Instagram</span></a></li>
-									<li><a href="https://wa.me/9814056600" target="_blank" class="icon brands alt fa-whatsapp" style="color: #25D366 !important;"><span class="label">WhatsApp</span></a></li>
-								</ul>
-							</section>
-						</section>
+								
+								<div class="skkara-info-block">
+									<h3 style="color: #ffffff !important;">Call Our Desk</h3>
+									
+									<a href="tel:+919814056600" class="contact-link-box">
+										<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
+										<span class="contact-number-text">+91 98140 56600</span>
+									</a>
+									
+									<a href="tel:+919914415500" class="contact-link-box">
+										<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
+										<span class="contact-number-text">+91 99144 15500</span>
+									</a>
+									
+									<a href="tel:+919914256600" class="contact-link-box">
+										<i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 1.55rem;"></i>
+										<span class="contact-number-text">+91 99142 56600</span>
+									</a>
+									
+									<a href="tel:01833598236" class="contact-link-box" style="margin-top: 1.5rem !important;">
+										<i class="fas fa-phone-alt" style="color: #D4AF37; font-size: 1.4rem;"></i>
+										<span class="contact-number-text" style="font-size: 1.3rem !important;">0183 359 8236 <span style="font-size: 0.6em; font-weight: normal; color: #9ca3af; text-transform: uppercase;">(Landline)</span></span>
+									</a>
+								</div>
+								
+								<div class="skkara-info-block">
+									<h3 style="color: #ffffff !important;">Working Hours</h3>
+									<p style="color: #e5e7eb !important; font-size: 1.1rem !important;">
+										<strong>Tuesday to Sunday:</strong> 9:00 AM – 6:00 PM<br />
+										<span style="color: #FF4D4D; font-weight: 700; text-transform: uppercase; display: inline-block; margin-top: 6px;">Monday: Closed (Weekly Off)</span>
+									</p>
+								</div>
+								
+								<div class="skkara-info-block">
+									<h3 style="color: #ffffff !important;">Official Channels</h3>
+									<ul class="icons" style="margin: 0 !important; padding: 0 !important;">
+										<li style="display: inline-block; margin-right: 15px;"><a href="https://instagram.com/skkara.india" target="_blank" class="icon brands fa-instagram" style="color: #FFFFFF !important; font-size: 1.5rem;"><span class="label">Instagram</span></a></li>
+										<li style="display: inline-block;"><a href="https://wa.me/9814056600" target="_blank" class="icon brands fa-whatsapp" style="color: #25D366 !important; font-size: 1.5rem;"><span class="label">WhatsApp</span></a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
 					</footer>
 
-				<div id="copyright" style="border-top: 1px solid #1f2937 !important;">
+				<div id="copyright" style="border-top: 1px solid #1f2937 !important; padding: 2rem 0 !important; background-color: #0d0d0d !important;">
 						<ul style="font-weight: 700; color: #9ca3af !important;"><li>&copy; S.K.KARA</li><li>OWNER: MR. KAILASH CHANDER</li></ul>
 					</div>
 
