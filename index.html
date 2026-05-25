@@ -16,12 +16,12 @@
     <style>
         :root {
             --primary-gold: #D4AF37; 
-            --deep-black: #070B08;   /* Infused deep black-green */
-            --card-charcoal: #0F1611;/* Dark forest charcoal for cards */
-            --forest-green: #051C0C; /* Rich, premium dark forest green */
-            --border-green: #143D21; 
+            --deep-black: #040D06;   /* Rich, luxury dark forest-black base */
+            --card-charcoal: #0B170E;/* Deep green-tinted charcoal for solid container contrast */
+            --forest-green: #05220A; /* Deep premium velvet forest green */
+            --border-green: #16401D; 
             --text-light: #FFFFFF;
-            --text-muted: #A3B8A9;   /* Muted green-gray text */
+            --text-muted: #AEC2B2;   /* Elegant sage-muted text */
         }
 
         * {
@@ -43,7 +43,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 2rem 5%;
-            background: linear-gradient(to bottom, rgba(7,11,8,0.9), rgba(7,11,8,0));
+            background: linear-gradient(to bottom, rgba(4,13,6,0.9), rgba(4,13,6,0));
             position: absolute;
             width: 100%;
             z-index: 100;
@@ -79,19 +79,40 @@
         }
 
         .hero {
-            height: 100vh;
+            height: 110vh; 
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 1rem;
-            background: radial-gradient(circle at center, rgba(5, 28, 12, 0.6) 0%, rgba(7,11,8,1) 85%);
+            padding: 4rem 1rem 0;
+            background: radial-gradient(circle at center, rgba(5, 34, 10, 0.7) 0%, rgba(4,13,6,1) 85%);
             position: relative;
         }
 
         .hero-content {
             max-width: 900px;
             z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .brand-logo-frame {
+            margin-bottom: 2.5rem;
+            max-width: 280px;
+            height: auto;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(11, 23, 14, 0.8), rgba(5, 34, 10, 0.5));
+            box-shadow: 0 20px 45px rgba(0,0,0,0.7);
+            border-radius: 4px;
+        }
+
+        .brand-logo-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.25));
         }
 
         .hero p {
@@ -105,7 +126,7 @@
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 4.5rem;
+            font-size: 4.2rem;
             font-weight: 700;
             letter-spacing: 6px;
             line-height: 1.2;
@@ -125,7 +146,7 @@
             color: var(--text-muted);
             letter-spacing: 2px;
             text-transform: none;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
         }
 
         .cta-btn {
@@ -149,7 +170,7 @@
         }
 
         section {
-            padding: 6rem 10%;
+            padding: 7rem 10%;
         }
 
         .section-title {
@@ -228,7 +249,7 @@
 
         .card {
             background-color: var(--card-charcoal);
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.04);
             padding: 3rem 2rem;
             text-align: center;
             transition: all 0.3s ease;
@@ -306,7 +327,7 @@
         }
 
         footer {
-            background-color: #030804;
+            background-color: #020703;
             padding: 5rem 10% 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
@@ -342,8 +363,8 @@
 
         .form-control {
             width: 100%;
-            background-color: #0B120D;
-            border: 2px solid #223829;
+            background-color: #060F08;
+            border: 2px solid #1C3322;
             color: #FFFFFF;
             padding: 0.8rem;
             font-family: 'Montserrat', sans-serif;
@@ -373,8 +394,8 @@
         }
 
         .phone-card {
-            background: #0B120D;
-            border: 2px solid #223829;
+            background: #060F08;
+            border: 2px solid #1C3322;
             padding: 1rem;
             margin-bottom: 0.75rem;
             border-radius: 6px;
@@ -422,7 +443,7 @@
         }
 
         @media (max-width: 968px) {
-            .hero h1 { font-size: 3.2rem; }
+            .hero h1 { font-size: 2.8rem; }
             .legacy-container, .lang-row, .footer-container { grid-template-columns: 1fr; gap: 2.5rem; }
             .nav-links { display: none; }
             section { padding: 4rem 5%; }
@@ -443,6 +464,10 @@
 
     <div class="hero" id="hero">
         <div class="hero-content">
+            <div class="brand-logo-frame">
+                <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
+            </div>
+            
             <p>PREMIUM LOHA KARA MANUFACTURER</p>
             <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
             <p class="subtitle">Amritsar, Punjab, India</p>
@@ -569,10 +594,4 @@
             </div>
         </div>
 
-        <div class="copyright-bar">
-            <p>&copy; 2026 S.K. KARA Manufacturing Brand. Owner: Mr. Kailash Chander. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+        <div class="c
