@@ -1,252 +1,319 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>S.K.KARA | Premium Loha Kara Manufacturer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		<meta name="description" content="S.K.KARA is a multi-generational premium Loha Kara manufacturer based in Amritsar, Punjab. Crafting authentic, heavy iron Karas with an elite finish." />
-		<meta name="keywords" content="Loha Kara manufacturer, Amritsar Kara factory, premium iron kara, heavy loha kara online, buy kara Amritsar, traditional sikh kara, S.K. Kara Amritsar" />
-		<meta name="author" content="S.K.KARA" />
-		<meta name="geo.region" content="IN-PB" />
-		<meta name="geo.placename" content="Amritsar" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.K. KARA | Premium Iron Manufactures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #DFB15B; /* Luxurious Gold */
+            --dark-bg: #0D0D0D; /* Sleek Onyx Black */
+            --card-bg: #141414; /* Deep Charcoal */
+            --text-light: #FFFFFF;
+            --text-muted: #A6A6A6;
+        }
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		<style>
-			/* Force Deep Black Background for a Luxury Look */
-			body, input, select, textarea, #wrapper, #main, #header, #nav, .post, article, #footer {
-				background-color: #0d0d0d !important;
-				color: #e5e7eb !important;
-			}
-			
-			/* Premium Gold Headings */
-			h1, h2, h3, h4, h5, h6, .logo, #nav ul.links li.active a {
-				color: #D4AF37 !important;
-				font-weight: 700 !important;
-			}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
 
-			/* Clean White Text for Visibility */
-			p, strong {
-				color: #ffffff !important;
-			}
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            background: linear-gradient(to bottom, rgba(13,13,13,0.9), rgba(13,13,13,0));
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
 
-			/* Custom Elegant Box for Language Support */
-			.language-support-box {
-				background-color: #061A0E !important;
-				border: 2px solid #14532d !important;
-				padding: 2.5rem !important;
-				margin: 2rem 0 !important;
-				border-radius: 6px !important;
-			}
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--primary);
+        }
 
-			/* Modern Input Fields */
-			#footer input[type="text"], #footer textarea {
-				background-color: #111827 !important;
-				border: 2px solid #374151 !important;
-				color: #ffffff !important;
-			}
-			#footer label {
-				color: #ffffff !important;
-				font-weight: 700 !important;
-			}
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
 
-			/* Clear High-Contrast Solid White Phone Links */
-			.phone-link-card {
-				background: #111827 !important;
-				border: 2px solid #374151 !important;
-				padding: 12px 16px !important;
-				margin-bottom: 10px !important;
-				border-radius: 6px !important;
-				display: block !important;
-				text-decoration: none !important;
-				max-width: 380px;
-			}
-			.phone-link-card i {
-				color: #D4AF37 !important;
-			}
-			.phone-link-card span {
-				color: #ffffff !important;
-				font-weight: 700 !important;
-				font-size: 1.25rem !important;
-				margin-left: 12px !important;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
 
-		<div id="wrapper" class="fade-in">
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
-				<div id="intro">
-						<h1>S.K.KARA</h1>
-						<p style="color: #D4AF37 !important; font-weight: 700; letter-spacing: 1px;">PREMIUM LOHA KARA MANUFACTURER</p>
-						<p style="font-size: 0.9em;">Amritsar, Punjab, India</p>
-						<ul class="actions">
-							<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore Catalog</a></li>
-						</ul>
-					</div>
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1rem;
+            background: radial-gradient(circle at center, rgba(30,30,30,0.4) 0%, rgba(13,13,13,1) 80%);
+            position: relative;
+        }
 
-				<header id="header">
-						<a href="index.html" class="logo">S.K.KARA</a>
-					</header>
+        .hero-content {
+            max-width: 900px;
+            z-index: 10;
+        }
 
-				<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Our Collection</a></li>
-							<li><a href="#legacy">Our Legacy</a></li>
-							<li><a href="#footer">Contact Us</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://instagram.com/skkara.india" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://wa.me/9814056600" target="_blank" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
-						</ul>
-					</nav>
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: 6px;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
 
-				<div id="main">
+        .hero h1 span {
+            color: var(--primary);
+            display: block;
+            font-weight: 900;
+            margin-top: 0.5rem;
+        }
 
-						<article class="post featured">
-								<header class="major">
-									<h2>Forged with Strength,<br />Crafted with Devotion</h2>
-									<p>Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, <strong>S.K.KARA</strong> has been manufacturing authentic, premium quality Loha Karas for generations in Amritsar. We use high-grade iron and specialized traditional forging techniques to deliver exceptional durability, weight balance, and a brilliant premium finish.</p>
-								</header>
-								<a href="https://wa.me/9814056600" target="_blank" class="image main"><img src="images/pic01.jpg" alt="Premium Loha Kara Banner" /></a>
-								<ul class="actions special">
-									<li><a href="https://wa.me/9814056600" target="_blank" class="button large" style="background-color: #25D366 !important; color: white !important; border: none !important; font-weight: 700;"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a></li>
-								</ul>
-							</article>
+        .hero p {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
 
-						<section class="posts">
-								<article>
-									<header>
-										<h3><a href="https://wa.me/9814056600" target="_blank">Classic Heavy<br />Loha Kara</a></h3>
-									</header>
-									<a href="https://wa.me/9814056600" target="_blank" class="image fit"><img src="images/pic02.jpg" alt="Classic Heavy Loha Kara" /></a>
-									<p>Our traditional heavy iron Kara. Masterfully shaped and polished with clean, weighted edges that reflect strength and endurance.</p>
-									<ul class="actions special">
-										<li><a href="https://wa.me/9814056600" target="_blank" class="button">Order Style</a></li>
-									</ul>
-								</article>
-								
-								<article>
-									<header>
-										<h3><a href="https://wa.me/9914415500" target="_blank">Premium Polished<br />Amritsari Edition</a></h3>
-									</header>
-									<a href="https://wa.me/9914415500" target="_blank" class="image fit"><img src="images/pic03.jpg" alt="Premium Polished Kara" /></a>
-									<p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
-									<ul class="actions special">
-										<li><a href="https://wa.me/9914415500" target="_blank" class="button">Order Style</a></li>
-									</ul>
-								</article>
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
 
-								<article>
-									<header>
-										<h3><a href="https://wa.me/9814056600" target="_blank">Sleek & Slim<br />Everyday Fit</a></h3>
-									</header>
-									<a href="https://wa.me/9814056600" target="_blank" class="image fit"><img src="images/pic04.jpg" alt="Sleek Modern Kara" /></a>
-									<p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
-									<ul class="actions special">
-										<li><a href="https://wa.me/9814056600" target="_blank" class="button">Order Style</a></li>
-									</ul>
-								</article>
+        .cta-btn:hover {
+            background-color: var(--primary);
+            color: var(--dark-bg);
+            box-shadow: 0 0 20px rgba(223, 177, 91, 0.4);
+        }
 
-								<article>
-									<header>
-										<h3><a href="https://wa.me/9914415500" target="_blank">Custom Size<br />& Pattern Orders</a></h3>
-									</header>
-									<a href="https://wa.me/9914415500" target="_blank" class="image fit"><img src="images/pic05.jpg" alt="Custom Made Kara" /></a>
-									<p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory to match your precise requirements.</p>
-									<ul class="actions special">
-										<li><a href="https://wa.me/9914415500" target="_blank" class="button">Discuss Sizes</a></li>
-									</ul>
-								</article>
-							</section>
+        /* Section Styling */
+        section {
+            padding: 8rem 10%;
+        }
 
-						<section id="multilingual" class="language-support-box">
-								<div class="row">
-									<div class="col-6 col-12-small" style="text-align: left;">
-										<h3 style="color: #D4AF37 !important;">ਪੰਜਾਬੀ ਸੈਕਸ਼ਨ (Order Help)</h3>
-										<p>ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ।</p>
-									</div>
-									<div class="col-6 col-12-small" style="text-align: left;">
-										<h3 style="color: #D4AF37 !important;">हिंदी अनुभाग (Order Help)</h3>
-										<p>यदि आप आर्डर देना चाहते हैं या कड़े के सही साइज के बारे में कोई जानकारी लेना चाहते हैं, तो कृपया नीचे दिए गए व्हाट्सएप बटन पर क्लिक करके हमसे सीधा संपर्क करें।</p>
-									</div>
-								</div>
-							</section>
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            letter-spacing: 4px;
+            margin-bottom: 4rem;
+            position: relative;
+        }
 
-						<section id="legacy" style="padding: 2rem 0; text-align: center;">
-								<h2>Our Multi-Generational Legacy</h2>
-								<p>Operating directly out of the historic manufacturing hub of <strong>Amritsar, Punjab</strong>, <strong>S.K.KARA</strong> stands as a benchmark of genuine multi-generational iron craft. We do not mass-produce generic steel trinkets; we manufacture authentic, heavy iron (Loha) Karas built with high-grade strength and cultural precision.</p>
-							</section>
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background-color: var(--primary);
+            margin: 1rem auto 0;
+        }
 
-					</div>
+        /* Legacy Section Split Layout */
+        .legacy-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
 
-				<footer id="footer">
-						<section>
-							<form method="post" action="mailto:info@skkara.com" enctype="text/plain">
-								<h3>Email Business Inquiry</h3>
-								<div class="fields">
-									<div class="field">
-										<label for="name">Your Name</label>
-										<input type="text" name="name" id="name" required />
-									</div>
-									<div class="field">
-										<label for="phone">Mobile Number</label>
-										<input type="text" name="phone" id="phone" required />
-									</div>
-									<div class="field">
-										<label for="message">Requirement Details</label>
-										<textarea name="message" id="message" rows="3" placeholder="Specify quantity and sizes..."></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Submit Form" style="background-color: #ffffff !important; color: #000000 !important; font-weight: bold !important;" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Factory Address</h3>
-								<p><strong>S.K.KARA</strong><br />East Mohan Nagar, Amritsar, Punjab, INDIA.</p>
-							</section>
-							<section>
-								<h3>Call Our Desk</h3>
-								<a href="tel:+919814056600" class="phone-link-card">
-									<i class="fas fa-mobile-alt"></i>
-									<span>+91 98140 56600</span>
-								</a>
-								<a href="tel:+919914415500" class="phone-link-card">
-									<i class="fas fa-mobile-alt"></i>
-									<span>+91 99144 15500</span>
-								</a>
-								<a href="tel:+919914256600" class="phone-link-card">
-									<i class="fas fa-mobile-alt"></i>
-									<span>+91 99142 56600</span>
-								</a>
-							</section>
-							<section>
-								<h3>Working Hours</h3>
-								<p>Tuesday to Sunday: 9:00 AM – 6:00 PM<br />
-								<span style="color: #FF4D4D; font-weight: 700;">Monday: Closed (Weekly Off)</span></p>
-							</section>
-						</section>
-					</footer>
+        .legacy-text h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
 
-				<div id="copyright">
-						<ul><li>&copy; S.K.KARA</li><li>Owner: Mr. Kailash Chander</li></ul>
-					</div>
+        .legacy-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
 
-			</div>
+        .legacy-image-box {
+            border: 1px solid rgba(223, 177, 91, 0.2);
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            text-align: center;
+        }
 
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .legacy-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgba(223, 177, 91, 0.1);
+            line-height: 1;
+        }
 
-	</body>
+        .legacy-badge-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-top: -1rem;
+        }
+
+        /* Product Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 4rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Settings */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .legacy-container { grid-template-columns: 1fr; gap: 2.5rem; }
+            .nav-links { display: none; }
+            section { padding: 5rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">S.K. KARA</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#legacy">Our Legacy</a></li>
+            <li><a href="#collection">Collection</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="hero">
+        <div class="hero-content">
+            <p>ESTABLISHED GENERATIONS AGO</p>
+            <h1>PREMIUM IRON <span>MANUFACTURING</span></h1>
+            <a href="#collection" class="cta-btn">Explore Collection</a>
+        </div>
+    </div>
+
+    <section id="legacy">
+        <h2 class="section-title">The Heritage</h2>
+        <div class="legacy-container">
+            <div class="legacy-text">
+                <h3>Crafted by Hand, Built to Last</h3>
+                <p>Rooted in an unyielding commitment to strength and purity, our multi-generational manufacturing business balances traditional values with high-end digital precision.</p>
+                <p>Every single masterpiece we produce carries the weight of our family legacy, meticulously designed for those who recognize authentic, premium excellence.</p>
+            </div>
+            <div class="legacy-image-box">
+                <div class="legacy-badge">SK</div>
+                <div class="legacy-badge-title">Authentic Perfection</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collection">
+        <h2 class="section-title">The Masterpieces</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Classic Heavy Finish</h3>
+                <p>Bold, weighted, and traditional structural foundations forged to unmatched precision specifications.</p>
+            </div>
+            <div class="card">
+                <h3>Sleek Modern Profile</h3>
+                <p>Streamlined architectural ironwork blending timeless durability with clean contemporary design aesthetics.</p>
+            </div>
+            <div class="card">
+                <h3>Signature Custom Cuts</h3>
+                <p>Bespoke custom-forged pieces engineered directly around high-end custom requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 S.K. KARA Manufacturing Brand. All Luxury Rights Reserved.</p>
+    </footer>
+
+</body>
 </html>
