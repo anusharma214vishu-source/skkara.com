@@ -16,12 +16,12 @@
     <style>
         :root {
             --primary-gold: #D4AF37; 
-            --deep-black: #040D06;   /* Rich, luxury dark forest-black base */
-            --card-charcoal: #0B170E;/* Deep green-tinted charcoal for solid container contrast */
-            --forest-green: #05220A; /* Deep premium velvet forest green */
-            --border-green: #16401D; 
+            --deep-black: #030A04;   
+            --card-charcoal: #08120A;
+            --forest-green: #041A08; 
+            --border-green: #113318; 
             --text-light: #FFFFFF;
-            --text-muted: #AEC2B2;   /* Elegant sage-muted text */
+            --text-muted: #A3B5A6;   
         }
 
         * {
@@ -30,20 +30,26 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--deep-black);
             color: var(--text-light);
             overflow-x: hidden;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Responsive Mobile-First Header Navigation */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem 5%;
-            background: linear-gradient(to bottom, rgba(4,13,6,0.9), rgba(4,13,6,0));
+            padding: 1.5rem 5%;
+            background: linear-gradient(to bottom, rgba(3,10,4,0.95), rgba(3,10,4,0));
             position: absolute;
             width: 100%;
             z-index: 100;
@@ -51,9 +57,9 @@
 
         .logo {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 900;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             color: var(--primary-gold);
             text-decoration: none;
         }
@@ -61,15 +67,15 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 1.5rem;
         }
 
         .nav-links a {
             color: var(--text-light);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
             font-weight: 600;
             transition: color 0.3s ease;
         }
@@ -78,19 +84,21 @@
             color: var(--primary-gold);
         }
 
+        /* Re-engineered Hero Frame to completely stop overlapping on mobile devices */
         .hero {
-            height: 110vh; 
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 4rem 1rem 0;
-            background: radial-gradient(circle at center, rgba(5, 34, 10, 0.7) 0%, rgba(4,13,6,1) 85%);
+            padding: 7rem 1rem 3rem;
+            background: radial-gradient(circle at center, rgba(4, 26, 8, 0.8) 0%, rgba(3,10,4,1) 85%);
             position: relative;
         }
 
         .hero-content {
-            max-width: 900px;
+            width: 100%;
+            max-width: 850px;
             z-index: 10;
             display: flex;
             flex-direction: column;
@@ -98,13 +106,14 @@
         }
 
         .brand-logo-frame {
-            margin-bottom: 2.5rem;
-            max-width: 280px;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 220px;
             height: auto;
-            border: 1px solid rgba(212, 175, 55, 0.35);
-            padding: 1.5rem;
-            background: linear-gradient(135deg, rgba(11, 23, 14, 0.8), rgba(5, 34, 10, 0.5));
-            box-shadow: 0 20px 45px rgba(0,0,0,0.7);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(8, 18, 10, 0.9), rgba(4, 26, 8, 0.6));
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
             border-radius: 4px;
         }
 
@@ -112,26 +121,26 @@
             width: 100%;
             height: auto;
             display: block;
-            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.25));
         }
 
         .hero p {
-            font-size: 1.1rem;
-            letter-spacing: 4px;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
             text-transform: uppercase;
             color: var(--primary-gold);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             font-weight: 700;
         }
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 4.2rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            letter-spacing: 6px;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
+            letter-spacing: 3px;
+            line-height: 1.3;
+            margin-bottom: 1.25rem;
             color: var(--text-light);
+            word-wrap: break-word;
         }
 
         .hero h1 span {
@@ -142,21 +151,21 @@
         }
 
         .hero .subtitle {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             letter-spacing: 2px;
             text-transform: none;
-            margin-bottom: 3.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .cta-btn {
             display: inline-block;
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2rem;
             border: 1px solid var(--primary-gold);
             color: var(--primary-gold);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
             letter-spacing: 2px;
             transition: all 0.4s ease;
@@ -166,50 +175,50 @@
         .cta-btn:hover {
             background-color: var(--primary-gold);
             color: var(--deep-black);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
         }
 
         section {
-            padding: 7rem 10%;
+            padding: 5rem 5%;
         }
 
         .section-title {
             font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             text-align: center;
-            letter-spacing: 4px;
-            margin-bottom: 4rem;
+            letter-spacing: 3px;
+            margin-bottom: 3rem;
             color: var(--primary-gold);
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 50px;
             height: 1px;
             background-color: var(--primary-gold);
-            margin: 1rem auto 0;
+            margin: 0.75rem auto 0;
         }
 
         .legacy-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
             align-items: center;
         }
 
         .legacy-text h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: var(--primary-gold);
-            margin-bottom: 1.5rem;
-            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
         }
 
         .legacy-text p {
             color: var(--text-light);
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
         }
 
         .legacy-text strong {
@@ -217,8 +226,8 @@
         }
 
         .legacy-image-box {
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 3rem;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 2rem;
             background-color: var(--card-charcoal);
             text-align: center;
             border-radius: 4px;
@@ -226,56 +235,51 @@
 
         .legacy-badge {
             font-family: 'Cinzel', serif;
-            font-size: 6rem;
+            font-size: 4.5rem;
             font-weight: 900;
-            color: rgba(212, 175, 55, 0.08);
+            color: rgba(212, 175, 55, 0.05);
             line-height: 1;
         }
 
         .legacy-badge-title {
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 1.2rem;
+            letter-spacing: 3px;
+            font-size: 1rem;
             color: var(--primary-gold);
-            margin-top: -1rem;
+            margin-top: -0.5rem;
             font-weight: 700;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: 1fr;
+            gap: 1.75rem;
         }
 
         .card {
             background-color: var(--card-charcoal);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            padding: 3rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            padding: 2rem 1.5rem;
             text-align: center;
-            transition: all 0.3s ease;
             border-radius: 4px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-gold);
+            min-height: 250px;
         }
 
         .card h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 1px;
             color: var(--primary-gold);
         }
 
         .card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
         }
 
         .whatsapp-btn {
@@ -286,89 +290,86 @@
             background-color: #25D366;
             color: #FFFFFF;
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
+            padding: 0.75rem 1.25rem;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #1ebd58;
+            width: 100%;
         }
 
         .language-support-box {
             background-color: var(--forest-green);
-            border: 2px solid var(--border-green);
-            padding: 3rem 2.5rem;
-            margin: 4rem 0;
+            border: 1px solid var(--border-green);
+            padding: 2rem 1.5rem;
+            margin: 2rem 0;
             border-radius: 6px;
         }
 
         .lang-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
 
         .lang-column h3 {
             font-family: 'Cinzel', serif;
             color: var(--primary-gold);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             letter-spacing: 1px;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         .lang-column p {
             color: #E5E7EB;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         footer {
-            background-color: #020703;
-            padding: 5rem 10% 3rem;
+            background-color: #020502;
+            padding: 4rem 5% 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .footer-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1fr;
+            gap: 3rem;
             text-align: left;
         }
 
         .footer-section h3 {
             font-family: 'Cinzel', serif;
             color: var(--primary-gold);
-            margin-bottom: 1.5rem;
-            letter-spacing: 2px;
-            font-size: 1.4rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
         }
 
         .form-group {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
 
         .form-group label {
             display: block;
             color: var(--text-light);
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .form-control {
             width: 100%;
-            background-color: #060F08;
-            border: 2px solid #1C3322;
+            background-color: #050B06;
+            border: 1px solid #162E1C;
             color: #FFFFFF;
-            padding: 0.8rem;
+            padding: 0.75rem;
             font-family: 'Montserrat', sans-serif;
             border-radius: 4px;
+            font-size: 0.9rem;
         }
 
         .form-control:focus {
@@ -381,51 +382,43 @@
             color: var(--deep-black);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 0.8rem 2rem;
+            letter-spacing: 1px;
+            padding: 0.75rem 1.5rem;
             border: none;
             cursor: pointer;
-            transition: all 0.3s ease;
             border-radius: 4px;
-        }
-
-        .submit-btn:hover {
-            background-color: var(--primary-gold);
+            width: 100%;
         }
 
         .phone-card {
-            background: #060F08;
-            border: 2px solid #1C3322;
-            padding: 1rem;
-            margin-bottom: 0.75rem;
+            background: #050B06;
+            border: 1px solid #162E1C;
+            padding: 0.85rem;
+            margin-bottom: 0.6rem;
             border-radius: 6px;
             display: flex;
             align-items: center;
             text-decoration: none;
-            max-width: 400px;
-            transition: border-color 0.3s ease;
-        }
-
-        .phone-card:hover {
-            border-color: var(--primary-gold);
+            width: 100%;
         }
 
         .phone-card i {
             color: var(--primary-gold);
-            font-size: 1.2rem;
-            width: 25px;
+            font-size: 1rem;
+            width: 20px;
         }
 
         .phone-card span {
             color: var(--text-light);
             font-weight: 700;
-            font-size: 1.2rem;
-            margin-left: 10px;
+            font-size: 1rem;
+            margin-left: 8px;
         }
 
         .hours-text {
-            margin-top: 1.5rem;
+            margin-top: 1.25rem;
             color: var(--text-muted);
+            font-size: 0.85rem;
         }
 
         .closed-alert {
@@ -435,18 +428,27 @@
 
         .copyright-bar {
             text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
         }
 
-        @media (max-width: 968px) {
-            .hero h1 { font-size: 2.8rem; }
-            .legacy-container, .lang-row, .footer-container { grid-template-columns: 1fr; gap: 2.5rem; }
-            .nav-links { display: none; }
-            section { padding: 4rem 5%; }
+        /* Desktop & Tablet Scale Up Adjustments */
+        @media (min-width: 768px) {
+            nav { padding: 2rem 5%; }
+            .logo { font-size: 1.8rem; }
+            .nav-links a { font-size: 0.85rem; letter-spacing: 2px; }
+            .hero h1 { font-size: 4.2rem; letter-spacing: 6px; }
+            .hero p { font-size: 1.1rem; letter-spacing: 4px; }
+            .hero .subtitle { font-size: 0.95rem; }
+            .section-title { font-size: 2.5rem; }
+            .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; }
+            .grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; }
+            .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .footer-container { grid-template-columns: 1fr 1fr; gap: 4rem; }
+            .submit-btn, .phone-card { width: auto; min-width: 320px; }
         }
     </style>
 </head>
@@ -456,9 +458,9 @@
         <a href="#" class="logo">S.K. KARA</a>
         <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#legacy">Our Legacy</a></li>
+            <li><a href="#legacy">Legacy</a></li>
             <li><a href="#collection">Collection</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -467,18 +469,17 @@
             <div class="brand-logo-frame">
                 <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
             </div>
-            
             <p>PREMIUM LOHA KARA MANUFACTURER</p>
             <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
             <p class="subtitle">Amritsar, Punjab, India</p>
-            <a href="#collection" class="cta-btn">Explore Full Catalog</a>
+            <a href="#collection" class="cta-btn">Explore Catalog</a>
         </div>
     </div>
 
     <main style="padding: 0 5%;">
 
         <section id="legacy">
-            <h2 class="section-title">Our Multi-Generational Legacy</h2>
+            <h2 class="section-title">Our Legacy</h2>
             <div class="legacy-container">
                 <div class="legacy-text">
                     <h3>Crafted by Hand, Built to Last</h3>
@@ -588,10 +589,3 @@
                 </a>
 
                 <div class="hours-text">
-                    <p>Tuesday to Sunday: 9:00 AM – 6:00 PM</p>
-                    <p class="closed-alert">Monday: Closed (Weekly Off)</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="c
