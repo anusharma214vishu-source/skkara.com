@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <style>
@@ -121,16 +121,6 @@
             display: block;
         }
 
-        .hero .script-tagline {
-            font-family: 'Pinyon Script', cursive;
-            font-size: 2.2rem;
-            color: var(--primary-gold);
-            margin-bottom: 0.25rem;
-            text-transform: none;
-            letter-spacing: 0px;
-            font-weight: 400;
-        }
-
         .hero h1 {
             font-family: 'Cinzel', serif;
             font-size: 2.5rem;
@@ -153,7 +143,6 @@
             font-size: 0.85rem;
             color: var(--text-muted);
             letter-spacing: 2px;
-            text-transform: none;
             margin-bottom: 2.5rem;
         }
 
@@ -231,7 +220,6 @@
             text-align: center;
             border-radius: 4px;
             position: relative;
-            overflow: hidden;
         }
 
         .legacy-badge {
@@ -339,7 +327,6 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 3rem;
-            text-align: left;
         }
 
         .footer-section {
@@ -352,6 +339,7 @@
             margin-bottom: 1.25rem;
             letter-spacing: 1px;
             font-size: 1.2rem;
+            display: block;
         }
 
         .form-group {
@@ -397,11 +385,17 @@
             width: 100%;
         }
 
+        .phone-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
         .phone-card {
             background: #050B06;
             border: 1px solid #162E1C;
             padding: 0.85rem;
-            margin-bottom: 0.6rem;
             border-radius: 6px;
             display: flex;
             align-items: center;
@@ -423,11 +417,11 @@
         }
 
         .hours-container-block {
-            margin-top: 1.5rem;
             background: #050B06;
             border: 1px solid #162E1C;
-            padding: 1rem;
+            padding: 1.25rem;
             border-radius: 6px;
+            width: 100%;
         }
 
         .hours-title-text {
@@ -436,7 +430,7 @@
             margin-bottom: 0.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         .hours-detail-p {
@@ -465,7 +459,6 @@
             .logo { font-size: 1.8rem; }
             .nav-links a { font-size: 0.85rem; letter-spacing: 2px; }
             .hero h1 { font-size: 4.2rem; letter-spacing: 6px; }
-            .hero .script-tagline { font-size: 3rem; margin-bottom: 0.5rem; }
             .hero .subtitle { font-size: 0.95rem; }
             .section-title { font-size: 2.5rem; }
             .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; }
@@ -494,7 +487,6 @@
             <div class="brand-logo-frame">
                 <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
             </div>
-            <p class="script-tagline">Premium Loha Kara Manufacturer</p>
             <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
             <p class="subtitle">Amritsar, Punjab, India</p>
             <a href="#collection" class="cta-btn">Explore Catalog</a>
@@ -596,4 +588,12 @@
                 <p style="margin-bottom: 2rem;"><strong>S.K.KARA</strong><br>East Mohan Nagar, Amritsar, Punjab, INDIA.</p>
 
                 <h3>Call Our Desk</h3>
-                <a href="tel:+911832583600" c
+                <div class="phone-list">
+                    <a href="tel:+911832583600" class="phone-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 183 2583600 (Landline)</span>
+                    </a>
+                    <a href="tel:+919814056600" class="phone-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>+91 98140 56600</span>
+                    </a>
