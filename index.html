@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <style>
@@ -121,15 +121,6 @@
             display: block;
         }
 
-        .hero p {
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--primary-gold);
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
         .hero h1 {
             font-family: 'Cinzel', serif;
             font-size: 2.5rem;
@@ -152,7 +143,6 @@
             font-size: 0.85rem;
             color: var(--text-muted);
             letter-spacing: 2px;
-            text-transform: none;
             margin-bottom: 2.5rem;
         }
 
@@ -225,18 +215,22 @@
 
         .legacy-image-box {
             border: 1px solid rgba(212, 175, 55, 0.15);
-            padding: 2rem;
+            padding: 2.5rem 1.5rem;
             background-color: var(--card-charcoal);
             text-align: center;
             border-radius: 4px;
+            position: relative;
         }
 
         .legacy-badge {
-            font-family: 'Cinzel', serif;
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: rgba(212, 175, 55, 0.05);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 6.5rem;
+            font-weight: 600;
+            color: rgba(212, 175, 55, 0.08);
             line-height: 1;
+            margin-bottom: 0.5rem;
+            letter-spacing: -2px;
         }
 
         .legacy-badge-title {
@@ -244,7 +238,6 @@
             letter-spacing: 3px;
             font-size: 1rem;
             color: var(--primary-gold);
-            margin-top: -0.5rem;
             font-weight: 700;
         }
 
@@ -324,17 +317,25 @@
             font-size: 0.9rem;
         }
 
+        /* BLOCK-BASED SIMPLE FOOTER TO PREVENT VANISHING */
         footer {
             background-color: #020502;
             padding: 4rem 5% 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: block !important;
+            clear: both;
         }
 
         .footer-container {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 3rem;
-            text-align: left;
+            width: 100% !important;
+        }
+
+        .footer-section {
+            display: block !important;
+            width: 100% !important;
         }
 
         .footer-section h3 {
@@ -342,7 +343,8 @@
             color: var(--primary-gold);
             margin-bottom: 1.25rem;
             letter-spacing: 1px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            text-transform: uppercase;
         }
 
         .form-group {
@@ -386,48 +388,78 @@
             cursor: pointer;
             border-radius: 4px;
             width: 100%;
+            max-width: 350px;
+        }
+
+        .phone-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            width: 100%;
         }
 
         .phone-card {
             background: #050B06;
             border: 1px solid #162E1C;
-            padding: 0.85rem;
-            margin-bottom: 0.6rem;
+            padding: 1rem;
             border-radius: 6px;
-            display: flex;
+            display: flex !important;
             align-items: center;
             text-decoration: none;
             width: 100%;
+            max-width: 450px;
         }
 
         .phone-card i {
             color: var(--primary-gold);
-            font-size: 1rem;
-            width: 20px;
+            font-size: 1.1rem;
+            width: 25px;
         }
 
         .phone-card span {
             color: var(--text-light);
             font-weight: 700;
+            font-size: 1.05rem;
+            margin-left: 10px;
+        }
+
+        .hours-container-block {
+            background: #050B06;
+            border: 1px solid #162E1C;
+            padding: 1.5rem;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 450px;
+            margin-top: 1.5rem;
+            display: block !important;
+        }
+
+        .hours-title-text {
+            color: var(--primary-gold);
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+        }
+
+        .hours-detail-p {
+            color: var(--text-light);
             font-size: 1rem;
-            margin-left: 8px;
+            margin-bottom: 0.3rem;
         }
 
-        .hours-text {
-            margin-top: 1.25rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        .closed-alert {
+        .closed-alert-text {
             color: #FF4D4D;
             font-weight: 700;
+            font-size: 1rem;
         }
 
         .copyright-bar {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 4rem;
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             font-size: 0.75rem;
@@ -439,14 +471,13 @@
             .logo { font-size: 1.8rem; }
             .nav-links a { font-size: 0.85rem; letter-spacing: 2px; }
             .hero h1 { font-size: 4.2rem; letter-spacing: 6px; }
-            .hero p { font-size: 1.1rem; letter-spacing: 4px; }
             .hero .subtitle { font-size: 0.95rem; }
             .section-title { font-size: 2.5rem; }
             .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; }
             .grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; }
             .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
-            .footer-container { grid-template-columns: 1fr 1fr; gap: 4rem; }
-            .submit-btn, .phone-card { width: auto; min-width: 320px; }
+            .footer-container { grid-template-columns: 1fr 1fr; gap: 4rem; flex-direction: row; }
+            .legacy-badge { font-size: 8.5rem; }
         }
     </style>
 </head>
@@ -467,7 +498,6 @@
             <div class="brand-logo-frame">
                 <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
             </div>
-            <p>PREMIUM LOHA KARA MANUFACTURER</p>
             <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
             <p class="subtitle">Amritsar, Punjab, India</p>
             <a href="#collection" class="cta-btn">Explore Catalog</a>
@@ -485,7 +515,7 @@
                     <p>Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, we do not mass-produce generic steel trinkets. We manufacture authentic, heavy iron (Loha) Karas built with high-grade strength, traditional physical weight balance, and a brilliant premium finish.</p>
                 </div>
                 <div class="legacy-image-box">
-                    <div class="legacy-badge">SK</div>
+                    <div class="legacy-badge">Sk</div>
                     <div class="legacy-badge-title">Authentic Perfection</div>
                 </div>
             </div>
@@ -545,9 +575,30 @@
 
     <footer id="contact">
         <div class="footer-container">
+            
             <div class="footer-section">
                 <h3>Email Business Inquiry</h3>
                 <form method="post" action="mailto:info@skkara.com" enctype="text/plain">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" name="
+                        <input type="text" name="name" id="name" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Number</label>
+                        <input type="text" name="phone" id="phone" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Requirement Details</label>
+                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Specify required quantities and diameter dimensions..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Form</button>
+                </form>
+            </div>
+
+            <div class="footer-section">
+                <h3>Office Address</h3>
+                <p style="margin-bottom: 2rem; color: #FFFFFF;"><strong>S.K.KARA</strong><br>East Mohan Nagar, Amritsar, Punjab, INDIA.</p>
+
+                <h3>Call Our Desk</h3>
+                <div class="phone-list">
+                    <a href="tel:+911832583600"
