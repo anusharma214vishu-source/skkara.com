@@ -342,6 +342,10 @@
             text-align: left;
         }
 
+        .footer-section {
+            width: 100%;
+        }
+
         .footer-section h3 {
             font-family: 'Cinzel', serif;
             color: var(--primary-gold);
@@ -418,16 +422,33 @@
             margin-left: 8px;
         }
 
-        .hours-text {
-            margin-top: 1.25rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
+        .hours-container-block {
+            margin-top: 1.5rem;
+            background: #050B06;
+            border: 1px solid #162E1C;
+            padding: 1rem;
+            border-radius: 6px;
         }
 
-        .closed-alert {
+        .hours-title-text {
+            color: var(--primary-gold);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        .hours-detail-p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .closed-alert-text {
             color: #FF4D4D;
             font-weight: 700;
+            font-size: 0.95rem;
         }
 
         .copyright-bar {
@@ -451,7 +472,7 @@
             .grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; }
             .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
             .footer-container { grid-template-columns: 1fr 1fr; gap: 4rem; }
-            .submit-btn, .phone-card { width: auto; min-width: 320px; }
+            .submit-btn, .phone-card, .hours-container-block { width: auto; min-width: 320px; max-width: 450px; }
             .legacy-badge { font-size: 8.5rem; }
         }
     </style>
@@ -575,16 +596,4 @@
                 <p style="margin-bottom: 2rem;"><strong>S.K.KARA</strong><br>East Mohan Nagar, Amritsar, Punjab, INDIA.</p>
 
                 <h3>Call Our Desk</h3>
-                <a href="tel:+911832583600" class="phone-card">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+91 183 2583600 (Landline)</span>
-                </a>
-                <a href="tel:+919814056600" class="phone-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>+91 98140 56600</span>
-                </a>
-                <a href="tel:+919914415500" class="phone-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>+91 99144 15500</span>
-                </a>
-                <a href="tel:+919914256600" c
+                <a href="tel:+911832583600" c
