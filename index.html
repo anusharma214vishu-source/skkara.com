@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <style>
         :root {
@@ -274,20 +273,17 @@
         }
 
         .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: block;
             background-color: #25D366;
             color: #FFFFFF;
             text-decoration: none;
-            padding: 0.75rem 1.25rem;
+            padding: 0.75rem;
             font-weight: 700;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 4px;
-            width: 100%;
+            text-align: center;
         }
 
         .language-support-box {
@@ -317,34 +313,67 @@
             font-size: 0.9rem;
         }
 
-        /* BLOCK-BASED SIMPLE FOOTER TO PREVENT VANISHING */
+        /* SUPER BASIC CRASH-PROOF FOOTER Layout */
         footer {
             background-color: #020502;
-            padding: 4rem 5% 2rem;
+            padding: 4rem 5% 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            display: block !important;
-            clear: both;
         }
 
-        .footer-container {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            width: 100% !important;
+        .footer-layout {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .footer-section {
-            display: block !important;
-            width: 100% !important;
-        }
-
-        .footer-section h3 {
+        .footer-heading {
             font-family: 'Cinzel', serif;
             color: var(--primary-gold);
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            margin-top: 2.5rem;
             margin-bottom: 1.25rem;
-            letter-spacing: 1px;
-            font-size: 1.3rem;
             text-transform: uppercase;
+        }
+
+        .address-text {
+            color: #FFFFFF;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Plain text, high contrast link boxes */
+        .phone-link-box {
+            display: block;
+            background-color: #061408;
+            border: 1px solid #16381C;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 1.1rem;
+            margin-bottom: 0.8rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            max-width: 480px;
+        }
+
+        .phone-link-box:hover {
+            border-color: var(--primary-gold);
+        }
+
+        .timings-panel {
+            background-color: #061408;
+            border: 1px solid #16381C;
+            padding: 1.25rem;
+            border-radius: 6px;
+            max-width: 480px;
+            margin-top: 1rem;
+        }
+
+        .timings-panel p {
+            font-size: 1.05rem;
+            color: #FFFFFF;
+            margin-bottom: 0.4rem;
         }
 
         .form-group {
@@ -363,6 +392,7 @@
 
         .form-control {
             width: 100%;
+            max-width: 500px;
             background-color: #050B06;
             border: 1px solid #162E1C;
             color: #FFFFFF;
@@ -370,11 +400,6 @@
             font-family: 'Montserrat', sans-serif;
             border-radius: 4px;
             font-size: 0.9rem;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-gold);
         }
 
         .submit-btn {
@@ -391,78 +416,12 @@
             max-width: 350px;
         }
 
-        .phone-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
-            width: 100%;
-        }
-
-        .phone-card {
-            background: #050B06;
-            border: 1px solid #162E1C;
-            padding: 1rem;
-            border-radius: 6px;
-            display: flex !important;
-            align-items: center;
-            text-decoration: none;
-            width: 100%;
-            max-width: 450px;
-        }
-
-        .phone-card i {
-            color: var(--primary-gold);
-            font-size: 1.1rem;
-            width: 25px;
-        }
-
-        .phone-card span {
-            color: var(--text-light);
-            font-weight: 700;
-            font-size: 1.05rem;
-            margin-left: 10px;
-        }
-
-        .hours-container-block {
-            background: #050B06;
-            border: 1px solid #162E1C;
-            padding: 1.5rem;
-            border-radius: 6px;
-            width: 100%;
-            max-width: 450px;
-            margin-top: 1.5rem;
-            display: block !important;
-        }
-
-        .hours-title-text {
-            color: var(--primary-gold);
-            font-weight: 700;
-            margin-bottom: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.95rem;
-        }
-
-        .hours-detail-p {
-            color: var(--text-light);
-            font-size: 1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .closed-alert-text {
-            color: #FF4D4D;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-
         .copyright-bar {
             text-align: center;
             margin-top: 4rem;
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
         }
 
@@ -476,7 +435,7 @@
             .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; }
             .grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; }
             .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
-            .footer-container { grid-template-columns: 1fr 1fr; gap: 4rem; flex-direction: row; }
+            .footer-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
             .legacy-badge { font-size: 8.5rem; }
         }
     </style>
@@ -529,7 +488,7 @@
                         <h3>Classic Heavy Loha Kara</h3>
                         <p>Our traditional heavy iron Kara. Masterfully shaped and polished with clean, weighted edges that reflect strength and endurance.</p>
                     </div>
-                    <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Order Style</a>
+                    <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
                 </div>
                 
                 <div class="card">
@@ -537,7 +496,7 @@
                         <h3>Premium Polished Amritsari Edition</h3>
                         <p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
                     </div>
-                    <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Order Style</a>
+                    <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
                 </div>
 
                 <div class="card">
@@ -545,7 +504,7 @@
                         <h3>Sleek & Slim Everyday Fit</h3>
                         <p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
                     </div>
-                    <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Order Style</a>
+                    <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
                 </div>
 
                 <div class="card">
@@ -553,7 +512,7 @@
                         <h3>Custom Sizes & Patterns</h3>
                         <p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory floor to match your precise requirements.</p>
                     </div>
-                    <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Discuss Sizes</a>
+                    <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Discuss Sizes via WhatsApp</a>
                 </div>
             </div>
         </section>
@@ -562,7 +521,7 @@
             <div class="lang-row">
                 <div class="lang-column">
                     <h3>ਪੰਜਾਬੀ ਸੈਕਸ਼ਨ (Order Help)</h3>
-                    <p>ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ।</p>
+                    <p>ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ。</p>
                 </div>
                 <div class="lang-column">
                     <h3>हिंदी अनुभाग (Order Help)</h3>
@@ -574,31 +533,56 @@
     </main>
 
     <footer id="contact">
-        <div class="footer-container">
-            
-            <div class="footer-section">
-                <h3>Email Business Inquiry</h3>
-                <form method="post" action="mailto:info@skkara.com" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" id="name" class="form-control" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Mobile Number</label>
-                        <input type="text" name="phone" id="phone" class="form-control" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Requirement Details</label>
-                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Specify required quantities and diameter dimensions..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit Form</button>
-                </form>
-            </div>
+        <div class="footer-layout">
+            <div class="footer-grid-split">
+                
+                <div>
+                    <h2 class="footer-heading">Email Business Inquiry</h2>
+                    <form method="post" action="mailto:info@skkara.com" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Mobile Number</label>
+                            <input type="text" name="phone" id="phone" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Requirement Details</label>
+                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Specify required quantities and diameter dimensions..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Form</button>
+                    </form>
+                </div>
 
-            <div class="footer-section">
-                <h3>Office Address</h3>
-                <p style="margin-bottom: 2rem; color: #FFFFFF;"><strong>S.K.KARA</strong><br>East Mohan Nagar, Amritsar, Punjab, INDIA.</p>
+                <div>
+                    <h2 class="footer-heading">Office Address</h2>
+                    <p class="address-text">
+                        <strong>S.K. KARA</strong><br>
+                        East Mohan Nagar, Amritsar, Punjab, INDIA.
+                    </p>
 
-                <h3>Call Our Desk</h3>
-                <div class="phone-list">
-                    <a href="tel:+911832583600"
+                    <h2 class="footer-heading">Call Our Desk</h2>
+                    
+                    <a href="tel:+911832583600" class="phone-link-box">
+                        Landline: +91 183 2583600
+                    </a>
+                    
+                    <a href="tel:+919814056600" class="phone-link-box">
+                        Mobile: +91 98140 56600
+                    </a>
+                    
+                    <a href="tel:+919914415500" class="phone-link-box">
+                        Mobile: +91 99144 15500
+                    </a>
+                    
+                    <a href="tel:+919914256600" class="phone-link-box">
+                        Mobile: +91 99142 56600
+                    </a>
+
+                    <h2 class="footer-heading">Office Timings</h2>
+                    <div class="timings-panel">
+                        <p><strong>Days:</strong> Tuesday to Sunday</p>
+                        <p><strong>Hours:</strong> 9:00 AM – 6:00 PM</p>
+                        <p style="color: #FF4D4D; font-weight: 700; margin-top: 0.5rem;">Monday: CLOSED (Weekly Off)</p>
+                    </div>
