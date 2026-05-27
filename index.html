@@ -14,13 +14,13 @@
 
     <style>
         :root {
-            --primary-gold: #FFD700;       /* Vibrant Luxury Gold */
-            --accent-gold: #F4E285;        /* Radiant Soft Gold for Highlights */
-            --deep-black: #000000;         /* Stark Obsidian Black for Premium Contrast */
-            --bg-gradient: #060A07;        /* Subtle deep steel tone shift */
-            --card-charcoal: #131814;      /* Sharp, crisp surface for boxes */
-            --text-light: #FFFFFF;         /* Ultra-crisp Pure White */
-            --text-muted: #CBD5E1;         /* Bright Platinum Silver */
+            --primary-gold: #FFD700;       
+            --accent-gold: #F4E285;        
+            --deep-black: #000000;         
+            --bg-gradient: #060A07;        
+            --card-charcoal: #131814;      
+            --text-light: #FFFFFF;         
+            --text-muted: #CBD5E1;         
         }
 
         * {
@@ -42,6 +42,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* Nav Slide Down Animation */
         nav {
             display: flex;
             flex-direction: column;
@@ -54,6 +55,7 @@
             border-bottom: 2px solid var(--primary-gold);
             gap: 1rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+            animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .logo-container {
@@ -95,13 +97,33 @@
             font-size: 0.85rem;
             letter-spacing: 1.5px;
             font-weight: 700;
+            position: relative;
+            padding-bottom: 4px;
             transition: color 0.3s ease;
+        }
+
+        /* Underline Expansion Hover Animation */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-gold);
+            transition: width 0.3s ease, left 0.3s ease;
         }
 
         .nav-links a:hover {
             color: var(--primary-gold);
         }
 
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Hero Entrance Animation */
         .hero {
             min-height: 75vh;
             display: flex;
@@ -119,6 +141,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
         }
 
         .brand-logo-frame {
@@ -130,6 +153,12 @@
             background: #000000;
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
             border-radius: 6px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .brand-logo-frame:hover {
+            transform: scale(1.04) rotate(1deg);
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
         }
 
         .brand-logo-frame img {
@@ -165,6 +194,7 @@
             font-weight: 600;
         }
 
+        /* Metallic Shimmering Action Button Loop */
         .cta-btn {
             display: inline-block;
             padding: 0.9rem 2.25rem;
@@ -175,20 +205,42 @@
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 2px;
-            transition: all 0.3s ease;
-            background: rgba(255, 215, 0, 0.05);
+            background: rgba(255, 215, 0, 0.03);
             border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,215,0,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,215,0,0) 100%);
+            transform: skewX(-25deg);
+            animation: shineLoop 5s infinite linear;
         }
 
         .cta-btn:hover {
             background-color: var(--primary-gold);
             color: #000000;
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.45);
+            transform: translateY(-2px);
         }
 
         section {
             padding: 5rem 1rem;
             background-color: var(--deep-black);
+        }
+
+        /* Reveal-on-scroll classes applied dynamically or using continuous window scroll styling */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: scrollRevealFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         #collection {
@@ -224,397 +276,3 @@
 
         .legacy-text h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
-            color: var(--accent-gold);
-            margin-bottom: 1.25rem;
-            letter-spacing: 1px;
-        }
-
-        .legacy-text p {
-            color: var(--text-muted);
-            margin-bottom: 1.25rem;
-            font-size: 1rem;
-        }
-
-        .legacy-text strong {
-            color: var(--primary-gold);
-            font-weight: 700;
-        }
-
-        .legacy-image-box {
-            border: 2px solid rgba(255, 215, 0, 0.2);
-            padding: 3rem 1rem;
-            background: var(--card-charcoal);
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .legacy-badge {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 6rem;
-            font-weight: 600;
-            color: rgba(255, 215, 0, 0.08);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .legacy-badge-title {
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 1rem;
-            color: var(--primary-gold);
-            font-weight: 700;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background-color: var(--card-charcoal);
-            border: 2px solid rgba(255, 215, 0, 0.15);
-            text-align: center;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-            transition: border-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--primary-gold);
-            transform: translateY(-4px);
-        }
-
-        .card-body {
-            padding: 2rem 1.5rem;
-        }
-
-        .card-img-top {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-bottom: 2px solid rgba(255, 215, 0, 0.15);
-        }
-
-        .card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
-            margin-bottom: 0.85rem;
-            letter-spacing: 1px;
-            color: var(--primary-gold);
-        }
-
-        .card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1.25rem;
-            font-weight: 500;
-        }
-
-        .card-action {
-            padding: 0 1.5rem 2rem;
-        }
-
-        .whatsapp-btn {
-            display: block;
-            background-color: #25D366;
-            color: #FFFFFF;
-            text-decoration: none;
-            padding: 0.9rem;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            text-align: center;
-            transition: background-color 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #20ba5a;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-        }
-
-        .language-support-box {
-            background-color: #0B110C;
-            border: 2px solid var(--primary-gold);
-            padding: 2.5rem 1.75rem;
-            max-width: 1200px;
-            margin: 3rem auto 1rem;
-            border-radius: 8px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-        }
-
-        .lang-row {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .lang-column h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--primary-gold);
-            margin-bottom: 0.75rem;
-            letter-spacing: 1px;
-            font-size: 1.25rem;
-        }
-
-        .lang-column p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            font-weight: 500;
-        }
-
-        footer {
-            background-color: #000000;
-            padding: 4rem 1rem 3rem;
-            border-top: 2px solid var(--primary-gold);
-        }
-
-        .footer-layout {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-heading {
-            font-family: 'Cinzel', serif;
-            color: var(--primary-gold);
-            font-size: 1.35rem;
-            letter-spacing: 1.5px;
-            margin-top: 2rem;
-            margin-bottom: 1.25rem;
-            text-transform: uppercase;
-        }
-
-        .address-text {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .phone-link-box {
-            display: block;
-            background-color: var(--card-charcoal);
-            border: 2px solid rgba(255, 215, 0, 0.15);
-            color: var(--text-light);
-            text-decoration: none;
-            padding: 1.1rem;
-            margin-bottom: 0.85rem;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 1.05rem;
-            width: 100%;
-            max-width: 480px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-        }
-
-        .phone-link-box:hover {
-            border-color: var(--primary-gold);
-            background-color: #1B221D;
-            transform: scale(1.01);
-        }
-
-        .hours-info-box {
-            display: block;
-            background-color: rgba(255, 215, 0, 0.05);
-            border: 2px solid var(--primary-gold);
-            color: var(--text-light);
-            padding: 1.25rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 6px;
-            font-size: 1rem;
-            width: 100%;
-            max-width: 480px;
-            line-height: 1.7;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            color: var(--accent-gold);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .form-control {
-            width: 100%;
-            max-width: 500px;
-            background-color: var(--card-charcoal);
-            border: 2px solid rgba(255, 215, 0, 0.15);
-            color: var(--text-light);
-            padding: 1rem;
-            font-family: 'Montserrat', sans-serif;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-gold);
-        }
-
-        .submit-btn {
-            background-color: var(--primary-gold);
-            color: #000000;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 1rem 1.75rem;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-            width: 100%;
-            max-width: 350px;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: var(--text-light);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-        }
-
-        .copyright-bar {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        @media (min-width: 768px) {
-            nav {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 2rem 5%;
-                gap: 0;
-            }
-            .logo-container {
-                align-items: flex-start;
-            }
-            .logo { font-size: 2rem; }
-            .logo-regional { font-size: 1rem; }
-            .hero { min-height: 80vh; padding: 6rem 1rem 3rem; }
-            .hero h1 { font-size: 4.5rem; letter-spacing: 6px; }
-            .hero .subtitle { font-size: 1.05rem; }
-            .brand-logo-frame { width: 220px; }
-            .section-title { font-size: 2.75rem; }
-            .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; padding: 0 5%; }
-            .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; padding: 0 5%; }
-            .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
-            .footer-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-            .legacy-badge { font-size: 9.5rem; }
-            footer { padding: 4rem 5% 3rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo-container">
-            <a href="#" class="logo">S.K. KARA</a>
-            <div class="logo-regional">ਐੱਸ. ਕੇ. ਕੜਾ | एस. के. कड़ा</div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#legacy">Legacy</a></li>
-            <li><a href="#collection">Collection</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hero" id="hero">
-        <div class="hero-content">
-            <div class="brand-logo-frame">
-                <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
-            </div>
-            <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
-            <p class="subtitle">Amritsar, Punjab, India</p>
-            <a href="#collection" class="cta-btn">Explore Catalog</a>
-        </div>
-    </div>
-
-    <main>
-
-        <section id="legacy">
-            <h2 class="section-title">Our Legacy</h2>
-            <div class="legacy-container">
-                <div class="legacy-text">
-                    <h3>Crafted by Hand, Built to Last</h3>
-                    <p>Operating directly out of the historic manufacturing hub of <strong>Amritsar, Punjab</strong>, <strong>S.K. KARA</strong> stands as a benchmark of genuine multi-generational iron craft.</p>
-                    <p>Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, we do not mass-produce generic steel trinkets. We manufacture authentic, heavy iron (Loha) Karas built with high-grade strength, traditional physical weight balance, and a brilliant premium finish.</p>
-                </div>
-                <div class="legacy-image-box">
-                    <div class="legacy-badge">Sk</div>
-                    <div class="legacy-badge-title">Authentic Perfection</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="collection">
-            <h2 class="section-title">The Masterpieces</h2>
-            <div class="grid">
-                
-                <div class="card">
-                    <div>
-                        <img src="loha-gajra.png.jpeg" alt="Loha Gajra Big" class="card-img-top">
-                        <div class="card-body">
-                            <h3>Loha Gajra Big</h3>
-                            <p style="color:var(--primary-gold); font-weight:700; margin-bottom:0.5rem; letter-spacing:1px; font-size:0.85rem; text-transform:uppercase;">Engraved with Waheguru</p>
-                            <p>Pure Loha, strong & durable. Expertly engraved with premium quality precision, reflecting Sikh heritage and timeless elegance.</p>
-                        </div>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Premium Polished Amritsari Edition</h3>
-                        <p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Sleek & Slim Everyday Fit</h3>
-                        <p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Custom Sizes & Patterns</h3>
-                        <p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory floor to match your precise requirements.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Discuss Sizes via WhatsApp</a>
-                    </div>
