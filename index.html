@@ -10,18 +10,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Monsieur+La Douise&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;600;700&family=Alex+Brush&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --luxury-gold: #DFBA6B;         /* Bright Champagne Gold Accent */
-            --rich-bronze: #B39243;         /* Deep Warm Gold for Borders */
-            --velvet-midnight: #151B16;    /* Premium Rich Deep Charcoal instead of plain black */
-            --soft-cream: #FAF7F0;          /* Warm Ivory Cream for headings */
-            --text-readable: #E2E8F0;       /* Bright, clean text for body reading */
-            --card-bg: #222A23;             /* Lighter, richer green-tinted charcoal for cards */
-            --pure-black: #0B0E0B;          /* Deep base accents */
-            --border-glow: rgba(223, 186, 107, 0.25); /* Elegant gold framing */
+            --iron-dark: #1E2522;           /* Bright, Rich Slate Steel Background */
+            --clean-white: #FFFFFF;         /* Stark White for Maximum Crisp Contrast */
+            --navy-premium: #0B2545;        /* Deep Imperial Navy for Strong Text & Buttons */
+            --sky-accent: #134074;          /* Secondary Accent Blue */
+            --steel-silver: #EEF4F8;       /* Light Silver-Blue for Section Backgrounds */
+            --text-dark: #1D2A44;           /* Dark Navy-Grey for Perfect Text Readability */
+            --text-light: #64748B;          /* Muted Slate for Secondary Text */
+            --border-clean: #D1DCE5;        /* Light Crisp Borders */
         }
 
         * {
@@ -36,22 +36,34 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--velvet-midnight);
-            color: var(--text-readable);
+            background-color: var(--iron-dark);
+            color: var(--clean-white);
             overflow-x: hidden;
             line-height: 1.6;
             display: block !important;
         }
 
-        /* Beautiful Cursive Class */
-        .cursive-text {
-            font-family: 'Monsieur La Douise', cursive;
-            font-size: 3rem;
-            color: var(--luxury-gold);
+        /* Sharp, Formal Connected Cursive Font (CJP Style) */
+        .cjp-cursive {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.2rem;
+            color: var(--clean-white);
             text-transform: none !important;
-            letter-spacing: 0 !important;
+            font-weight: 400;
+            letter-spacing: 0px !important;
+            display: block;
+            margin-bottom: -0.2rem;
+        }
+        
+        .cjp-cursive-dark {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3.5rem;
+            color: var(--sky-accent);
+            text-transform: none !important;
+            font-weight: 400;
             display: block;
             margin-bottom: -0.5rem;
+            text-align: center;
         }
 
         /* Navigation Bar */
@@ -61,9 +73,9 @@
             align-items: center;
             text-align: center;
             padding: 1.5rem 5%;
-            background: var(--pure-black);
+            background: var(--clean-white);
             width: 100%;
-            border-bottom: 2px solid var(--rich-bronze);
+            border-bottom: 3px solid var(--navy-premium);
             gap: 1rem;
         }
 
@@ -76,18 +88,18 @@
         .logo {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 4px;
-            color: var(--soft-cream);
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--navy-premium);
             text-decoration: none;
         }
 
         .logo-regional {
             font-size: 0.9rem;
-            color: var(--luxury-gold);
+            color: var(--sky-accent);
             letter-spacing: 1px;
-            margin-top: 0.3rem;
-            font-weight: 600;
+            margin-top: 0.2rem;
+            font-weight: 700;
         }
 
         .nav-links {
@@ -99,29 +111,29 @@
         }
 
         .nav-links a {
-            color: var(--text-readable);
+            color: var(--text-light);
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 1.5px;
             font-weight: 700;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: var(--luxury-gold);
+            color: var(--navy-premium);
         }
 
-        /* Hero Banner - Balanced Brightness */
+        /* Hero Banner - High Contrast & Polished */
         .hero {
-            min-height: 80vh;
+            min-height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 5rem 1rem;
-            background: radial-gradient(circle at center, #29362B 0%, var(--pure-black) 100%);
-            border-bottom: 1px solid var(--border-glow);
+            background: linear-gradient(135deg, #132219 0%, #2D3A32 100%);
+            border-bottom: 4px solid var(--navy-premium);
         }
 
         .hero-content {
@@ -130,15 +142,15 @@
         }
 
         .brand-logo-frame {
-            margin-bottom: 2rem;
-            width: 160px;
+            margin-bottom: 1.5rem;
+            width: 150px;
             margin-left: auto;
             margin-right: auto;
-            border: 2px solid var(--luxury-gold);
-            padding: 0.5rem;
-            background: var(--pure-black);
-            border-radius: 6px;
-            box-shadow: 0 10px 25px rgba(223, 186, 107, 0.15);
+            border: 3px solid var(--clean-white);
+            padding: 0.4rem;
+            background: var(--clean-white);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .brand-logo-frame img {
@@ -149,78 +161,91 @@
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: 4px;
+            font-size: 2.6rem;
+            font-weight: 900;
+            letter-spacing: 3px;
             line-height: 1.3;
             margin-bottom: 1.5rem;
-            color: var(--soft-cream);
+            color: var(--clean-white);
         }
 
         .hero h1 span {
-            color: var(--luxury-gold);
+            color: var(--clean-white);
             display: block;
-            font-weight: 900;
+            font-size: 1.8rem;
+            font-weight: 700;
             margin-top: 0.5rem;
+            opacity: 0.9;
         }
 
         .hero .subtitle {
             font-size: 1rem;
-            color: var(--luxury-gold);
-            letter-spacing: 3px;
+            color: var(--clean-white);
+            letter-spacing: 4px;
             margin-bottom: 2.5rem;
             text-transform: uppercase;
             font-weight: 700;
+            opacity: 0.8;
         }
 
         .cta-btn {
             display: inline-block;
             padding: 1rem 2.5rem;
-            border: 2px solid var(--luxury-gold);
-            color: var(--luxury-gold);
+            border: 2px solid var(--clean-white);
+            color: var(--clean-white);
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.85rem;
             font-weight: 700;
             letter-spacing: 2px;
             border-radius: 4px;
-            background: rgba(223, 186, 107, 0.05);
+            background: rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
-            background-color: var(--luxury-gold);
-            color: var(--pure-black);
-            box-shadow: 0 5px 20px rgba(223, 186, 107, 0.4);
+            background-color: var(--clean-white);
+            color: var(--navy-premium);
+            box-shadow: 0 8px 25px rgba(255,255,255,0.25);
         }
 
-        /* Core Content Sections */
+        /* Main Content Styling */
         section {
             padding: 6rem 1rem;
-            background-color: var(--velvet-midnight);
             display: block !important;
+        }
+
+        #legacy {
+            background-color: var(--steel-silver);
+            color: var(--text-dark);
+        }
+
+        #collection {
+            background-color: var(--clean-white);
+            color: var(--text-dark);
         }
 
         .section-title {
             font-family: 'Cinzel', serif;
             font-size: 2.25rem;
             text-align: center;
-            letter-spacing: 3px;
-            color: var(--soft-cream);
+            letter-spacing: 2px;
+            color: var(--navy-premium);
             text-transform: uppercase;
             margin-bottom: 4rem;
+            font-weight: 900;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 80px;
-            height: 2px;
-            background-color: var(--luxury-gold);
-            margin: 0.8rem auto 0;
+            width: 70px;
+            height: 3px;
+            background-color: var(--navy-premium);
+            margin: 0.6rem auto 0;
         }
 
-        /* Legacy Layout */
+        /* Legacy Layout Box */
         .legacy-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -230,37 +255,38 @@
         }
 
         .legacy-text h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--soft-cream);
-            margin-bottom: 1.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--navy-premium);
+            margin-bottom: 1.25rem;
             font-weight: 700;
         }
 
         .legacy-text p {
-            color: var(--text-readable);
+            color: var(--text-dark);
             margin-bottom: 1.5rem;
             font-size: 1.05rem;
         }
 
         .legacy-image-box {
-            border: 2px solid var(--border-glow);
-            padding: 4rem 1rem;
-            background: var(--card-bg);
+            border: 2px solid var(--border-clean);
+            padding: 4.5rem 1rem;
+            background: var(--clean-white);
             text-align: center;
             border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
         .legacy-badge-title {
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 1rem;
-            color: var(--luxury-gold);
+            letter-spacing: 3px;
+            font-size: 0.95rem;
+            color: var(--text-light);
             font-weight: 700;
+            margin-top: 0.5rem;
         }
 
-        /* Cards and Product Grid */
+        /* Product Cards Grid */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -270,21 +296,22 @@
         }
 
         .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-glow);
+            background-color: var(--steel-silver);
+            border: 1px solid var(--border-clean);
             text-align: center;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             overflow: hidden;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--luxury-gold);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            border-color: var(--navy-premium);
         }
 
         .card-body {
@@ -295,28 +322,28 @@
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 2px solid var(--border-glow);
+            border-bottom: 1px solid var(--border-clean);
         }
 
         .card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
             margin-bottom: 0.85rem;
-            color: var(--soft-cream);
+            color: var(--navy-premium);
             font-weight: 700;
         }
 
         .card-accent {
-            color: var(--luxury-gold);
+            color: var(--sky-accent);
             font-weight: 700;
             margin-bottom: 0.75rem;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 1px;
         }
 
         .card p {
-            color: var(--text-readable);
+            color: var(--text-dark);
             font-size: 0.95rem;
         }
 
@@ -326,9 +353,8 @@
 
         .whatsapp-btn {
             display: block;
-            background-color: #243321;
-            border: 1px solid var(--luxury-gold);
-            color: var(--luxury-gold);
+            background-color: var(--navy-premium);
+            color: var(--clean-white);
             text-decoration: none;
             padding: 1rem;
             font-weight: 700;
@@ -336,86 +362,95 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 4px;
-            transition: all 0.3s ease;
+            transition: background-color 0.2s ease;
         }
 
         .whatsapp-btn:hover {
             background-color: #25D366;
             color: white;
-            border-color: #25D366;
         }
 
-        /* Language Block */
+        /* Language Block Box */
         .language-support-box {
-            background-color: var(--pure-black);
-            border: 2px solid var(--rich-bronze);
-            padding: 3rem 2rem;
+            background-color: var(--steel-silver);
+            border-top: 2px solid var(--border-clean);
+            border-bottom: 2px solid var(--border-clean);
+            padding: 4rem 2rem;
+            color: var(--text-dark);
+        }
+
+        .lang-container-box {
             max-width: 1200px;
-            margin: 4rem auto 1rem;
-            border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            margin: 0 auto;
+        }
+
+        .lang-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
         }
 
         .lang-column h3 {
             font-family: 'Cinzel', serif;
-            color: var(--luxury-gold);
+            color: var(--navy-premium);
             margin-bottom: 1rem;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
 
         .lang-column p {
-            color: var(--text-readable);
+            color: var(--text-dark);
             font-size: 1rem;
             line-height: 1.7;
         }
 
-        /* Footer Element Styles */
+        /* Footer and Corporate Form Styling */
         footer {
-            background-color: var(--pure-black);
+            background-color: var(--navy-premium);
+            color: var(--clean-white);
             padding: 5rem 1rem 3rem;
-            border-top: 2px solid var(--rich-bronze);
             display: block !important;
         }
 
         .footer-heading {
             font-family: 'Cinzel', serif;
-            color: var(--soft-cream);
+            color: var(--clean-white);
             font-size: 1.4rem;
             letter-spacing: 1.5px;
             margin-top: 2rem;
             margin-bottom: 1.5rem;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         .address-text {
-            color: var(--text-readable);
+            color: rgba(255,255,255,0.8);
             font-size: 1.05rem;
             margin-bottom: 2rem;
         }
 
         .phone-link-box {
             display: block;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-glow);
-            color: var(--soft-cream);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--clean-white);
             text-decoration: none;
             padding: 1.1rem;
             margin-bottom: 1rem;
             border-radius: 4px;
             font-weight: 700;
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: background 0.2s ease;
         }
 
         .phone-link-box:hover {
-            border-color: var(--luxury-gold);
-            background: var(--velvet-midnight);
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .hours-info-box {
-            background-color: rgba(255,255,255,0.04);
-            border: 1px solid var(--border-glow);
-            color: var(--text-readable);
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255,255,255,0.85);
             padding: 1.5rem;
             border-radius: 4px;
             font-size: 1rem;
@@ -427,59 +462,54 @@
 
         .form-group label {
             display: block;
-            color: var(--luxury-gold);
+            color: var(--clean-white);
             font-weight: 700;
             margin-bottom: 0.5rem;
             font-size: 0.8rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .form-control {
             width: 100%;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-glow);
-            color: var(--soft-cream);
+            background-color: var(--clean-white);
+            border: 1px solid var(--border-clean);
+            color: var(--text-dark);
             padding: 1rem;
             font-family: 'Montserrat', sans-serif;
             border-radius: 4px;
             font-size: 0.95rem;
         }
 
-        .form-control:focus {
-            outline: none;
-            border-color: var(--luxury-gold);
-        }
-
         .submit-btn {
-            background-color: transparent;
-            color: var(--luxury-gold);
-            border: 2px solid var(--luxury-gold);
+            background-color: var(--clean-white);
+            color: var(--navy-premium);
+            border: none;
             font-weight: 700;
             text-transform: uppercase;
             padding: 1.1rem 2rem;
             cursor: pointer;
             border-radius: 4px;
             width: 100%;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             letter-spacing: 1px;
-            transition: all 0.3s ease;
+            transition: opacity 0.2s ease;
         }
 
         .submit-btn:hover {
-            background-color: var(--luxury-gold);
-            color: var(--pure-black);
+            opacity: 0.9;
         }
 
         .copyright-bar {
             text-align: center;
             margin-top: 5rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.85rem;
-            color: var(--text-readable);
+            color: rgba(255,255,255,0.7);
         }
 
-        /* Responsive Breakpoints for Tablets & Desktops */
+        /* Desktop Layout Responsive Design */
         @media (min-width: 768px) {
             nav {
                 flex-direction: row;
@@ -488,13 +518,13 @@
                 gap: 0;
             }
             .logo-container { align-items: flex-start; }
-            .hero { min-height: 85vh; }
-            .hero h1 { font-size: 4.2rem; letter-spacing: 6px; }
-            .brand-logo-frame { width: 190px; }
-            .section-title { font-size: 2.75rem; }
+            .hero { min-height: 80vh; }
+            .hero h1 { font-size: 4rem; letter-spacing: 5px; }
+            .brand-logo-frame { width: 180px; }
+            .section-title { font-size: 2.5rem; }
             .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; padding: 0 5%; }
             .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 0 5%; gap: 3rem; }
-            .lang-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .lang-row { grid-template-columns: 1fr 1fr; gap: 4rem; }
             .footer-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
             footer { padding: 5rem 5% 3rem; }
         }
@@ -520,7 +550,7 @@
             <div class="brand-logo-frame">
                 <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
             </div>
-            <span class="cursive-text">Handcrafted Elegance</span>
+            <span class="cjp-cursive">Handcrafted Elegance</span>
             <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
             <p class="subtitle">Amritsar, Punjab, India</p>
             <a href="#collection" class="cta-btn">Explore Catalog</a>
@@ -530,7 +560,7 @@
     <main>
 
         <section id="legacy">
-            <span class="cursive-text" style="text-align: center; margin-bottom: 0.5rem;">Our Story</span>
+            <span class="cjp-cursive-dark">Our Story</span>
             <h2 class="section-title" style="margin-top: 0;">Our Legacy</h2>
             <div class="legacy-container">
                 <div class="legacy-text">
@@ -539,14 +569,14 @@
                     <p>Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, we do not mass-produce generic steel trinkets. We manufacture authentic, heavy iron (Loha) Karas built with high-grade strength, traditional physical weight balance, and a brilliant premium finish.</p>
                 </div>
                 <div class="legacy-image-box">
-                    <span class="cursive-text" style="font-size: 5rem; line-height: 1;">Authentic</span>
-                    <div class="legacy-badge-title" style="margin-top: 1rem;">Perfection Since Generations</div>
+                    <span class="cjp-cursive-dark" style="font-size: 4.5rem; line-height: 1;">Authentic Perfection</span>
+                    <div class="legacy-badge-title">Since Generations</div>
                 </div>
             </div>
         </section>
 
         <section id="collection">
-            <span class="cursive-text" style="text-align: center; margin-bottom: 0.5rem;">The Premium Range</span>
+            <span class="cjp-cursive-dark">The Premium Range</span>
             <h2 class="section-title" style="margin-top: 0;">The Masterpieces</h2>
             <div class="grid">
                 
@@ -600,14 +630,16 @@
         </section>
 
         <section id="multilingual" class="language-support-box">
-            <div class="lang-row">
-                <div class="lang-column">
-                    <h3>ਪੰਜਾਬੀ ਸੈਕਸ਼ਨ (Order Help)</h3>
-                    <p>ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ।</p>
-                </div>
-                <div class="lang-column">
-                    <h3>हिंदी अनुभाग (Order Help)</h3>
-                    <p>यदि आप आर्डर देना चाहते हैं या कड़े के सही साइज के बारे में कोई जानकारी लेना चाहते हैं, तो कृपया व्हाट्सएप बटन पर क्लिक करके हमसे सीधा संपर्क करें।</p>
+            <div class="lang-container-box">
+                <div class="lang-row">
+                    <div class="lang-column">
+                        <h3>ਪੰਜਾਬੀ ਸੈਕਸ਼ਨ (Order Help)</h3>
+                        <p>ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ।</p>
+                    </div>
+                    <div class="lang-column">
+                        <h3>हिंदी अनुभाग (Order Help)</h3>
+                        <p>यदि आप आर्डर देना चाहते हैं या कड़े के सही साइज के बारे में कोई जानकारी लेना चाहते हैं, तो कृपया व्हाट्सएप बटन पर क्लिक करके हमसे सीधा संपर्क करें।</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -662,7 +694,7 @@
                     <div class="hours-info-box">
                         <strong>Days:</strong> Tuesday to Sunday<br>
                         <strong>Hours:</strong> 9:00 AM – 6:00 PM<br>
-                        <span style="color: #EF4444; font-weight: 600; display: block; margin-top: 0.4rem;">Monday: CLOSED (Weekly Off)</span>
+                        <span style="color: #FF8A8A; font-weight: 600; display: block; margin-top: 0.4rem;">Monday: CLOSED (Weekly Off)</span>
                     </div>
                 </div>
 
