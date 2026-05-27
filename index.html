@@ -152,7 +152,7 @@
             color: var(--primary-gold);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.8 Hologram;
             font-weight: 600;
             letter-spacing: 2px;
             transition: all 0.4s ease;
@@ -313,6 +313,7 @@
             font-size: 0.9rem;
         }
 
+        /* LIQUID STRUCTURAL FOOTER - FIXED NO TEXT CUTOFF */
         footer {
             background-color: #020502;
             padding: 4rem 5% 3rem;
@@ -337,8 +338,8 @@
         .address-text {
             color: #FFFFFF;
             font-size: 1.05rem;
-            margin-bottom: 1rem;
-            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .phone-link-box {
@@ -353,6 +354,7 @@
             font-weight: 700;
             font-size: 1.1rem;
             max-width: 480px;
+            transition: all 0.3s ease;
         }
 
         .phone-link-box:hover {
@@ -364,23 +366,24 @@
             background-color: #061408;
             border: 1px solid #16381C;
             color: #FFFFFF;
-            padding: 1.1rem;
-            margin-bottom: 0.8rem;
+            padding: 1.25rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             border-radius: 6px;
             font-size: 1.05rem;
             max-width: 480px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .form-group label {
             display: block;
             color: var(--text-light);
             font-weight: 700;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -392,10 +395,10 @@
             background-color: #050B06;
             border: 1px solid #162E1C;
             color: #FFFFFF;
-            padding: 0.75rem;
+            padding: 0.85rem;
             font-family: 'Montserrat', sans-serif;
             border-radius: 4px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         .submit-btn {
@@ -404,12 +407,17 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            padding: 0.75rem 1.5rem;
+            padding: 0.9rem 1.5rem;
             border: none;
             cursor: pointer;
             border-radius: 4px;
             width: 100%;
             max-width: 350px;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-gold);
         }
 
         .copyright-bar {
@@ -581,4 +589,19 @@
 
                     <h2 class="footer-heading">Business Hours</h2>
                     <div class="hours-info-box">
-                        <stro
+                        <strong>Days:</strong> Tuesday to Sunday<br>
+                        <strong>Hours:</strong> 9:00 AM – 6:00 PM<br>
+                        <span style="color: #FF4D4D; font-weight: 700; display: block; margin-top: 0.4rem;">Monday: CLOSED (Weekly Off)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>&copy; 2026 S.K. KARA Manufacturing Brand. Owner: Mr. Kailash Chander. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
