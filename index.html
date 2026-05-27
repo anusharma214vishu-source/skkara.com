@@ -14,14 +14,14 @@
 
     <style>
         :root {
-            --premium-gold: #D4AF37;       /* Muted Champagne Gold */
-            --soft-gold: #E6D5B8;          /* Soft Warm Sand Highlighting */
-            --deep-black: #0A0D0A;         /* Rich Steel-Tinted Dark Base */
-            --pure-black: #000000;         /* Stark Black for clean spacing */
-            --card-charcoal: #141A15;      /* Solid, deep slate surface */
-            --text-pure: #FFFFFF;          /* Crisp Ice White */
-            --text-muted: #94A3B8;         /* Subdued Slate Grey for long text */
-            --border-low: rgba(212, 175, 55, 0.15); /* Thin subtle metallic edge */
+            --premium-gold: #D4AF37;       /* Elegant Muted Champagne Gold */
+            --soft-gold: #E6D5B8;          /* Soft Warm Highlight */
+            --deep-black: #0A0D0A;         /* Rich Dark Steel Base */
+            --pure-black: #000000;         /* Stark Black */
+            --card-charcoal: #141A15;      /* Solid Deep Slate Surface */
+            --text-pure: #FFFFFF;          /* Crisp White */
+            --text-muted: #94A3B8;         /* Subdued Slate Grey */
+            --border-low: rgba(212, 175, 55, 0.15); /* Subtle Metallic Border */
         }
 
         * {
@@ -40,11 +40,10 @@
             color: var(--text-pure);
             overflow-x: hidden;
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            display: block; /* Force basic block display for stability */
+            display: block !important; /* Force browser rendering */
         }
 
-        /* Nav Layout */
+        /* Navigation Bar */
         nav {
             display: flex;
             flex-direction: column;
@@ -53,10 +52,8 @@
             padding: 1.5rem 5%;
             background: var(--pure-black);
             width: 100%;
-            z-index: 100;
             border-bottom: 1px solid var(--border-low);
             gap: 1rem;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.7);
         }
 
         .logo-container {
@@ -72,7 +69,6 @@
             letter-spacing: 3px;
             color: var(--text-pure);
             text-decoration: none;
-            line-height: 1.2;
         }
 
         .logo-regional {
@@ -98,32 +94,14 @@
             font-size: 0.8rem;
             letter-spacing: 1.5px;
             font-weight: 700;
-            position: relative;
-            padding-bottom: 4px;
             transition: color 0.3s ease;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 1px;
-            background-color: var(--premium-gold);
-            transition: width 0.3s ease, left 0.3s ease;
         }
 
         .nav-links a:hover {
             color: var(--text-pure);
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-            left: 0;
-        }
-
-        /* Hero Layout */
+        /* Hero Banner */
         .hero {
             min-height: 75vh;
             display: flex;
@@ -138,26 +116,17 @@
         .hero-content {
             width: 100%;
             max-width: 850px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .brand-logo-frame {
             margin-bottom: 2rem;
             width: 150px;
-            height: auto;
+            margin-left: auto;
+            margin-right: auto;
             border: 1px solid var(--border-low);
             padding: 0.5rem;
             background: var(--pure-black);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             border-radius: 4px;
-            transition: transform 0.4s ease, border-color 0.4s ease;
-        }
-
-        .brand-logo-frame:hover {
-            transform: scale(1.03);
-            border-color: var(--premium-gold);
         }
 
         .brand-logo-frame img {
@@ -192,7 +161,6 @@
             font-weight: 600;
         }
 
-        /* Muted Action Button */
         .cta-btn {
             display: inline-block;
             padding: 0.9rem 2.25rem;
@@ -203,36 +171,20 @@
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 2px;
-            background: transparent;
             border-radius: 4px;
-            position: relative;
-            overflow: hidden;
             transition: all 0.3s ease;
-        }
-
-        .cta-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -150%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
-            transform: skewX(-25deg);
-            animation: shineLoop 6s infinite linear;
         }
 
         .cta-btn:hover {
             background-color: var(--premium-gold);
             color: var(--pure-black);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-            transform: translateY(-2px);
         }
 
+        /* Core Content Sections */
         section {
             padding: 5rem 1rem;
             background-color: var(--deep-black);
-            display: block; /* Strict rendering fallback safety */
+            display: block !important; /* Force visible block state */
         }
 
         .section-title {
@@ -244,3 +196,451 @@
             color: var(--text-pure);
             text-transform: uppercase;
         }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background-color: var(--premium-gold);
+            margin: 0.8rem auto 0;
+        }
+
+        /* Legacy Layout */
+        .legacy-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .legacy-text h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.35rem;
+            color: var(--text-pure);
+            margin-bottom: 1.25rem;
+        }
+
+        .legacy-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+        }
+
+        .legacy-image-box {
+            border: 1px solid var(--border-low);
+            padding: 3rem 1rem;
+            background: var(--card-charcoal);
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .legacy-badge {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 6rem;
+            color: rgba(212, 175, 55, 0.08);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .legacy-badge-title {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* Cards and Product Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--card-charcoal);
+            border: 1px solid var(--border-low);
+            text-align: center;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .card-body {
+            padding: 2rem 1.5rem;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid var(--border-low);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.85rem;
+            color: var(--text-pure);
+        }
+
+        .card-accent {
+            color: var(--premium-gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .card-action {
+            padding: 0 1.5rem 2rem;
+        }
+
+        .whatsapp-btn {
+            display: block;
+            background-color: #1E291B;
+            border: 1px solid rgba(255,255,255,0.15);
+            color: var(--text-pure);
+            text-decoration: none;
+            padding: 0.85rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #25D366;
+        }
+
+        /* Language Block */
+        .language-support-box {
+            background-color: var(--pure-black);
+            border: 1px solid var(--border-low);
+            padding: 2.5rem 1.75rem;
+            max-width: 1200px;
+            margin: 3rem auto 1rem;
+            border-radius: 6px;
+        }
+
+        .lang-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .lang-column h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--premium-gold);
+            margin-bottom: 0.75rem;
+            font-size: 1.15rem;
+        }
+
+        .lang-column p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Footer Element Styles */
+        footer {
+            background-color: var(--pure-black);
+            padding: 4rem 1rem 3rem;
+            border-top: 1px solid var(--border-low);
+            display: block !important;
+        }
+
+        .footer-heading {
+            font-family: 'Cinzel', serif;
+            color: var(--text-pure);
+            font-size: 1.25rem;
+            letter-spacing: 1.5px;
+            margin-top: 2rem;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+        }
+
+        .address-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .phone-link-box {
+            display: block;
+            background-color: var(--card-charcoal);
+            border: 1px solid var(--border-low);
+            color: var(--text-pure);
+            text-decoration: none;
+            padding: 1rem;
+            margin-bottom: 0.85rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .hours-info-box {
+            background-color: rgba(255,255,255,0.02);
+            border: 1px solid var(--border-low);
+            color: var(--text-muted);
+            padding: 1.25rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-pure);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: var(--card-charcoal);
+            border: 1px solid var(--border-low);
+            color: var(--text-pure);
+            padding: 0.9rem;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .submit-btn {
+            background-color: transparent;
+            color: var(--premium-gold);
+            border: 1px solid var(--premium-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 1rem 1.75rem;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--premium-gold);
+            color: var(--pure-black);
+        }
+
+        .copyright-bar {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Breakpoints for Tablets & Desktops */
+        @media (min-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1.75rem 5%;
+                gap: 0;
+            }
+            .logo-container { align-items: flex-start; }
+            .hero { min-height: 80vh; }
+            .hero h1 { font-size: 3.8rem; letter-spacing: 5px; }
+            .brand-logo-frame { width: 190px; }
+            .section-title { font-size: 2.5rem; }
+            .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; padding: 0 5%; }
+            .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 0 5%; gap: 2.5rem; }
+            .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .footer-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+            footer { padding: 4rem 5% 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <a href="#" class="logo">S.K. KARA</a>
+            <div class="logo-regional">ਐੱਸ. ਕੇ. ਕੜਾ | एस. के. कड़ा</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#legacy">Legacy</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="hero">
+        <div class="hero-content">
+            <div class="brand-logo-frame">
+                <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
+            </div>
+            <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
+            <p class="subtitle">Amritsar, Punjab, India</p>
+            <a href="#collection" class="cta-btn">Explore Catalog</a>
+        </div>
+    </div>
+
+    <main>
+
+        <section id="legacy">
+            <h2 class="section-title">Our Legacy</h2>
+            <div class="legacy-container">
+                <div class="legacy-text">
+                    <h3>Crafted by Hand, Built to Last</h3>
+                    <p>Operating directly out of the historic manufacturing hub of <strong>Amritsar, Punjab</strong>, <strong>S.K. KARA</strong> stands as a benchmark of genuine multi-generational iron craft.</p>
+                    <p>Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, we do not mass-produce generic steel trinkets. We manufacture authentic, heavy iron (Loha) Karas built with high-grade strength, traditional physical weight balance, and a brilliant premium finish.</p>
+                </div>
+                <div class="legacy-image-box">
+                    <div class="legacy-badge">Sk</div>
+                    <div class="legacy-badge-title">Authentic Perfection</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collection">
+            <h2 class="section-title">The Masterpieces</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <div>
+                        <img src="loha-gajra.png.jpeg" alt="Loha Gajra Big" class="card-img-top">
+                        <div class="card-body">
+                            <h3>Loha Gajra Big</h3>
+                            <p class="card-accent">Engraved with Waheguru</p>
+                            <p>Pure Loha, strong & durable. Expertly engraved with premium quality precision, reflecting Sikh heritage and timeless elegance.</p>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Premium Polished Amritsari Edition</h3>
+                        <p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Sleek & Slim Everyday Fit</h3>
+                        <p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Custom Sizes & Patterns</h3>
+                        <p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory floor to match your precise requirements.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Discuss Sizes via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="multilingual" class="language-support-box">
+            <div class="lang-row">
+                <div class="lang-column">
+                    <h3>ਪੰਜਾਬੀ ਸੈਕਸ਼ਨ (Order Help)</h3>
+                    <p>ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ।</p>
+                </div>
+                <div class="lang-column">
+                    <h3>हिंदी अनुभाग (Order Help)</h3>
+                    <p>यदि आप आर्डर देना चाहते हैं या कड़े के सही साइज के बारे में कोई जानकारी लेना चाहते हैं, तो कृपया व्हाट्सएप बटन पर क्लिक करके हमसे सीधा संपर्क करें।</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="footer-layout">
+            <div class="footer-grid-split">
+                
+                <div>
+                    <h2 class="footer-heading">Email Business Inquiry</h2>
+                    <form method="post" action="mailto:info@skkara.com" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Mobile Number</label>
+                            <input type="text" name="phone" id="phone" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Requirement Details</label>
+                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Specify required quantities and diameter dimensions..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Form</button>
+                    </form>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Office Address</h2>
+                    <p class="address-text">
+                        <strong>S.K. KARA</strong><br>
+                        East Mohan Nagar, Amritsar, Punjab, INDIA.
+                    </p>
+
+                    <h2 class="footer-heading">Call Our Desk</h2>
+                    
+                    <a href="tel:+911832583600" class="phone-link-box">
+                        Landline: +91 183 2583600
+                    </a>
+                    
+                    <a href="tel:+919814056600" class="phone-link-box">
+                        Mobile: +91 98140 56600
+                    </a>
+                    
+                    <a href="tel:+919914415500" class="phone-link-box">
+                        Mobile: +91 99144 15500
+                    </a>
+
+                    <h2 class="footer-heading">Business Hours</h2>
+                    <div class="hours-info-box">
+                        <strong>Days:</strong> Tuesday to Sunday<br>
+                        <strong>Hours:</strong> 9:00 AM – 6:00 PM<br>
+                        <span style="color: #EF4444; font-weight: 600; display: block; margin-top: 0.4rem;">Monday: CLOSED (Weekly Off)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>&copy; 2026 S.K. KARA Manufacturing Brand. Owner: Mr. Kailash Chander. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
