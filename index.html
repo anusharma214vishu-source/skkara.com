@@ -10,17 +10,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Montserrat:wght400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-gold: #FFD700;       
-            --accent-gold: #F4E285;        
-            --deep-black: #000000;         
-            --bg-gradient: #060A07;        
-            --card-charcoal: #131814;      
-            --text-light: #FFFFFF;         
-            --text-muted: #CBD5E1;         
+            --premium-gold: #D4AF37;       /* Muted Champagne Gold (Elegant, not neon) */
+            --soft-gold: #E6D5B8;          /* Soft Warm Sand Highlight */
+            --deep-black: #0A0D0A;         /* Rich Steel-Tinted Dark Base */
+            --pure-black: #000000;         /* Stark Black for clean spacing */
+            --card-charcoal: #141A15;      /* Solid, deep slate surface */
+            --text-pure: #FFFFFF;          /* Crisp Ice White */
+            --text-muted: #94A3B8;         /* Subdued Slate Grey for long text */
+            --border-low: rgba(212, 175, 55, 0.15); /* Thin subtle metallic edge */
         }
 
         * {
@@ -36,25 +37,25 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--deep-black);
-            color: var(--text-light);
+            color: var(--text-pure);
             overflow-x: hidden;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Nav Slide Down Animation */
+        /* Nav Layout */
         nav {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 1.5rem 5%;
-            background: #000000;
+            background: var(--pure-black);
             width: 100%;
             z-index: 100;
-            border-bottom: 2px solid var(--primary-gold);
+            border-bottom: 1px solid var(--border-low);
             gap: 1rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.7);
             animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -67,19 +68,19 @@
         .logo {
             font-family: 'Cinzel', serif;
             font-size: 1.75rem;
-            font-weight: 900;
+            font-weight: 700;
             letter-spacing: 3px;
-            color: var(--primary-gold);
+            color: var(--text-pure); /* Changed to pure white for high-end look */
             text-decoration: none;
             line-height: 1.2;
         }
 
         .logo-regional {
-            font-size: 0.9rem;
-            color: var(--accent-gold);
+            font-size: 0.85rem;
+            color: var(--premium-gold); /* Gold used purely as a subtle subtitle accent */
             letter-spacing: 1px;
             margin-top: 0.3rem;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .nav-links {
@@ -91,10 +92,10 @@
         }
 
         .nav-links a {
-            color: var(--text-light);
+            color: var(--text-muted);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 1.5px;
             font-weight: 700;
             position: relative;
@@ -102,20 +103,19 @@
             transition: color 0.3s ease;
         }
 
-        /* Underline Expansion Hover Animation */
         .nav-links a::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 50%;
             width: 0;
-            height: 2px;
-            background-color: var(--primary-gold);
+            height: 1px;
+            background-color: var(--premium-gold);
             transition: width 0.3s ease, left 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--primary-gold);
+            color: var(--text-pure);
         }
 
         .nav-links a:hover::after {
@@ -123,7 +123,7 @@
             left: 0;
         }
 
-        /* Hero Entrance Animation */
+        /* Hero Layout */
         .hero {
             min-height: 75vh;
             display: flex;
@@ -131,8 +131,8 @@
             justify-content: center;
             text-align: center;
             padding: 4rem 1rem;
-            background: radial-gradient(circle at center, #0F1A11 0%, var(--deep-black) 100%);
-            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            background: radial-gradient(circle at center, #111812 0%, var(--pure-black) 100%);
+            border-bottom: 1px solid var(--border-low);
         }
 
         .hero-content {
@@ -146,19 +146,19 @@
 
         .brand-logo-frame {
             margin-bottom: 2rem;
-            width: 160px;
+            width: 150px;
             height: auto;
-            border: 2px solid var(--primary-gold);
-            padding: 0.75rem;
-            background: #000000;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
-            border-radius: 6px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid var(--border-low);
+            padding: 0.5rem;
+            background: var(--pure-black);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 4px;
+            transition: transform 0.4s ease, border-color 0.4s ease;
         }
 
         .brand-logo-frame:hover {
-            transform: scale(1.04) rotate(1deg);
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+            transform: scale(1.03);
+            border-color: var(--premium-gold);
         }
 
         .brand-logo-frame img {
@@ -169,24 +169,23 @@
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 2.1rem;
-            font-weight: 700;
-            letter-spacing: 2px;
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 3px;
             line-height: 1.4;
             margin-bottom: 1.5rem;
-            color: var(--text-light);
+            color: var(--text-pure);
         }
 
         .hero h1 span {
-            color: var(--primary-gold);
+            color: var(--premium-gold);
             display: block;
-            font-weight: 900;
-            margin-top: 0.6rem;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            font-weight: 700;
+            margin-top: 0.5rem;
         }
 
         .hero .subtitle {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
             letter-spacing: 2px;
             margin-bottom: 2.5rem;
@@ -194,18 +193,18 @@
             font-weight: 600;
         }
 
-        /* Metallic Shimmering Action Button Loop */
+        /* Muted Action Button */
         .cta-btn {
             display: inline-block;
             padding: 0.9rem 2.25rem;
-            border: 2px solid var(--primary-gold);
-            color: var(--primary-gold);
+            border: 1px solid var(--premium-gold);
+            color: var(--premium-gold);
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 2px;
-            background: rgba(255, 215, 0, 0.03);
+            background: transparent;
             border-radius: 4px;
             position: relative;
             overflow: hidden;
@@ -219,15 +218,15 @@
             left: -150%;
             width: 50%;
             height: 100%;
-            background: linear-gradient(to right, rgba(255,215,0,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,215,0,0) 100%);
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
             transform: skewX(-25deg);
-            animation: shineLoop 5s infinite linear;
+            animation: shineLoop 6s infinite linear;
         }
 
         .cta-btn:hover {
-            background-color: var(--primary-gold);
-            color: #000000;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.45);
+            background-color: var(--premium-gold);
+            color: var(--pure-black);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
             transform: translateY(-2px);
         }
 
@@ -236,10 +235,9 @@
             background-color: var(--deep-black);
         }
 
-        /* FIXED: Beautiful Scroll Reveal Animations handled via JavaScript safely */
         .scroll-reveal {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(30px);
             transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
 
@@ -248,26 +246,22 @@
             transform: translateY(0);
         }
 
-        #collection {
-            background: linear-gradient(to bottom, var(--deep-black), var(--bg-gradient));
-        }
-
         .section-title {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
             text-align: center;
             letter-spacing: 3px;
-            margin-bottom: 3rem;
-            color: var(--primary-gold);
+            margin-bottom: 3.5rem;
+            color: var(--text-pure);
             text-transform: uppercase;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 80px;
-            height: 2px;
-            background-color: var(--primary-gold);
+            width: 50px;
+            height: 1px;
+            background-color: var(--premium-gold);
             margin: 0.8rem auto 0;
         }
 
@@ -281,8 +275,8 @@
 
         .legacy-text h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
-            color: var(--accent-gold);
+            font-size: 1.35rem;
+            color: var(--text-pure);
             margin-bottom: 1.25rem;
             letter-spacing: 1px;
         }
@@ -290,26 +284,26 @@
         .legacy-text p {
             color: var(--text-muted);
             margin-bottom: 1.25rem;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .legacy-text strong {
-            color: var(--primary-gold);
-            font-weight: 700;
+            color: var(--text-pure);
+            font-weight: 600;
         }
 
         .legacy-image-box {
-            border: 2px solid rgba(255, 215, 0, 0.15);
+            border: 1px solid var(--border-low);
             padding: 3rem 1rem;
             background: var(--card-charcoal);
             text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
             transition: border-color 0.4s ease;
         }
 
         .legacy-image-box:hover {
-            border-color: var(--primary-gold);
+            border-color: rgba(212, 175, 55, 0.3);
         }
 
         .legacy-badge {
@@ -317,22 +311,22 @@
             font-style: italic;
             font-size: 6rem;
             font-weight: 600;
-            color: rgba(255, 215, 0, 0.08);
+            color: rgba(255, 255, 255, 0.03);
             line-height: 1;
             margin-bottom: 0.5rem;
             transition: color 0.4s ease;
         }
 
         .legacy-image-box:hover .legacy-badge {
-            color: rgba(255, 215, 0, 0.18);
+            color: rgba(212, 175, 55, 0.06);
         }
 
         .legacy-badge-title {
             text-transform: uppercase;
             letter-spacing: 3px;
-            font-size: 1rem;
-            color: var(--primary-gold);
-            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
         }
 
         .grid {
@@ -343,24 +337,24 @@
             margin: 0 auto;
         }
 
-        /* Interactive Premium Hover Cards */
+        /* Refined Balanced Product Cards */
         .card {
             background-color: var(--card-charcoal);
-            border: 2px solid rgba(255, 215, 0, 0.15);
+            border: 1px solid var(--border-low);
             text-align: center;
-            border-radius: 8px;
+            border-radius: 6px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-            transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .card:hover {
-            border-color: var(--primary-gold);
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(255, 215, 0, 0.15);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
         }
 
         .card-body {
@@ -371,27 +365,22 @@
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 2px solid rgba(255, 215, 0, 0.15);
-            transition: transform 0.5s ease;
-        }
-
-        .card:hover .card-img-top {
-            transform: scale(1.02);
+            border-bottom: 1px solid var(--border-low);
         }
 
         .card h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 0.85rem;
             letter-spacing: 1px;
-            color: var(--primary-gold);
+            color: var(--text-pure);
         }
 
         .card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
             margin-bottom: 1.25rem;
-            font-weight: 500;
+            font-weight: 400;
         }
 
         .card-action {
@@ -400,34 +389,35 @@
 
         .whatsapp-btn {
             display: block;
-            background-color: #25D366;
-            color: #FFFFFF;
+            background-color: #1E291B; /* Dark structural button instead of neon green */
+            border: 1px solid rgba(255,255,255,0.15);
+            color: var(--text-pure);
             text-decoration: none;
-            padding: 0.9rem;
-            font-weight: 700;
-            font-size: 0.9rem;
+            padding: 0.85rem;
+            font-weight: 600;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 4px;
             text-align: center;
-            transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
         }
 
         .whatsapp-btn:hover {
-            background-color: #20ba5a;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            background-color: #25D366; /* Shows color only on action intent */
+            border-color: #25D366;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
             transform: scale(1.02);
         }
 
         .language-support-box {
-            background-color: #0B110C;
-            border: 2px solid var(--primary-gold);
+            background-color: var(--pure-black);
+            border: 1px solid var(--border-low);
             padding: 2.5rem 1.75rem;
             max-width: 1200px;
             margin: 3rem auto 1rem;
-            border-radius: 8px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            border-radius: 6px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
         }
 
         .lang-row {
@@ -438,23 +428,22 @@
 
         .lang-column h3 {
             font-family: 'Cinzel', serif;
-            color: var(--primary-gold);
+            color: var(--premium-gold);
             margin-bottom: 0.75rem;
             letter-spacing: 1px;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
         }
 
         .lang-column p {
-            color: var(--text-light);
-            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
             line-height: 1.7;
-            font-weight: 500;
         }
 
         footer {
-            background-color: #000000;
+            background-color: var(--pure-black);
             padding: 4rem 1rem 3rem;
-            border-top: 2px solid var(--primary-gold);
+            border-top: 1px solid var(--border-low);
         }
 
         .footer-layout {
@@ -464,8 +453,8 @@
 
         .footer-heading {
             font-family: 'Cinzel', serif;
-            color: var(--primary-gold);
-            font-size: 1.35rem;
+            color: var(--text-pure);
+            font-size: 1.25rem;
             letter-spacing: 1.5px;
             margin-top: 2rem;
             margin-bottom: 1.25rem;
@@ -474,7 +463,7 @@
 
         .address-text {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.95rem;
             margin-bottom: 1.5rem;
             line-height: 1.7;
         }
@@ -482,38 +471,35 @@
         .phone-link-box {
             display: block;
             background-color: var(--card-charcoal);
-            border: 2px solid rgba(255, 215, 0, 0.15);
-            color: var(--text-light);
+            border: 1px solid var(--border-low);
+            color: var(--text-pure);
             text-decoration: none;
-            padding: 1.1rem;
+            padding: 1rem;
             margin-bottom: 0.85rem;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 1.05rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.95rem;
             width: 100%;
             max-width: 480px;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
         }
 
         .phone-link-box:hover {
-            border-color: var(--primary-gold);
-            background-color: #1B221D;
-            transform: translateX(4px);
+            border-color: var(--premium-gold);
+            background-color: #19201A;
+            transform: translateX(3px);
         }
 
         .hours-info-box {
             display: block;
-            background-color: rgba(255, 215, 0, 0.05);
-            border: 2px solid var(--primary-gold);
-            color: var(--text-light);
+            background-color: rgba(255,255,255,0.02);
+            border: 1px solid var(--border-low);
+            color: var(--text-muted);
             padding: 1.25rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
-            border-radius: 6px;
-            font-size: 1rem;
-            width: 100%;
-            max-width: 480px;
+            border-radius: 4px;
+            font-size: 0.95rem;
             line-height: 1.7;
         }
 
@@ -523,10 +509,10 @@
 
         .form-group label {
             display: block;
-            color: var(--accent-gold);
-            font-weight: 700;
+            color: var(--text-pure);
+            font-weight: 600;
             margin-bottom: 0.5rem;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -535,39 +521,38 @@
             width: 100%;
             max-width: 500px;
             background-color: var(--card-charcoal);
-            border: 2px solid rgba(255, 215, 0, 0.15);
-            color: var(--text-light);
-            padding: 1rem;
+            border: 1px solid var(--border-low);
+            color: var(--text-pure);
+            padding: 0.9rem;
             font-family: 'Montserrat', sans-serif;
             border-radius: 4px;
-            font-size: 0.95rem;
-            transition: border-color 0.3s ease, background-color 0.3s ease;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--primary-gold);
-            background-color: #1A201B;
+            border-color: var(--premium-gold);
         }
 
         .submit-btn {
-            background-color: var(--primary-gold);
-            color: #000000;
+            background-color: transparent;
+            color: var(--premium-gold);
+            border: 1px solid var(--premium-gold);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             padding: 1rem 1.75rem;
-            border: none;
             cursor: pointer;
             border-radius: 4px;
             width: 100%;
             max-width: 350px;
-            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .submit-btn:hover {
-            background-color: var(--text-light);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            background-color: var(--premium-gold);
+            color: var(--pure-black);
             transform: translateY(-2px);
         }
 
@@ -575,242 +560,38 @@
             text-align: center;
             margin-top: 4rem;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             font-size: 0.8rem;
             color: var(--text-muted);
         }
 
-        /* ANIMATIONS KEYFRAMES */
         @keyframes slideDown {
             from { transform: translateY(-100%); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
 
         @keyframes fadeInUp {
-            from { transform: translateY(40px); opacity: 0; }
+            from { transform: translateY(30px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
 
         @keyframes shineLoop {
             0% { left: -150%; }
-            30%, 100% { left: 150%; }
+            25%, 100% { left: 150%; }
         }
 
         @media (min-width: 768px) {
             nav {
                 flex-direction: row;
                 justify-content: space-between;
-                padding: 2rem 5%;
+                padding: 1.75rem 5%;
                 gap: 0;
             }
             .logo-container {
                 align-items: flex-start;
             }
-            .logo { font-size: 2rem; }
-            .logo-regional { font-size: 1rem; }
+            .logo { font-size: 1.85rem; }
             .hero { min-height: 80vh; padding: 6rem 1rem 3rem; }
-            .hero h1 { font-size: 4.5rem; letter-spacing: 6px; }
-            .hero .subtitle { font-size: 1.05rem; }
-            .brand-logo-frame { width: 220px; }
-            .section-title { font-size: 2.75rem; }
-            .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; padding: 0 5%; }
-            .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; padding: 0 5%; }
-            .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
-            .footer-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-            .legacy-badge { font-size: 9.5rem; }
-            footer { padding: 4rem 5% 3rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo-container">
-            <a href="#" class="logo">S.K. KARA</a>
-            <div class="logo-regional">ਐੱਸ. ਕੇ. ਕੜਾ | एस. के. कड़ा</div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#legacy">Legacy</a></li>
-            <li><a href="#collection">Collection</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hero" id="hero">
-        <div class="hero-content">
-            <div class="brand-logo-frame">
-                <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
-            </div>
-            <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
-            <p class="subtitle">Amritsar, Punjab, India</p>
-            <a href="#collection" class="cta-btn">Explore Catalog</a>
-        </div>
-    </div>
-
-    <main>
-
-        <section id="legacy" class="scroll-reveal">
-            <h2 class="section-title">Our Legacy</h2>
-            <div class="legacy-container">
-                <div class="legacy-text">
-                    <h3>Crafted by Hand, Built to Last</h3>
-                    <p>Operating directly out of the historic manufacturing hub of <strong>Amritsar, Punjab</strong>, <strong>S.K. KARA</strong> stands as a benchmark of genuine multi-generational iron craft.</p>
-                    <p>Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, we do not mass-produce generic steel trinkets. We manufacture authentic, heavy iron (Loha) Karas built with high-grade strength, traditional physical weight balance, and a brilliant premium finish.</p>
-                </div>
-                <div class="legacy-image-box">
-                    <div class="legacy-badge">Sk</div>
-                    <div class="legacy-badge-title">Authentic Perfection</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="collection" class="scroll-reveal">
-            <h2 class="section-title">The Masterpieces</h2>
-            <div class="grid">
-                
-                <div class="card">
-                    <div>
-                        <img src="loha-gajra.png.jpeg" alt="Loha Gajra Big" class="card-img-top">
-                        <div class="card-body">
-                            <h3>Loha Gajra Big</h3>
-                            <p style="color:var(--primary-gold); font-weight:700; margin-bottom:0.5rem; letter-spacing:1px; font-size:0.85rem; text-transform:uppercase;">Engraved with Waheguru</p>
-                            <p>Pure Loha, strong & durable. Expertly engraved with premium quality precision, reflecting Sikh heritage and timeless elegance.</p>
-                        </div>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Premium Polished Amritsari Edition</h3>
-                        <p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Sleek & Slim Everyday Fit</h3>
-                        <p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Custom Sizes & Patterns</h3>
-                        <p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory floor to match your precise requirements.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Discuss Sizes via WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="multilingual" class="language-support-box scroll-reveal">
-            <div class="lang-row">
-                <div class="lang-column">
-                    <h3>ਪੰਜਾਬੀ ਸੈਕਸ਼ਨ (Order Help)</h3>
-                    <p>ਜੇਕਰ ਤੁਸੀਂ ਆਰਡਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕੜੇ ਦੇ ਸਾਈਜ਼ ਬਾਰੇ ਕੋਈ ਜਾਣਕਾਰੀ ਲੈਣੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਸਿੱਧਾ ਵਟਸਐਪ (WhatsApp) 'ਤੇ ਮੈਸੇਜ ਭੇਜ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਡੀ ਪੂਰੀ ਸਹਾਇਤਾ ਕਰਾਂਗੇ।</p>
-                </div>
-                <div class="lang-column">
-                    <h3>हिंदी अनुभाग (Order Help)</h3>
-                    <p>यदि आप आर्डर देना चाहते हैं या कड़े के सही साइज के बारे में कोई जानकारी लेना चाहते हैं, तो कृपया व्हाट्सएप बटन पर क्लिक करके हमसे सीधा संपर्क करें।</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer id="contact">
-        <div class="footer-layout">
-            <div class="footer-grid-split">
-                
-                <div>
-                    <h2 class="footer-heading">Email Business Inquiry</h2>
-                    <form method="post" action="mailto:info@skkara.com" enctype="text/plain">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" name="name" id="name" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Mobile Number</label>
-                            <input type="text" name="phone" id="phone" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Requirement Details</label>
-                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Specify required quantities and diameter dimensions..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Submit Form</button>
-                    </form>
-                </div>
-
-                <div>
-                    <h2 class="footer-heading">Office Address</h2>
-                    <p class="address-text">
-                        <strong>S.K. KARA</strong><br>
-                        East Mohan Nagar, Amritsar, Punjab, INDIA.
-                    </p>
-
-                    <h2 class="footer-heading">Call Our Desk</h2>
-                    
-                    <a href="tel:+911832583600" class="phone-link-box">
-                        Landline: +91 183 2583600
-                    </a>
-                    
-                    <a href="tel:+919814056600" class="phone-link-box">
-                        Mobile: +91 98140 56600
-                    </a>
-                    
-                    <a href="tel:+919914415500" class="phone-link-box">
-                        Mobile: +91 99144 15500
-                    </a>
-
-                    <h2 class="footer-heading">Business Hours</h2>
-                    <div class="hours-info-box">
-                        <strong>Days:</strong> Tuesday to Sunday<br>
-                        <strong>Hours:</strong> 9:00 AM – 6:00 PM<br>
-                        <span style="color: #FF4D4D; font-weight: 700; display: block; margin-top: 0.4rem;">Monday: CLOSED (Weekly Off)</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="copyright-bar">
-            <p>&copy; 2026 S.K. KARA Manufacturing Brand. Owner: Mr. Kailash Chander. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const reveals = document.querySelectorAll('.scroll-reveal');
-            
-            // Safety check: if IntersectionObserver is supported, run fluidly
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                        }
-                    });
-                }, { threshold: 0.1 });
-
-                reveals.forEach(el => observer.observe(el));
-            } else {
-                // Fallback: If browser is old, just make everything visible instantly
-                reveals.forEach(el => el.classList.add('visible'));
-            }
-        });
-    </script>
-
-</body>
-</html>
+            .hero h1 { font-size: 3.8rem; letter-spacing: 5px; }
+            .brand-logo-frame { width: 190px; }
+            .section-title {
