@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,6 +53,11 @@
             z-index: 100;
         }
 
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+        }
+
         .logo {
             font-family: 'Cinzel', serif;
             font-size: 1.5rem;
@@ -60,6 +65,15 @@
             letter-spacing: 2px;
             color: var(--primary-gold);
             text-decoration: none;
+            line-height: 1.2;
+        }
+
+        .logo-regional {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            margin-top: 0.2rem;
+            font-weight: 400;
         }
 
         .nav-links {
@@ -88,7 +102,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 7rem 1rem 3rem;
+            padding: 9rem 1rem 3rem;
             background: radial-gradient(circle at center, rgba(4, 26, 8, 0.8) 0%, rgba(3,10,4,1) 85%);
             position: relative;
         }
@@ -259,17 +273,14 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
-        /* Container for inner card spacing */
         .card-body {
             padding: 1.75rem 1.5rem;
         }
 
-        /* Cleaned up image look for high resolution */
+        /* FIX: Adjusted image styling to preserve the true aspect ratio without compression distortion */
         .card-img-top {
             width: 100%;
             height: auto;
-            max-height: 240px;
-            object-fit: cover;
             display: block;
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
@@ -288,7 +299,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Added special container padding around buttons */
         .card-action {
             padding: 0 1.5rem 1.75rem;
         }
@@ -458,6 +468,7 @@
         @media (min-width: 768px) {
             nav { padding: 2rem 5%; }
             .logo { font-size: 1.8rem; }
+            .logo-regional { font-size: 0.85rem; }
             .nav-links a { font-size: 0.85rem; letter-spacing: 2px; }
             .hero h1 { font-size: 4.2rem; letter-spacing: 6px; }
             .hero .subtitle { font-size: 0.95rem; }
@@ -473,7 +484,10 @@
 <body>
 
     <nav>
-        <a href="#" class="logo">S.K. KARA</a>
+        <div class="logo-container">
+            <a href="#" class="logo">S.K. KARA</a>
+            <div class="logo-regional">ਐੱਸ. ਕੇ. ਕੜਾ | एस. के. कड़ा</div>
+        </div>
         <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#legacy">Legacy</a></li>
