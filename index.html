@@ -14,8 +14,8 @@
 
     <style>
         :root {
-            --premium-gold: #D4AF37;       /* Muted Champagne Gold (Elegant, not neon) */
-            --soft-gold: #E6D5B8;          /* Soft Warm Sand Highlight */
+            --premium-gold: #D4AF37;       /* Muted Champagne Gold */
+            --soft-gold: #E6D5B8;          /* Soft Warm Sand Highlighting */
             --deep-black: #0A0D0A;         /* Rich Steel-Tinted Dark Base */
             --pure-black: #000000;         /* Stark Black for clean spacing */
             --card-charcoal: #141A15;      /* Solid, deep slate surface */
@@ -41,6 +41,7 @@
             overflow-x: hidden;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            display: block; /* Force basic block display for stability */
         }
 
         /* Nav Layout */
@@ -56,7 +57,6 @@
             border-bottom: 1px solid var(--border-low);
             gap: 1rem;
             box-shadow: 0 4px 30px rgba(0,0,0,0.7);
-            animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .logo-container {
@@ -141,7 +141,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
 
         .brand-logo-frame {
@@ -226,4 +225,22 @@
         .cta-btn:hover {
             background-color: var(--premium-gold);
             color: var(--pure-black);
-            box-shadow
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 5rem 1rem;
+            background-color: var(--deep-black);
+            display: block; /* Strict rendering fallback safety */
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            text-align: center;
+            letter-spacing: 3px;
+            margin-bottom: 3.5rem;
+            color: var(--text-pure);
+            text-transform: uppercase;
+        }
