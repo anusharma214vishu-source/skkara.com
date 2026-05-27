@@ -248,14 +248,30 @@
 
         .card {
             background-color: var(--card-charcoal);
-            border: 1px solid rgba(255, 255, 255, 0.02);
-            padding: 2rem 1.5rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
             text-align: center;
-            border-radius: 4px;
+            border-radius: 6px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            overflow: hidden;
             min-height: 250px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        /* Container for inner card spacing */
+        .card-body {
+            padding: 1.75rem 1.5rem;
+        }
+
+        /* Cleaned up image look for high resolution */
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            max-height: 240px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
 
         .card h3 {
@@ -272,6 +288,11 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Added special container padding around buttons */
+        .card-action {
+            padding: 0 1.5rem 1.75rem;
+        }
+
         .whatsapp-btn {
             display: block;
             background-color: #25D366;
@@ -284,6 +305,12 @@
             letter-spacing: 1px;
             border-radius: 4px;
             text-align: center;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
         }
 
         .language-support-box {
@@ -436,7 +463,7 @@
             .hero .subtitle { font-size: 0.95rem; }
             .section-title { font-size: 2.5rem; }
             .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; }
-            .grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; }
+            .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
             .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
             .footer-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
             .legacy-badge { font-size: 8.5rem; }
@@ -489,36 +516,46 @@
                 
                 <div class="card">
                     <div>
-                        <img src="loha-gajra.png.jpeg" alt="Loha Gajra Big" style="width:100%; height:auto; border-radius:4px; margin-bottom:1rem; border:1px solid rgba(212,175,55,0.2);">
-                        <h3>Loha Gajra Big</h3>
-                        <p style="color:#D4AF37; font-weight:600; margin-bottom:0.5rem; letter-spacing:1px; font-size:0.8rem; text-transform:uppercase;">Engraved with Waheguru</p>
-                        <p>Pure Loha, strong & durable. Expertly engraved with premium quality precision, reflecting Sikh heritage and timeless elegance.</p>
+                        <img src="loha-gajra.png.jpeg" alt="Loha Gajra Big" class="card-img-top">
+                        <div class="card-body">
+                            <h3>Loha Gajra Big</h3>
+                            <p style="color:#D4AF37; font-weight:600; margin-bottom:0.5rem; letter-spacing:1px; font-size:0.8rem; text-transform:uppercase;">Engraved with Waheguru</p>
+                            <p>Pure Loha, strong & durable. Expertly engraved with premium quality precision, reflecting Sikh heritage and timeless elegance.</p>
+                        </div>
                     </div>
-                    <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
+                    <div class="card-action">
+                        <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
+                    </div>
                 </div>
                 
                 <div class="card">
-                    <div>
+                    <div class="card-body">
                         <h3>Premium Polished Amritsari Edition</h3>
                         <p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
                     </div>
-                    <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
+                    <div class="card-action">
+                        <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <div>
+                    <div class="card-body">
                         <h3>Sleek & Slim Everyday Fit</h3>
                         <p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
                     </div>
-                    <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
+                    <div class="card-action">
+                        <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <div>
+                    <div class="card-body">
                         <h3>Custom Sizes & Patterns</h3>
                         <p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory floor to match your precise requirements.</p>
                     </div>
-                    <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Discuss Sizes via WhatsApp</a>
+                    <div class="card-action">
+                        <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Discuss Sizes via WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </section>
