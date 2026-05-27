@@ -10,18 +10,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Monsieur+La Douise&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --premium-gold: #D4AF37;       /* Elegant Muted Champagne Gold */
-            --soft-gold: #E6D5B8;          /* Soft Warm Highlight */
-            --deep-black: #0A0D0A;         /* Rich Dark Steel Base */
-            --pure-black: #000000;         /* Stark Black */
-            --card-charcoal: #141A15;      /* Solid Deep Slate Surface */
-            --text-pure: #FFFFFF;          /* Crisp White */
-            --text-muted: #94A3B8;         /* Subdued Slate Grey */
-            --border-low: rgba(212, 175, 55, 0.15); /* Subtle Metallic Border */
+            --luxury-gold: #DFBA6B;         /* Bright Champagne Gold Accent */
+            --rich-bronze: #B39243;         /* Deep Warm Gold for Borders */
+            --velvet-midnight: #151B16;    /* Premium Rich Deep Charcoal instead of plain black */
+            --soft-cream: #FAF7F0;          /* Warm Ivory Cream for headings */
+            --text-readable: #E2E8F0;       /* Bright, clean text for body reading */
+            --card-bg: #222A23;             /* Lighter, richer green-tinted charcoal for cards */
+            --pure-black: #0B0E0B;          /* Deep base accents */
+            --border-glow: rgba(223, 186, 107, 0.25); /* Elegant gold framing */
         }
 
         * {
@@ -36,11 +36,22 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--deep-black);
-            color: var(--text-pure);
+            background-color: var(--velvet-midnight);
+            color: var(--text-readable);
             overflow-x: hidden;
             line-height: 1.6;
-            display: block !important; /* Force browser rendering */
+            display: block !important;
+        }
+
+        /* Beautiful Cursive Class */
+        .cursive-text {
+            font-family: 'Monsieur La Douise', cursive;
+            font-size: 3rem;
+            color: var(--luxury-gold);
+            text-transform: none !important;
+            letter-spacing: 0 !important;
+            display: block;
+            margin-bottom: -0.5rem;
         }
 
         /* Navigation Bar */
@@ -52,7 +63,7 @@
             padding: 1.5rem 5%;
             background: var(--pure-black);
             width: 100%;
-            border-bottom: 1px solid var(--border-low);
+            border-bottom: 2px solid var(--rich-bronze);
             gap: 1rem;
         }
 
@@ -64,19 +75,19 @@
 
         .logo {
             font-family: 'Cinzel', serif;
-            font-size: 1.75rem;
+            font-size: 2rem;
             font-weight: 700;
-            letter-spacing: 3px;
-            color: var(--text-pure);
+            letter-spacing: 4px;
+            color: var(--soft-cream);
             text-decoration: none;
         }
 
         .logo-regional {
-            font-size: 0.85rem;
-            color: var(--premium-gold);
+            font-size: 0.9rem;
+            color: var(--luxury-gold);
             letter-spacing: 1px;
             margin-top: 0.3rem;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .nav-links {
@@ -84,33 +95,33 @@
             flex-wrap: wrap;
             justify-content: center;
             list-style: none;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .nav-links a {
-            color: var(--text-muted);
+            color: var(--text-readable);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             letter-spacing: 1.5px;
             font-weight: 700;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--text-pure);
+            color: var(--luxury-gold);
         }
 
-        /* Hero Banner */
+        /* Hero Banner - Balanced Brightness */
         .hero {
-            min-height: 75vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 4rem 1rem;
-            background: radial-gradient(circle at center, #111812 0%, var(--pure-black) 100%);
-            border-bottom: 1px solid var(--border-low);
+            padding: 5rem 1rem;
+            background: radial-gradient(circle at center, #29362B 0%, var(--pure-black) 100%);
+            border-bottom: 1px solid var(--border-glow);
         }
 
         .hero-content {
@@ -120,13 +131,14 @@
 
         .brand-logo-frame {
             margin-bottom: 2rem;
-            width: 150px;
+            width: 160px;
             margin-left: auto;
             margin-right: auto;
-            border: 1px solid var(--border-low);
+            border: 2px solid var(--luxury-gold);
             padding: 0.5rem;
             background: var(--pure-black);
-            border-radius: 4px;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(223, 186, 107, 0.15);
         }
 
         .brand-logo-frame img {
@@ -137,72 +149,74 @@
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 2.2rem;
-            font-weight: 600;
-            letter-spacing: 3px;
-            line-height: 1.4;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            line-height: 1.3;
             margin-bottom: 1.5rem;
-            color: var(--text-pure);
+            color: var(--soft-cream);
         }
 
         .hero h1 span {
-            color: var(--premium-gold);
+            color: var(--luxury-gold);
             display: block;
-            font-weight: 700;
+            font-weight: 900;
             margin-top: 0.5rem;
         }
 
         .hero .subtitle {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            letter-spacing: 2px;
+            font-size: 1rem;
+            color: var(--luxury-gold);
+            letter-spacing: 3px;
             margin-bottom: 2.5rem;
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .cta-btn {
             display: inline-block;
-            padding: 0.9rem 2.25rem;
-            border: 1px solid var(--premium-gold);
-            color: var(--premium-gold);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 700;
             letter-spacing: 2px;
             border-radius: 4px;
+            background: rgba(223, 186, 107, 0.05);
             transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
-            background-color: var(--premium-gold);
+            background-color: var(--luxury-gold);
             color: var(--pure-black);
+            box-shadow: 0 5px 20px rgba(223, 186, 107, 0.4);
         }
 
         /* Core Content Sections */
         section {
-            padding: 5rem 1rem;
-            background-color: var(--deep-black);
-            display: block !important; /* Force visible block state */
+            padding: 6rem 1rem;
+            background-color: var(--velvet-midnight);
+            display: block !important;
         }
 
         .section-title {
             font-family: 'Cinzel', serif;
-            font-size: 2rem;
+            font-size: 2.25rem;
             text-align: center;
             letter-spacing: 3px;
-            margin-bottom: 3.5rem;
-            color: var(--text-pure);
+            color: var(--soft-cream);
             text-transform: uppercase;
+            margin-bottom: 4rem;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 50px;
-            height: 1px;
-            background-color: var(--premium-gold);
+            width: 80px;
+            height: 2px;
+            background-color: var(--luxury-gold);
             margin: 0.8rem auto 0;
         }
 
@@ -210,247 +224,259 @@
         .legacy-container {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2.5rem;
+            gap: 3rem;
             max-width: 1100px;
             margin: 0 auto;
         }
 
         .legacy-text h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.35rem;
-            color: var(--text-pure);
-            margin-bottom: 1.25rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--soft-cream);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
         }
 
         .legacy-text p {
-            color: var(--text-muted);
-            margin-bottom: 1.25rem;
-            font-size: 0.95rem;
+            color: var(--text-readable);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
         }
 
         .legacy-image-box {
-            border: 1px solid var(--border-low);
-            padding: 3rem 1rem;
-            background: var(--card-charcoal);
+            border: 2px solid var(--border-glow);
+            padding: 4rem 1rem;
+            background: var(--card-bg);
             text-align: center;
-            border-radius: 6px;
-        }
-
-        .legacy-badge {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 6rem;
-            color: rgba(212, 175, 55, 0.08);
-            line-height: 1;
-            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .legacy-badge-title {
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 600;
+            letter-spacing: 4px;
+            font-size: 1rem;
+            color: var(--luxury-gold);
+            font-weight: 700;
         }
 
         /* Cards and Product Grid */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 2.5rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .card {
-            background-color: var(--card-charcoal);
-            border: 1px solid var(--border-low);
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-glow);
             text-align: center;
-            border-radius: 6px;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             overflow: hidden;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--luxury-gold);
         }
 
         .card-body {
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 1.75rem;
         }
 
         .card-img-top {
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 1px solid var(--border-low);
+            border-bottom: 2px solid var(--border-glow);
         }
 
         .card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.25rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
             margin-bottom: 0.85rem;
-            color: var(--text-pure);
+            color: var(--soft-cream);
+            font-weight: 700;
         }
 
         .card-accent {
-            color: var(--premium-gold);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            color: var(--luxury-gold);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             letter-spacing: 1px;
         }
 
         .card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            color: var(--text-readable);
+            font-size: 0.95rem;
         }
 
         .card-action {
-            padding: 0 1.5rem 2rem;
+            padding: 0 1.75rem 2.5rem;
         }
 
         .whatsapp-btn {
             display: block;
-            background-color: #1E291B;
-            border: 1px solid rgba(255,255,255,0.15);
-            color: var(--text-pure);
+            background-color: #243321;
+            border: 1px solid var(--luxury-gold);
+            color: var(--luxury-gold);
             text-decoration: none;
-            padding: 0.85rem;
-            font-weight: 600;
-            font-size: 0.85rem;
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 4px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .whatsapp-btn:hover {
             background-color: #25D366;
+            color: white;
+            border-color: #25D366;
         }
 
         /* Language Block */
         .language-support-box {
             background-color: var(--pure-black);
-            border: 1px solid var(--border-low);
-            padding: 2.5rem 1.75rem;
+            border: 2px solid var(--rich-bronze);
+            padding: 3rem 2rem;
             max-width: 1200px;
-            margin: 3rem auto 1rem;
-            border-radius: 6px;
-        }
-
-        .lang-row {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
+            margin: 4rem auto 1rem;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
         }
 
         .lang-column h3 {
             font-family: 'Cinzel', serif;
-            color: var(--premium-gold);
-            margin-bottom: 0.75rem;
-            font-size: 1.15rem;
+            color: var(--luxury-gold);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
         }
 
         .lang-column p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            color: var(--text-readable);
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* Footer Element Styles */
         footer {
             background-color: var(--pure-black);
-            padding: 4rem 1rem 3rem;
-            border-top: 1px solid var(--border-low);
+            padding: 5rem 1rem 3rem;
+            border-top: 2px solid var(--rich-bronze);
             display: block !important;
         }
 
         .footer-heading {
             font-family: 'Cinzel', serif;
-            color: var(--text-pure);
-            font-size: 1.25rem;
+            color: var(--soft-cream);
+            font-size: 1.4rem;
             letter-spacing: 1.5px;
             margin-top: 2rem;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
         }
 
         .address-text {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
+            color: var(--text-readable);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
         }
 
         .phone-link-box {
             display: block;
-            background-color: var(--card-charcoal);
-            border: 1px solid var(--border-low);
-            color: var(--text-pure);
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-glow);
+            color: var(--soft-cream);
             text-decoration: none;
-            padding: 1rem;
-            margin-bottom: 0.85rem;
+            padding: 1.1rem;
+            margin-bottom: 1rem;
             border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .phone-link-box:hover {
+            border-color: var(--luxury-gold);
+            background: var(--velvet-midnight);
         }
 
         .hours-info-box {
-            background-color: rgba(255,255,255,0.02);
-            border: 1px solid var(--border-low);
-            color: var(--text-muted);
-            padding: 1.25rem;
+            background-color: rgba(255,255,255,0.04);
+            border: 1px solid var(--border-glow);
+            color: var(--text-readable);
+            padding: 1.5rem;
             border-radius: 4px;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
         }
 
         .form-group label {
             display: block;
-            color: var(--text-pure);
-            font-weight: 600;
+            color: var(--luxury-gold);
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
         }
 
         .form-control {
             width: 100%;
-            background-color: var(--card-charcoal);
-            border: 1px solid var(--border-low);
-            color: var(--text-pure);
-            padding: 0.9rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-glow);
+            color: var(--soft-cream);
+            padding: 1rem;
             font-family: 'Montserrat', sans-serif;
             border-radius: 4px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--luxury-gold);
         }
 
         .submit-btn {
             background-color: transparent;
-            color: var(--premium-gold);
-            border: 1px solid var(--premium-gold);
+            color: var(--luxury-gold);
+            border: 2px solid var(--luxury-gold);
             font-weight: 700;
             text-transform: uppercase;
-            padding: 1rem 1.75rem;
+            padding: 1.1rem 2rem;
             cursor: pointer;
             border-radius: 4px;
             width: 100%;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
             transition: all 0.3s ease;
         }
 
         .submit-btn:hover {
-            background-color: var(--premium-gold);
+            background-color: var(--luxury-gold);
             color: var(--pure-black);
         }
 
         .copyright-bar {
             text-align: center;
-            margin-top: 4rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.8rem;
-            color: var(--text-muted);
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.85rem;
+            color: var(--text-readable);
         }
 
         /* Responsive Breakpoints for Tablets & Desktops */
@@ -462,15 +488,15 @@
                 gap: 0;
             }
             .logo-container { align-items: flex-start; }
-            .hero { min-height: 80vh; }
-            .hero h1 { font-size: 3.8rem; letter-spacing: 5px; }
+            .hero { min-height: 85vh; }
+            .hero h1 { font-size: 4.2rem; letter-spacing: 6px; }
             .brand-logo-frame { width: 190px; }
-            .section-title { font-size: 2.5rem; }
+            .section-title { font-size: 2.75rem; }
             .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; padding: 0 5%; }
-            .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 0 5%; gap: 2.5rem; }
-            .lang-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 0 5%; gap: 3rem; }
+            .lang-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
             .footer-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-            footer { padding: 4rem 5% 3rem; }
+            footer { padding: 5rem 5% 3rem; }
         }
     </style>
 </head>
@@ -494,6 +520,7 @@
             <div class="brand-logo-frame">
                 <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
             </div>
+            <span class="cursive-text">Handcrafted Elegance</span>
             <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
             <p class="subtitle">Amritsar, Punjab, India</p>
             <a href="#collection" class="cta-btn">Explore Catalog</a>
@@ -503,7 +530,8 @@
     <main>
 
         <section id="legacy">
-            <h2 class="section-title">Our Legacy</h2>
+            <span class="cursive-text" style="text-align: center; margin-bottom: 0.5rem;">Our Story</span>
+            <h2 class="section-title" style="margin-top: 0;">Our Legacy</h2>
             <div class="legacy-container">
                 <div class="legacy-text">
                     <h3>Crafted by Hand, Built to Last</h3>
@@ -511,14 +539,15 @@
                     <p>Under the visionary guidance of our owner, <strong>Mr. Kailash Chander</strong>, we do not mass-produce generic steel trinkets. We manufacture authentic, heavy iron (Loha) Karas built with high-grade strength, traditional physical weight balance, and a brilliant premium finish.</p>
                 </div>
                 <div class="legacy-image-box">
-                    <div class="legacy-badge">Sk</div>
-                    <div class="legacy-badge-title">Authentic Perfection</div>
+                    <span class="cursive-text" style="font-size: 5rem; line-height: 1;">Authentic</span>
+                    <div class="legacy-badge-title" style="margin-top: 1rem;">Perfection Since Generations</div>
                 </div>
             </div>
         </section>
 
         <section id="collection">
-            <h2 class="section-title">The Masterpieces</h2>
+            <span class="cursive-text" style="text-align: center; margin-bottom: 0.5rem;">The Premium Range</span>
+            <h2 class="section-title" style="margin-top: 0;">The Masterpieces</h2>
             <div class="grid">
                 
                 <div class="card">
@@ -538,6 +567,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h3>Premium Polished Amritsari Edition</h3>
+                        <p class="card-accent">High Gloss Finish</p>
                         <p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
                     </div>
                     <div class="card-action">
@@ -548,6 +578,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h3>Sleek & Slim Everyday Fit</h3>
+                        <p class="card-accent">Minimalist Design</p>
                         <p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
                     </div>
                     <div class="card-action">
@@ -558,6 +589,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h3>Custom Sizes & Patterns</h3>
+                        <p class="card-accent">Bespoke Manufacturing</p>
                         <p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory floor to match your precise requirements.</p>
                     </div>
                     <div class="card-action">
