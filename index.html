@@ -15,12 +15,12 @@
 
     <style>
         :root {
-            /* 1. EXCLUSIVE Home/Hero Palette (Dark Luxury) */
+            /* EXCLUSIVE Home/Hero Palette (Dark Luxury) */
             --forest-dark: #0D1F16;          /* Deep Forest Green Base */
             --luxury-gold: #DFBA6B;         /* Bright Imperial Gold */
             --pure-black: #060A07;          /* Pitch Dark Accent */
             
-            /* 2. Body Sections Palette (Clean & Bright Premium) */
+            /* Body Sections Palette (Clean & Bright Premium) */
             --clean-white: #FFFFFF;         /* Crisp Background */
             --steel-silver: #EEF4F8;        /* Light Premium Silver-Blue */
             --navy-premium: #0B2545;        /* Deep Navy for Sharp Typography */
@@ -29,8 +29,8 @@
             --text-light: #64748B;          /* Muted Secondary Text */
             --border-clean: #D1DCE5;        /* Crisp Division Lines */
 
-            /* 3. Footer Palette (Fresh Premium Slate) */
-            --charcoal-slate: #1E252B;      /* Brand New Premium Dark Gray Base */
+            /* Footer Palette (Fresh Premium Slate) */
+            --charcoal-slate: #1E252B;      /* Premium Dark Gray Base */
             --charcoal-card: #283139;       /* Lighter Slate for Forms/Boxes */
             --soft-white: #E2E8F0;          /* Soft Text for Dark Footer */
         }
@@ -51,21 +51,19 @@
             color: var(--text-dark);
             overflow-x: hidden;
             line-height: 1.6;
-            display: block !important;
         }
 
-        /* PREMIUM SCROLL ANIMATION CLASS */
-        .reveal-on-scroll {
+        /* --- ADVANCED ANIMATION TIMINGS & UTILITIES --- */
+        .reveal-section {
             opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform, opacity;
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .reveal-section.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Top Interactive Announcement Banner */
@@ -80,11 +78,12 @@
             text-transform: uppercase;
             border-bottom: 2px solid var(--luxury-gold);
             cursor: pointer;
-            transition: background 0.2s ease;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         .launch-banner:hover {
-            background-color: #142F22;
+            background-color: var(--luxury-gold);
+            color: var(--pure-black);
         }
 
         /* Connected Signature Cursive Style */
@@ -110,7 +109,7 @@
             text-align: center;
         }
 
-        /* Top Navigation - Clean & Prestigious */
+        /* Top Navigation Bar */
         nav {
             display: flex;
             flex-direction: column;
@@ -121,6 +120,10 @@
             width: 100%;
             border-bottom: 3px solid var(--navy-premium);
             gap: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
         .logo-container {
@@ -162,13 +165,29 @@
             letter-spacing: 1.5px;
             font-weight: 700;
             transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--navy-premium);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .nav-links a:hover {
             color: var(--navy-premium);
         }
 
-        /* HERO HOME SECTION: Luxurious dark style with Forest Green & Gold */
+        /* HERO HOME SECTION: Luxurious Dark Theme */
         .hero {
             min-height: 80vh;
             display: flex;
@@ -179,12 +198,22 @@
             background: radial-gradient(circle at center, var(--forest-dark) 0%, var(--pure-black) 100%);
             border-bottom: 5px solid var(--luxury-gold);
             color: var(--clean-white);
+            position: relative;
         }
 
         .hero-content {
             width: 100%;
             max-width: 850px;
-            animation: fadeInUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        @keyframes heroFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .brand-logo-frame {
@@ -197,11 +226,11 @@
             background: var(--pure-black);
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .brand-logo-frame:hover {
-            transform: scale(1.05) rotate(2deg);
+            transform: scale(1.08) rotate(3deg);
         }
 
         .brand-logo-frame img {
@@ -248,21 +277,20 @@
             font-weight: 700;
             letter-spacing: 2px;
             border-radius: 4px;
-            background: rgba(223, 186, 107, 0.08);
-            transition: all 0.3s ease;
+            background: rgba(223, 186, 107, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .cta-btn:hover {
             background-color: var(--luxury-gold);
             color: var(--pure-black);
-            box-shadow: 0 8px 25px rgba(223, 186, 107, 0.4);
-            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(223, 186, 107, 0.5);
+            transform: translateY(-3px);
         }
 
-        /* Main Content Sections */
+        /* Main Content Sections Layout */
         section {
             padding: 6rem 1rem;
-            display: block !important;
         }
 
         #legacy {
@@ -295,13 +323,14 @@
             margin: 0.6rem auto 0;
         }
 
-        /* Legacy Grid Content Layout */
+        /* Legacy Layout Structure */
         .legacy-container {
             display: grid;
             grid-template-columns: 1fr;
             gap: 3rem;
             max-width: 1100px;
             margin: 0 auto;
+            align-items: center;
         }
 
         .legacy-text h3 {
@@ -318,39 +347,57 @@
             font-size: 1.05rem;
         }
 
-        /* Golden Temple Emblem Box Styles */
+        /* PREMIUM GOLDEN TEMPLE BOX WITH PULSING GLOW */
         .legacy-image-box {
-            border: 2px solid var(--border-clean);
-            padding: 3rem 1rem;
             background: radial-gradient(circle at center, #11281c 0%, var(--forest-dark) 100%);
             border: 2px solid var(--luxury-gold);
+            padding: 4rem 2rem;
             text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 15px 35px rgba(13, 31, 22, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(13, 31, 22, 0.2);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .legacy-image-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(223, 186, 107, 0.25);
         }
 
         .harmandir-silhouette {
-            width: 140px;
+            width: 160px;
             height: auto;
-            fill: var(--luxury-gold);
-            filter: drop-shadow(0 0 8px rgba(223, 186, 107, 0.3));
+            fill: none;
+            stroke: var(--luxury-gold);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 10px rgba(223, 186, 107, 0.5));
+            transition: filter 0.4s ease;
+        }
+
+        .legacy-image-box:hover .harmandir-silhouette {
+            filter: drop-shadow(0 0 18px rgba(223, 186, 107, 0.8));
         }
 
         .legacy-badge-title {
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.95rem;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
             color: var(--luxury-gold);
             font-weight: 700;
-            margin-top: 0.5rem;
+            border-top: 1px solid rgba(223, 186, 107, 0.3);
+            padding-top: 1rem;
+            width: 60%;
         }
 
-        /* Product Catalog Cards Grid */
+        /* Product Grid and Luxury Hover Cards */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -368,13 +415,15 @@
             flex-direction: column;
             justify-content: space-between;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                        box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                        border-color 0.4s ease;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 38px rgba(11, 37, 69, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 45px rgba(11, 37, 69, 0.12), 0 0 15px rgba(223, 186, 107, 0.2);
             border-color: var(--luxury-gold);
         }
 
@@ -387,11 +436,11 @@
             height: auto;
             display: block;
             border-bottom: 1px solid var(--border-clean);
-            transition: transform 0.5s ease;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .card:hover .card-img-top {
-            transform: scale(1.03);
+            transform: scale(1.04);
         }
 
         .card h3 {
@@ -437,10 +486,11 @@
         .whatsapp-btn:hover {
             background-color: #25D366;
             color: white;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transform: translateY(-1px);
         }
 
-        /* Upgraded Instagram Section */
+        /* Instagram Social Section */
         .instagram-section {
             background-color: var(--steel-silver);
             text-align: center;
@@ -461,21 +511,20 @@
             border-radius: 30px;
             margin-top: 1.5rem;
             box-shadow: 0 8px 20px rgba(221, 42, 123, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .insta-btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: 0 12px 25px rgba(221, 42, 123, 0.5);
         }
 
-        /* Language Assistance Bar */
+        /* Dual-Language Support Box Layout */
         .language-support-box {
             background-color: var(--clean-white);
             border-top: 2px solid var(--border-clean);
             border-bottom: 2px solid var(--border-clean);
             padding: 4rem 2rem;
-            color: var(--text-dark);
         }
 
         .lang-container-box {
@@ -503,13 +552,12 @@
             line-height: 1.7;
         }
 
-        /* Charcoal Slate Premium Footer Section */
+        /* Slate Dark Premium Footer Area */
         footer {
             background-color: var(--charcoal-slate);
             color: var(--soft-white);
             padding: 5rem 1rem 3rem;
             border-top: 4px solid var(--luxury-gold);
-            display: block !important;
         }
 
         .footer-heading {
@@ -547,6 +595,7 @@
         .phone-link-box:hover {
             background-color: var(--charcoal-slate);
             border-color: var(--luxury-gold);
+            color: var(--luxury-gold);
         }
 
         .hours-info-box {
@@ -595,11 +644,13 @@
             width: 100%;
             font-size: 0.95rem;
             letter-spacing: 1px;
-            transition: opacity 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .submit-btn:hover {
-            opacity: 0.9;
+            background-color: var(--clean-white);
+            color: var(--charcoal-slate);
+            box-shadow: 0 5px 15px rgba(223, 186, 107, 0.4);
         }
 
         .copyright-bar {
@@ -611,7 +662,7 @@
             color: rgba(255, 255, 255, 0.5);
         }
 
-        /* Desktop Adjustments */
+        /* --- DESKTOP VIEW LAWS (RESPONSIVE) --- */
         @media (min-width: 768px) {
             nav {
                 flex-direction: row;
@@ -620,11 +671,11 @@
                 gap: 0;
             }
             .logo-container { align-items: flex-start; }
-            .hero { min-height: 80vh; }
+            .hero { min-height: 85vh; }
             .hero h1 { font-size: 4rem; letter-spacing: 5px; }
             .brand-logo-frame { width: 180px; }
             .section-title { font-size: 2.5rem; }
-            .legacy-container { grid-template-columns: 1fr 1fr; gap: 4rem; padding: 0 5%; }
+            .legacy-container { grid-template-columns: 1.2fr 0.8fr; gap: 4rem; padding: 0 5%; }
             .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 0 5%; gap: 3rem; }
             .lang-row { grid-template-columns: 1fr 1fr; gap: 4rem; }
             .footer-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
@@ -634,8 +685,8 @@
 </head>
 <body>
 
-    <!-- Launch copy link announcement line -->
-    <div class="launch-banner" onclick="navigator.clipboard.writeText(window.location.href); alert('Website link copied! Share it on your Instagram Story 🙌');">
+    <!-- Clickable Interactive Banner Line -->
+    <div class="launch-banner" onclick="navigator.clipboard.writeText(window.location.href); alert('Website link copied successfully! Post it on your Instagram Story 🙌');">
         🎉 Official Digital Launch — Click here to copy & share website link! 🎉
     </div>
 
@@ -646,16 +697,16 @@
         </div>
         <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#legacy">Legacy</a></li>
+            <li><a href="#legacy">Our Legacy</a></li>
             <li><a href="#collection">Collection</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact Desk</a></li>
         </ul>
     </nav>
 
     <div class="hero" id="hero">
         <div class="hero-content">
             <div class="brand-logo-frame">
-                <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Emblem">
+                <img src="images/logo.jpg.webp" alt="S.K. KARA Premium Legacy Emblem">
             </div>
             <span class="cjp-cursive">Handcrafted Elegance</span>
             <h1>FORGED WITH STRENGTH<span>CRAFTED WITH DEVOTION</span></h1>
@@ -666,7 +717,8 @@
 
     <main>
 
-        <section id="legacy" class="reveal-on-scroll">
+        <!-- Legacy Section with Scroll Effect & Vector Graphic -->
+        <section id="legacy" class="reveal-section">
             <h2 class="section-title">Our Legacy</h2>
             <div class="legacy-container">
                 <div class="legacy-text">
@@ -675,25 +727,26 @@
                     <p>Under the visionary guidance of <strong>Prop. Kailash Chander</strong> and our factory elders, we do not mass-produce generic steel trinkets. We manufacture authentic, heavy iron (Loha) Karas built with high-grade strength, traditional physical weight balance, and a brilliant premium finish.</p>
                 </div>
                 
-                <!-- UPGRADED LUXURY EMBLEM BOX WITH GOLDEN TEMPLE SILHOUETTE -->
+                <!-- Centerpiece Golden Temple Graphic Silhouette -->
                 <div class="legacy-image-box">
                     <svg class="harmandir-silhouette" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 50 L90 50 L85 45 L15 45 Z M18 45 L18 35 L25 35 L25 45 Z M28 45 L28 32 L38 32 L38 45 Z M41 45 L41 25 L59 25 L59 45 Z M62 45 L62 32 L72 32 L72 45 Z M75 45 L75 35 L82 35 L82 45 Z M43 25 C43 15, 57 15, 57 25 Z M47 16 L53 16 L50 10 Z M50 10 L50 4" stroke="#DFBA6B" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M10 50 L90 50 L85 45 L15 45 Z M18 45 L18 35 L25 35 L25 45 Z M28 45 L28 32 L38 32 L38 45 Z M41 45 L41 25 L59 25 L59 45 Z M62 45 L62 32 L72 32 L72 45 Z M75 45 L75 35 L82 35 L82 45 Z M43 25 C43 15, 57 15, 57 25 Z M47 16 L53 16 L50 10 Z M50 10 L50 4" stroke-width="1.5"/>
                     </svg>
                     <span style="font-family: 'Great Vibes', cursive; color: var(--luxury-gold); font-size: 2.8rem; display: block; margin-top: 0.5rem;">Amritsar Heritage</span>
-                    <div class="legacy-badge-title">Since Generations</div>
+                    <div class="legacy-badge-title">Established Legacy</div>
                 </div>
             </div>
         </section>
 
-        <section id="collection" class="reveal-on-scroll">
+        <!-- Catalog Collection with Dynamic Animations -->
+        <section id="collection" class="reveal-section">
             <span class="cjp-cursive-dark">The Premium Range</span>
             <h2 class="section-title" style="margin-top: 0;">The Masterpieces</h2>
             <div class="grid">
                 
                 <div class="card">
                     <div>
-                        <img src="loha-gajra.png.jpeg" alt="Loha Gajra" class="card-img-top">
+                        <img src="loha-gajra.png.jpeg" alt="Loha Gajra Handcrafted" class="card-img-top">
                         <div class="card-body">
                             <h3>Loha Gajra</h3>
                             <p class="card-accent">Engraved with Waheguru</p>
@@ -746,14 +799,15 @@
             </div>
         </section>
 
-        <!-- Dynamic Instagram Engagement section -->
-        <section class="instagram-section reveal-on-scroll">
+        <!-- Instagram Community Connection Section -->
+        <section class="instagram-section reveal-section">
             <h2 class="section-title">Join Our Community</h2>
             <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: var(--text-light);">Follow our workshop production stories, luxury photography drops, and official updates directly on our grid.</p>
             <a href="https://instagram.com/" target="_blank" class="insta-btn">Follow @S.K.KARA on Instagram</a>
         </section>
 
-        <section id="multilingual" class="language-support-box reveal-on-scroll">
+        <!-- Dual Language Punjabi/Hindi Box -->
+        <section id="multilingual" class="language-support-box reveal-section">
             <div class="lang-container-box">
                 <div class="lang-row">
                     <div class="lang-column">
@@ -770,6 +824,7 @@
 
     </main>
 
+    <!-- Professional Slate Contact Footer Section -->
     <footer id="contact">
         <div class="footer-layout">
             <div class="footer-grid-split">
@@ -796,23 +851,15 @@
                 <div>
                     <h2 class="footer-heading">Office Address</h2>
                     <p class="address-text">
-                        <strong>S.K. <span style="font-size: 1.25em; font-weight:900;">E</span>NTERPRISES (S.K. KARA)</strong><br>
+                        <strong>S.K. ENTERPRISES (S.K. KARA)</strong><br>
                         East Mohan Nagar, Amritsar, Punjab, INDIA.
                     </p>
 
                     <h2 class="footer-heading">Call Our Desk</h2>
                     
-                    <a href="tel:01832586600" class="phone-link-box">
-                        Landline: 0183-258-6600
-                    </a>
-                    
-                    <a href="tel:+919814056600" class="phone-link-box">
-                        Mobile: +91 98140 56600
-                    </a>
-                    
-                    <a href="tel:+919914415500" class="phone-link-box">
-                        Mobile: +91 99144 15500
-                    </a>
+                    <a href="tel:01832586600" class="phone-link-box">Landline: 0183-258-6600</a>
+                    <a href="tel:+919814056600" class="phone-link-box">Mobile: +91 98140 56600</a>
+                    <a href="tel:+919914415500" class="phone-link-box">Mobile: +91 99144 15500</a>
 
                     <h2 class="footer-heading">Business Hours</h2>
                     <div class="hours-info-box">
@@ -830,25 +877,24 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE SCROLL ANIMATION ENGINE -->
+    <!-- INTERACTIVE HIGH-END INTERSECTION OBSERVER SCRIPT -->
     <script>
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.1
+            threshold: 0.12
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Animates once for premium feel
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal-on-scroll').forEach(section => {
-            section.style.animationPlayState = 'paused';
+        document.querySelectorAll('.reveal-section').forEach(section => {
             observer.observe(section);
         });
     </script>
