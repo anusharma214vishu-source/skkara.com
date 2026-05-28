@@ -8,20 +8,28 @@
     <meta name="description" content="S.K. KARA is a multi-generational premium Loha Kara manufacturer based in Amritsar, Punjab. Crafting authentic, heavy iron Karas with an elite finish." />
     <meta name="keywords" content="Loha Kara manufacturer, Amritsar Kara factory, premium iron kara, heavy loha kara online, buy kara Amritsar, traditional sikh kara, S.K. Kara Amritsar" />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;600;700&family=Alex+Brush&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --iron-dark: #1E2522;           /* Bright, Rich Slate Steel Background */
-            --clean-white: #FFFFFF;         /* Stark White for Maximum Crisp Contrast */
-            --navy-premium: #0B2545;        /* Deep Imperial Navy for Strong Text & Buttons */
-            --sky-accent: #134074;          /* Secondary Accent Blue */
-            --steel-silver: #EEF4F8;       /* Light Silver-Blue for Section Backgrounds */
-            --text-dark: #1D2A44;           /* Dark Navy-Grey for Perfect Text Readability */
-            --text-light: #64748B;          /* Muted Slate for Secondary Text */
-            --border-clean: #D1DCE5;        /* Light Crisp Borders */
+            /* Luxury Home Palette */
+            --forest-dark: #0D1F16;          /* Deep Forest Green Base */
+            --luxury-gold: #DFBA6B;         /* Bright Imperial Gold */
+            --pure-black: #060A07;          /* Pitch Dark Accent */
+            
+            /* Clean Corporate Palette for Body */
+            --clean-white: #FFFFFF;         /* Stark White for High Contrast Content */
+            --steel-silver: #EEF4F8;        /* Light Premium Silver-Blue */
+            --navy-premium: #0B2545;        /* Deep Navy Blue for Sharp Typography */
+            --sky-accent: #134074;          /* Secondary Contrast Accent Blue */
+            
+            /* General Text Colors */
+            --text-dark: #1D2A44;           /* High Readability Slate */
+            --text-light: #64748B;          /* Muted Secondary Text */
+            --border-clean: #D1DCE5;        /* Crisp Division Lines */
         }
 
         * {
@@ -36,18 +44,18 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--iron-dark);
-            color: var(--clean-white);
+            background-color: var(--clean-white);
+            color: var(--text-dark);
             overflow-x: hidden;
             line-height: 1.6;
             display: block !important;
         }
 
-        /* Sharp, Formal Connected Cursive Font (CJP Style) */
+        /* Connected Signature Cursive Style (CJP Inspired) */
         .cjp-cursive {
             font-family: 'Great Vibes', cursive;
-            font-size: 3.2rem;
-            color: var(--clean-white);
+            font-size: 3.5rem;
+            color: var(--luxury-gold);
             text-transform: none !important;
             font-weight: 400;
             letter-spacing: 0px !important;
@@ -66,7 +74,7 @@
             text-align: center;
         }
 
-        /* Navigation Bar */
+        /* Top Header - Kept Clean & Prestigious */
         nav {
             display: flex;
             flex-direction: column;
@@ -124,16 +132,17 @@
             color: var(--navy-premium);
         }
 
-        /* Hero Banner - High Contrast & Polished */
+        /* Hero Home Section: EXCLUSIVE Forest Green, Dark Steel, & Imperial Gold Theme */
         .hero {
-            min-height: 75vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 5rem 1rem;
-            background: linear-gradient(135deg, #132219 0%, #2D3A32 100%);
-            border-bottom: 4px solid var(--navy-premium);
+            padding: 6rem 1rem;
+            background: radial-gradient(circle at center, var(--forest-dark) 0%, var(--pure-black) 100%);
+            border-bottom: 5px solid var(--luxury-gold);
+            color: var(--clean-white);
         }
 
         .hero-content {
@@ -146,11 +155,11 @@
             width: 150px;
             margin-left: auto;
             margin-right: auto;
-            border: 3px solid var(--clean-white);
+            border: 3px solid var(--luxury-gold);
             padding: 0.4rem;
-            background: var(--clean-white);
+            background: var(--pure-black);
             border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .brand-logo-frame img {
@@ -161,7 +170,7 @@
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             font-weight: 900;
             letter-spacing: 3px;
             line-height: 1.3;
@@ -170,46 +179,44 @@
         }
 
         .hero h1 span {
-            color: var(--clean-white);
+            color: var(--luxury-gold);
             display: block;
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 700;
             margin-top: 0.5rem;
-            opacity: 0.9;
         }
 
         .hero .subtitle {
             font-size: 1rem;
-            color: var(--clean-white);
+            color: var(--luxury-gold);
             letter-spacing: 4px;
             margin-bottom: 2.5rem;
             text-transform: uppercase;
             font-weight: 700;
-            opacity: 0.8;
         }
 
         .cta-btn {
             display: inline-block;
             padding: 1rem 2.5rem;
-            border: 2px solid var(--clean-white);
-            color: var(--clean-white);
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.85rem;
             font-weight: 700;
             letter-spacing: 2px;
             border-radius: 4px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(223, 186, 107, 0.08);
             transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
-            background-color: var(--clean-white);
-            color: var(--navy-premium);
-            box-shadow: 0 8px 25px rgba(255,255,255,0.25);
+            background-color: var(--luxury-gold);
+            color: var(--pure-black);
+            box-shadow: 0 8px 25px rgba(223, 186, 107, 0.4);
         }
 
-        /* Main Content Styling */
+        /* Core Dynamic Content Sections */
         section {
             padding: 6rem 1rem;
             display: block !important;
@@ -245,7 +252,7 @@
             margin: 0.6rem auto 0;
         }
 
-        /* Legacy Layout Box */
+        /* Legacy Content Setup */
         .legacy-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -286,7 +293,7 @@
             margin-top: 0.5rem;
         }
 
-        /* Product Cards Grid */
+        /* Premium Showcase Product Grid */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -370,7 +377,7 @@
             color: white;
         }
 
-        /* Language Block Box */
+        /* Language Block Setup */
         .language-support-box {
             background-color: var(--steel-silver);
             border-top: 2px solid var(--border-clean);
@@ -404,7 +411,7 @@
             line-height: 1.7;
         }
 
-        /* Footer and Corporate Form Styling */
+        /* Corporate Form & Dark Premium Footer Layout */
         footer {
             background-color: var(--navy-premium);
             color: var(--clean-white);
@@ -509,7 +516,7 @@
             color: rgba(255,255,255,0.7);
         }
 
-        /* Desktop Layout Responsive Design */
+        /* Desktop Layout Adaptations */
         @media (min-width: 768px) {
             nav {
                 flex-direction: row;
@@ -518,7 +525,7 @@
                 gap: 0;
             }
             .logo-container { align-items: flex-start; }
-            .hero { min-height: 80vh; }
+            .hero { min-height: 85vh; }
             .hero h1 { font-size: 4rem; letter-spacing: 5px; }
             .brand-logo-frame { width: 180px; }
             .section-title { font-size: 2.5rem; }
@@ -545,6 +552,7 @@
         </ul>
     </nav>
 
+    <!-- Home Hero Section with Custom Forest Green & Gold Palette -->
     <div class="hero" id="hero">
         <div class="hero-content">
             <div class="brand-logo-frame">
@@ -560,8 +568,7 @@
     <main>
 
         <section id="legacy">
-            <span class="cjp-cursive-dark">Our Story</span>
-            <h2 class="section-title" style="margin-top: 0;">Our Legacy</h2>
+            <h2 class="section-title">Our Legacy</h2>
             <div class="legacy-container">
                 <div class="legacy-text">
                     <h3>Crafted by Hand, Built to Last</h3>
