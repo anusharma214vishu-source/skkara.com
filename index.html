@@ -54,6 +54,20 @@
             display: block !important;
         }
 
+        /* PREMIUM SCROLL ANIMATION CLASS */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Top Interactive Announcement Banner */
         .launch-banner {
             background-color: var(--forest-dark);
@@ -73,7 +87,7 @@
             background-color: #142F22;
         }
 
-        /* Connected Signature Cursive Style (CJP Inspired) */
+        /* Connected Signature Cursive Style */
         .cjp-cursive {
             font-family: 'Great Vibes', cursive;
             font-size: 3.5rem;
@@ -170,6 +184,7 @@
         .hero-content {
             width: 100%;
             max-width: 850px;
+            animation: fadeInUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         }
 
         .brand-logo-frame {
@@ -182,6 +197,11 @@
             background: var(--pure-black);
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo-frame:hover {
+            transform: scale(1.05) rotate(2deg);
         }
 
         .brand-logo-frame img {
@@ -236,6 +256,7 @@
             background-color: var(--luxury-gold);
             color: var(--pure-black);
             box-shadow: 0 8px 25px rgba(223, 186, 107, 0.4);
+            transform: translateY(-2px);
         }
 
         /* Main Content Sections */
@@ -297,20 +318,34 @@
             font-size: 1.05rem;
         }
 
+        /* Golden Temple Emblem Box Styles */
         .legacy-image-box {
             border: 2px solid var(--border-clean);
-            padding: 4.5rem 1rem;
-            background: var(--clean-white);
+            padding: 3rem 1rem;
+            background: radial-gradient(circle at center, #11281c 0%, var(--forest-dark) 100%);
+            border: 2px solid var(--luxury-gold);
             text-align: center;
             border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 35px rgba(13, 31, 22, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .harmandir-silhouette {
+            width: 140px;
+            height: auto;
+            fill: var(--luxury-gold);
+            filter: drop-shadow(0 0 8px rgba(223, 186, 107, 0.3));
         }
 
         .legacy-badge-title {
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 0.95rem;
-            color: var(--text-light);
+            color: var(--luxury-gold);
             font-weight: 700;
             margin-top: 0.5rem;
         }
@@ -334,13 +369,13 @@
             justify-content: space-between;
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-            border-color: var(--navy-premium);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 38px rgba(11, 37, 69, 0.15);
+            border-color: var(--luxury-gold);
         }
 
         .card-body {
@@ -352,6 +387,11 @@
             height: auto;
             display: block;
             border-bottom: 1px solid var(--border-clean);
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.03);
         }
 
         .card h3 {
@@ -391,7 +431,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 4px;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .whatsapp-btn:hover {
@@ -626,7 +666,7 @@
 
     <main>
 
-        <section id="legacy">
+        <section id="legacy" class="reveal-on-scroll">
             <h2 class="section-title">Our Legacy</h2>
             <div class="legacy-container">
                 <div class="legacy-text">
@@ -634,14 +674,19 @@
                     <p>Operating directly out of the historic manufacturing hub of <strong>Amritsar, Punjab</strong>, <strong>S.K. KARA</strong> stands as a benchmark of genuine multi-generational iron craft.</p>
                     <p>Under the visionary guidance of <strong>Prop. Kailash Chander</strong> and our factory elders, we do not mass-produce generic steel trinkets. We manufacture authentic, heavy iron (Loha) Karas built with high-grade strength, traditional physical weight balance, and a brilliant premium finish.</p>
                 </div>
+                
+                <!-- UPGRADED LUXURY EMBLEM BOX WITH GOLDEN TEMPLE SILHOUETTE -->
                 <div class="legacy-image-box">
-                    <span class="cjp-cursive-dark" style="font-size: 4.5rem; line-height: 1;">Authentic Perfection</span>
+                    <svg class="harmandir-silhouette" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 50 L90 50 L85 45 L15 45 Z M18 45 L18 35 L25 35 L25 45 Z M28 45 L28 32 L38 32 L38 45 Z M41 45 L41 25 L59 25 L59 45 Z M62 45 L62 32 L72 32 L72 45 Z M75 45 L75 35 L82 35 L82 45 Z M43 25 C43 15, 57 15, 57 25 Z M47 16 L53 16 L50 10 Z M50 10 L50 4" stroke="#DFBA6B" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span style="font-family: 'Great Vibes', cursive; color: var(--luxury-gold); font-size: 2.8rem; display: block; margin-top: 0.5rem;">Amritsar Heritage</span>
                     <div class="legacy-badge-title">Since Generations</div>
                 </div>
             </div>
         </section>
 
-        <section id="collection">
+        <section id="collection" class="reveal-on-scroll">
             <span class="cjp-cursive-dark">The Premium Range</span>
             <h2 class="section-title" style="margin-top: 0;">The Masterpieces</h2>
             <div class="grid">
@@ -661,10 +706,12 @@
                 </div>
                 
                 <div class="card">
-                    <div class="card-body">
-                        <h3>Premium Polished Amritsari Edition</h3>
-                        <p class="card-accent">High Gloss Finish</p>
-                        <p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
+                    <div>
+                        <div class="card-body">
+                            <h3>Premium Polished Amritsari Edition</h3>
+                            <p class="card-accent">High Gloss Finish</p>
+                            <p>Finished to a high gloss shine, this premium iron selection perfectly combines a majestic visual appeal with robust weight.</p>
+                        </div>
                     </div>
                     <div class="card-action">
                         <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
@@ -672,10 +719,12 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-body">
-                        <h3>Sleek & Slim Everyday Fit</h3>
-                        <p class="card-accent">Minimalist Design</p>
-                        <p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
+                    <div>
+                        <div class="card-body">
+                            <h3>Sleek & Slim Everyday Fit</h3>
+                            <p class="card-accent">Minimalist Design</p>
+                            <p>A minimalist, lightweight design structured cleanly for comfortable, everyday professional wear without altering classic proportions.</p>
+                        </div>
                     </div>
                     <div class="card-action">
                         <a href="https://wa.me/9814056600" target="_blank" class="whatsapp-btn">Order Style via WhatsApp</a>
@@ -683,10 +732,12 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-body">
-                        <h3>Custom Sizes & Patterns</h3>
-                        <p class="card-accent">Bespoke Manufacturing</p>
-                        <p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory floor to match your precise requirements.</p>
+                    <div>
+                        <div class="card-body">
+                            <h3>Custom Sizes & Patterns</h3>
+                            <p class="card-accent">Bespoke Manufacturing</p>
+                            <p>We craft tailored inner-diameter sizes and custom physical specifications directly at our factory floor to match your precise requirements.</p>
+                        </div>
                     </div>
                     <div class="card-action">
                         <a href="https://wa.me/9914415500" target="_blank" class="whatsapp-btn">Discuss Sizes via WhatsApp</a>
@@ -696,13 +747,13 @@
         </section>
 
         <!-- Dynamic Instagram Engagement section -->
-        <section class="instagram-section">
+        <section class="instagram-section reveal-on-scroll">
             <h2 class="section-title">Join Our Community</h2>
             <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: var(--text-light);">Follow our workshop production stories, luxury photography drops, and official updates directly on our grid.</p>
             <a href="https://instagram.com/" target="_blank" class="insta-btn">Follow @S.K.KARA on Instagram</a>
         </section>
 
-        <section id="multilingual" class="language-support-box">
+        <section id="multilingual" class="language-support-box reveal-on-scroll">
             <div class="lang-container-box">
                 <div class="lang-row">
                     <div class="lang-column">
@@ -778,6 +829,29 @@
             <p>&copy; 2026 S.K. KARA Manufacturing Co. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- INTERACTIVE SCROLL ANIMATION ENGINE -->
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(section => {
+            section.style.animationPlayState = 'paused';
+            observer.observe(section);
+        });
+    </script>
 
 </body>
 </html>
