@@ -15,17 +15,24 @@
 
     <style>
         :root {
-            /* Ultimate Luxury Dark / Gold Theme */
-            --forest-base: #0A120D;          /* Deepest Forest Night */
-            --forest-card: #121A15;          /* Premium Jade/Forest Accent for Cards */
-            --velvet-black: #050706;         /* Solid Polished Black Backgrounds */
-            --imperial-gold: #DFBA6B;        /* High-End Polished Metallic Gold */
-            --muted-gold: #A68B4C;           /* Subtle Border Gold */
+            /* 1. EXCLUSIVE Home/Hero Palette (Dark Luxury) */
+            --forest-dark: #0D1F16;          /* Deep Forest Green Base */
+            --luxury-gold: #DFBA6B;         /* Bright Imperial Gold */
+            --pure-black: #060A07;          /* Pitch Dark Accent */
             
-            /* High-Contrast Typography colors */
-            --ivory-cream: #F4F7F5;          /* Crisp Warm White for reading text */
-            --soft-gray: #94A3B8;            /* Smooth Slate for captions */
-            --alert-red: #FF6B6B;            /* Elegant soft red for closed day */
+            /* 2. Body Sections Palette (Clean & Bright Premium) */
+            --clean-white: #FFFFFF;         /* Crisp Background */
+            --steel-silver: #EEF4F8;        /* Light Premium Silver-Blue */
+            --navy-premium: #0B2545;        /* Deep Navy for Sharp Typography */
+            --sky-accent: #134074;          /* Secondary Contrast Accent Blue */
+            --text-dark: #1D2A44;           /* High Readability Slate */
+            --text-light: #64748B;          /* Muted Secondary Text */
+            --border-clean: #D1DCE5;        /* Crisp Division Lines */
+
+            /* 3. NEW Footer Palette (Fresh Premium Slate) */
+            --charcoal-slate: #1E252B;      /* Brand New Premium Dark Gray Base */
+            --charcoal-card: #283139;       /* Lighter Slate for Forms/Boxes */
+            --soft-white: #E2E8F0;          /* Soft Text for Dark Footer */
         }
 
         * {
@@ -40,18 +47,18 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--forest-base);
-            color: var(--ivory-cream);
+            background-color: var(--clean-white);
+            color: var(--text-dark);
             overflow-x: hidden;
             line-height: 1.6;
             display: block !important;
         }
 
-        /* Connected CJP-Style Elegant Cursive Font */
+        /* Connected Signature Cursive Style (CJP Inspired) */
         .cjp-cursive {
             font-family: 'Great Vibes', cursive;
             font-size: 3.5rem;
-            color: var(--imperial-gold);
+            color: var(--luxury-gold);
             text-transform: none !important;
             font-weight: 400;
             letter-spacing: 0px !important;
@@ -62,7 +69,7 @@
         .cjp-cursive-dark {
             font-family: 'Alex Brush', cursive;
             font-size: 3.5rem;
-            color: var(--imperial-gold);
+            color: var(--sky-accent);
             text-transform: none !important;
             font-weight: 400;
             display: block;
@@ -70,16 +77,16 @@
             text-align: center;
         }
 
-        /* Navigation Bar - Upgraded to Dark Luxury */
+        /* Top Navigation - Clean & Prestigious */
         nav {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 1.5rem 5%;
-            background: var(--velvet-black);
+            background: var(--clean-white);
             width: 100%;
-            border-bottom: 2px solid var(--imperial-gold);
+            border-bottom: 3px solid var(--navy-premium);
             gap: 1rem;
         }
 
@@ -91,18 +98,18 @@
 
         .logo {
             font-family: 'Cinzel', serif;
-            font-size: 2.1rem;
+            font-size: 2rem;
             font-weight: 900;
-            letter-spacing: 4px;
-            color: var(--ivory-cream);
+            letter-spacing: 3px;
+            color: var(--navy-premium);
             text-decoration: none;
         }
 
         .logo-regional {
             font-size: 0.9rem;
-            color: var(--imperial-gold);
-            letter-spacing: 2px;
-            margin-top: 0.3rem;
+            color: var(--sky-accent);
+            letter-spacing: 1px;
+            margin-top: 0.2rem;
             font-weight: 700;
         }
 
@@ -115,20 +122,20 @@
         }
 
         .nav-links a {
-            color: var(--ivory-cream);
+            color: var(--text-light);
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.85rem;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             font-weight: 700;
             transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: var(--imperial-gold);
+            color: var(--navy-premium);
         }
 
-        /* Home Hero Section */
+        /* HERO HOME SECTION: Keep it stunningly dark with Forest Green & Gold */
         .hero {
             min-height: 85vh;
             display: flex;
@@ -136,8 +143,9 @@
             justify-content: center;
             text-align: center;
             padding: 6rem 1rem;
-            background: radial-gradient(circle at center, #111D16 0%, var(--velvet-black) 100%);
-            border-bottom: 3px solid var(--imperial-gold);
+            background: radial-gradient(circle at center, var(--forest-dark) 0%, var(--pure-black) 100%);
+            border-bottom: 5px solid var(--luxury-gold);
+            color: var(--clean-white);
         }
 
         .hero-content {
@@ -147,14 +155,14 @@
 
         .brand-logo-frame {
             margin-bottom: 1.5rem;
-            width: 155px;
+            width: 150px;
             margin-left: auto;
             margin-right: auto;
-            border: 2px solid var(--imperial-gold);
+            border: 3px solid var(--luxury-gold);
             padding: 0.4rem;
-            background: var(--velvet-black);
+            background: var(--pure-black);
             border-radius: 8px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .brand-logo-frame img {
@@ -170,11 +178,11 @@
             letter-spacing: 3px;
             line-height: 1.3;
             margin-bottom: 1.5rem;
-            color: var(--ivory-cream);
+            color: var(--clean-white);
         }
 
         .hero h1 span {
-            color: var(--imperial-gold);
+            color: var(--luxury-gold);
             display: block;
             font-size: 1.9rem;
             font-weight: 700;
@@ -183,7 +191,7 @@
 
         .hero .subtitle {
             font-size: 1rem;
-            color: var(--imperial-gold);
+            color: var(--luxury-gold);
             letter-spacing: 4px;
             margin-bottom: 2.5rem;
             text-transform: uppercase;
@@ -193,45 +201,46 @@
         .cta-btn {
             display: inline-block;
             padding: 1rem 2.5rem;
-            border: 2px solid var(--imperial-gold);
-            color: var(--imperial-gold);
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.85rem;
             font-weight: 700;
             letter-spacing: 2px;
             border-radius: 4px;
-            background: rgba(223, 186, 107, 0.05);
+            background: rgba(223, 186, 107, 0.08);
             transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
-            background-color: var(--imperial-gold);
-            color: var(--velvet-black);
+            background-color: var(--luxury-gold);
+            color: var(--pure-black);
             box-shadow: 0 8px 25px rgba(223, 186, 107, 0.4);
         }
 
-        /* Seamless Dark Content Blocks */
+        /* Main Content Sections (Returned to Bright, Professional Clean Theme) */
         section {
-            padding: 6.5rem 1rem;
+            padding: 6rem 1rem;
             display: block !important;
         }
 
         #legacy {
-            background: linear-gradient(180deg, var(--forest-base) 0%, var(--velvet-black) 100%);
-            border-bottom: 1px solid rgba(223, 186, 107, 0.1);
+            background-color: var(--steel-silver);
+            color: var(--text-dark);
         }
 
         #collection {
-            background: linear-gradient(180deg, var(--velvet-black) 0%, var(--forest-base) 100%);
+            background-color: var(--clean-white);
+            color: var(--text-dark);
         }
 
         .section-title {
             font-family: 'Cinzel', serif;
-            font-size: 2.3rem;
+            font-size: 2.25rem;
             text-align: center;
-            letter-spacing: 3px;
-            color: var(--ivory-cream);
+            letter-spacing: 2px;
+            color: var(--navy-premium);
             text-transform: uppercase;
             margin-bottom: 4rem;
             font-weight: 900;
@@ -241,12 +250,12 @@
             content: '';
             display: block;
             width: 70px;
-            height: 2px;
-            background-color: var(--imperial-gold);
-            margin: 0.7rem auto 0;
+            height: 3px;
+            background-color: var(--navy-premium);
+            margin: 0.6rem auto 0;
         }
 
-        /* Legacy Block Styling */
+        /* Legacy Grid Content Layout */
         .legacy-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -258,39 +267,36 @@
         .legacy-text h3 {
             font-family: 'Cinzel', serif;
             font-size: 1.6rem;
-            color: var(--imperial-gold);
+            color: var(--navy-premium);
             margin-bottom: 1.25rem;
             font-weight: 700;
-            letter-spacing: 1px;
         }
 
         .legacy-text p {
-            color: var(--ivory-cream);
+            color: var(--text-dark);
             margin-bottom: 1.5rem;
             font-size: 1.05rem;
-            opacity: 0.95;
         }
 
         .legacy-image-box {
-            border: 2px solid var(--muted-gold);
+            border: 2px solid var(--border-clean);
             padding: 4.5rem 1rem;
-            background: var(--forest-card);
+            background: var(--clean-white);
             text-align: center;
             border-radius: 8px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
         .legacy-badge-title {
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 0.95rem;
-            color: var(--ivory-cream);
+            color: var(--text-light);
             font-weight: 700;
             margin-top: 0.5rem;
-            opacity: 0.8;
         }
 
-        /* Luxury Product Grid Setup */
+        /* Product Catalog Cards Grid */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -300,22 +306,22 @@
         }
 
         .card {
-            background-color: var(--forest-card);
-            border: 1px solid rgba(223, 186, 107, 0.2);
+            background-color: var(--steel-silver);
+            border: 1px solid var(--border-clean);
             text-align: center;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             overflow: hidden;
-            box-shadow: 0 10px 28px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--imperial-gold);
-            box-shadow: 0 15px 35px rgba(223, 186, 107, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            border-color: var(--navy-premium);
         }
 
         .card-body {
@@ -326,31 +332,29 @@
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 2px solid rgba(223, 186, 107, 0.2);
+            border-bottom: 1px solid var(--border-clean);
         }
 
         .card h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.45rem;
+            font-size: 1.4rem;
             margin-bottom: 0.85rem;
-            color: var(--ivory-cream);
+            color: var(--navy-premium);
             font-weight: 700;
-            letter-spacing: 1px;
         }
 
         .card-accent {
-            color: var(--imperial-gold);
+            color: var(--sky-accent);
             font-weight: 700;
             margin-bottom: 0.75rem;
             text-transform: uppercase;
             font-size: 0.85rem;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
         }
 
         .card p {
-            color: var(--ivory-cream);
+            color: var(--text-dark);
             font-size: 0.95rem;
-            opacity: 0.9;
         }
 
         .card-action {
@@ -359,31 +363,30 @@
 
         .whatsapp-btn {
             display: block;
-            background-color: transparent;
-            border: 2px solid var(--imperial-gold);
-            color: var(--imperial-gold);
+            background-color: var(--navy-premium);
+            color: var(--clean-white);
             text-decoration: none;
             padding: 1rem;
             font-weight: 700;
             font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             border-radius: 4px;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease;
         }
 
         .whatsapp-btn:hover {
             background-color: #25D366;
             color: white;
-            border-color: #25D366;
         }
 
-        /* Multilingual Help Section */
+        /* Language Assistance Bar */
         .language-support-box {
-            background-color: var(--velvet-black);
-            border-top: 1px solid rgba(223, 186, 107, 0.2);
-            border-bottom: 1px solid rgba(223, 186, 107, 0.2);
-            padding: 4.5rem 2rem;
+            background-color: var(--steel-silver);
+            border-top: 2px solid var(--border-clean);
+            border-bottom: 2px solid var(--border-clean);
+            padding: 4rem 2rem;
+            color: var(--text-dark);
         }
 
         .lang-container-box {
@@ -399,31 +402,30 @@
 
         .lang-column h3 {
             font-family: 'Cinzel', serif;
-            color: var(--imperial-gold);
+            color: var(--navy-premium);
             margin-bottom: 1rem;
             font-size: 1.3rem;
             font-weight: 700;
         }
 
         .lang-column p {
-            color: var(--ivory-cream);
+            color: var(--text-dark);
             font-size: 1rem;
             line-height: 1.7;
-            opacity: 0.85;
         }
 
-        /* Deep Elegant Contact/Footer Form Layout */
+        /* NEW NEW NEW: Fresh Charcoal Slate Premium Footer Section */
         footer {
-            background-color: var(--velvet-black);
-            color: var(--ivory-cream);
+            background-color: var(--charcoal-slate);
+            color: var(--soft-white);
             padding: 5rem 1rem 3rem;
-            border-top: 2px solid var(--imperial-gold);
+            border-top: 4px solid var(--luxury-gold);
             display: block !important;
         }
 
         .footer-heading {
             font-family: 'Cinzel', serif;
-            color: var(--imperial-gold);
+            color: var(--luxury-gold);
             font-size: 1.4rem;
             letter-spacing: 1.5px;
             margin-top: 2rem;
@@ -433,7 +435,7 @@
         }
 
         .address-text {
-            color: var(--ivory-cream);
+            color: var(--soft-white);
             font-size: 1.05rem;
             margin-bottom: 2rem;
             opacity: 0.9;
@@ -441,9 +443,9 @@
 
         .phone-link-box {
             display: block;
-            background-color: var(--forest-card);
-            border: 1px solid rgba(223, 186, 107, 0.2);
-            color: var(--ivory-cream);
+            background-color: var(--charcoal-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--clean-white);
             text-decoration: none;
             padding: 1.1rem;
             margin-bottom: 1rem;
@@ -454,14 +456,14 @@
         }
 
         .phone-link-box:hover {
-            border-color: var(--imperial-gold);
-            background-color: rgba(223, 186, 107, 0.05);
+            background-color: var(--charcoal-slate);
+            border-color: var(--luxury-gold);
         }
 
         .hours-info-box {
-            background-color: var(--forest-base);
-            border: 1px solid rgba(223, 186, 107, 0.15);
-            color: var(--ivory-cream);
+            background-color: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--soft-white);
             padding: 1.5rem;
             border-radius: 4px;
             font-size: 1rem;
@@ -473,7 +475,7 @@
 
         .form-group label {
             display: block;
-            color: var(--imperial-gold);
+            color: var(--luxury-gold);
             font-weight: 700;
             margin-bottom: 0.5rem;
             font-size: 0.8rem;
@@ -483,24 +485,19 @@
 
         .form-control {
             width: 100%;
-            background-color: var(--forest-card);
-            border: 1px solid rgba(223, 186, 107, 0.2);
-            color: var(--ivory-cream);
+            background-color: var(--clean-white);
+            border: 1px solid var(--border-clean);
+            color: var(--text-dark);
             padding: 1rem;
             font-family: 'Montserrat', sans-serif;
             border-radius: 4px;
             font-size: 0.95rem;
         }
 
-        .form-control:focus {
-            outline: none;
-            border-color: var(--imperial-gold);
-        }
-
         .submit-btn {
-            background-color: transparent;
-            color: var(--imperial-gold);
-            border: 2px solid var(--imperial-gold);
+            background-color: var(--luxury-gold);
+            color: var(--charcoal-slate);
+            border: none;
             font-weight: 700;
             text-transform: uppercase;
             padding: 1.1rem 2rem;
@@ -508,27 +505,25 @@
             border-radius: 4px;
             width: 100%;
             font-size: 0.95rem;
-            letter-spacing: 1.5px;
-            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            transition: opacity 0.2s ease;
         }
 
         .submit-btn:hover {
-            background-color: var(--imperial-gold);
-            color: var(--velvet-black);
+            opacity: 0.9;
         }
 
-        /* Dynamic Authority Corporate Copyright Line (Fixing File 44db61f2-b30b-40df-b829-2e8f180f7690) */
+        /* Fixed Authority Copyright Line (Updated from file 44db61f2-b30b-40df-b829-2e8f180f7690) */
         .copyright-bar {
             text-align: center;
             margin-top: 5rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(223, 186, 107, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.85rem;
-            color: var(--soft-gray);
-            letter-spacing: 0.5px;
+            color: rgba(255, 255, 255, 0.5);
         }
 
-        /* Responsive Layout Overrides */
+        /* Desktop Adjustments */
         @media (min-width: 768px) {
             nav {
                 flex-direction: row;
@@ -564,6 +559,7 @@
         </ul>
     </nav>
 
+    <!-- Home section remains unique with luxurious dark style -->
     <div class="hero" id="hero">
         <div class="hero-content">
             <div class="brand-logo-frame">
@@ -664,6 +660,7 @@
 
     </main>
 
+    <!-- Upgraded Modern Charcoal Slate Footer -->
     <footer id="contact">
         <div class="footer-layout">
             <div class="footer-grid-split">
@@ -712,16 +709,16 @@
                     <div class="hours-info-box">
                         <strong>Days:</strong> Tuesday to Sunday<br>
                         <strong>Hours:</strong> 9:00 AM – 6:00 PM<br>
-                        <span style="color: var(--alert-red); font-weight: 600; display: block; margin-top: 0.4rem;">Monday: CLOSED (Weekly Off)</span>
+                        <span style="color: #FF8A8A; font-weight: 600; display: block; margin-top: 0.4rem;">Monday: CLOSED (Weekly Off)</span>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- Enhanced Authority Copyright Line (Updated from file 44db61f2-b30b-40df-b829-2e8f180f7690) -->
+        <!-- Clean, authentic corporate copyright line -->
         <div class="copyright-bar">
-            <p>&copy; 2026 S.K. KARA Manufacturing Co. Established Legacy in Amritsar, Punjab. All Rights Reserved.</p>
+            <p>&copy; 2026 S.K. KARA Manufacturing Co. All Rights Reserved.</p>
         </div>
     </footer>
 
