@@ -901,32 +901,16 @@
             </div>
         </div>
 
-        <div class="copyright-bar">
-            <p>&copy; 2026 S.K. KARA Manufacturing Co. All Rights Reserved.</p>
+      <footer>
+        <div class="footer-content">
+            <p>© <span id="current-year"></span> S.K. KARA. All Rights Reserved.</p>
+            <p class="gstin-text">GSTIN: 03XXXXX1234X1Z2</p> <!-- Replace with your actual GSTIN -->
         </div>
     </footer>
 
-    <!-- INTERACTIVE HIGH-END INTERSECTION OBSERVER SCRIPT -->
+    <!-- This tiny script makes sure the year updates itself automatically every Jan 1st -->
     <script>
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.12
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // Animates once for premium feel
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal-section').forEach(section => {
-            observer.observe(section);
-        });
+        document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
-
 </body>
 </html>
