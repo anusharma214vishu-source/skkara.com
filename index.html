@@ -893,14 +893,16 @@
                         <strong>Days:</strong> Tuesday to Sunday<br>
                         <strong>Hours:</strong> 9:00 AM – 6:00 PM<br>
                         <span style="color: #FF8A8A; font-weight: 600; display: block; margin-top: 0.4rem;">Monday: CLOSED (Weekly Off)</span>
+                        
                     </div>
                 </div>
-
+<p style="text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 1rem;"><strong>GSTIN:</strong> 03AAAAA0000A1Z5</p>
+                
             </div>
         </div>
 
         <div class="copyright-bar">
-            <p>&copy; 2026 S.K. KARA Manufacturing Co. All Rights Reserved.</p>
+            <p>&copy; <span id="current-year"></span> S.K. KARA. All rights reserved.</p>
         </div>
     </footer>
 
@@ -924,7 +926,9 @@
         document.querySelectorAll('.reveal-section').forEach(section => {
             observer.observe(section);
         });
-    </script>
+<script>
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
