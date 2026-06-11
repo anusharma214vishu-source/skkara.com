@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.K. KARA | Premium Handcrafted Karas</title>
-    <!-- Google Fonts -->
+    <title>S.K. KARA | Premium Handcrafted Sikh Karas from Amritsar</title>
+    
+    <meta name="description" content="Discover the official digital catalog of S.K. KARA (S.K. Enterprises). Explore our premium, handcrafted luxury iron and steel Karas made with multi-generational legacy precision in Amritsar.">
+    <meta name="description" content="Discover the official digital catalog of S.K. KARA (S.K. Enterprises). Explore our premium, handcrafted luxury iron and steel Karas made with multi-generational legacy precision in Amritsar.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;600;700&family=Alex+Brush&family=Great+Vibes&display=swap" rel="stylesheet">
+
     <style>
-        /* --- CSS STYLING --- */
         :root {
-            --gold: #D4AF37;
-            --dark-gold: #AA7C11;
-            --light-gold: #F3E5AB;
-            --bg-dark: #0A0A0A;
-            --bg-light: #F9F9F9;
-            --text-dark: #1A1A1A;
-            --text-light: #E0E0E0;
-            --white: #FFFFFF;
+            /* EXCLUSIVE Home/Hero Palette (Dark Luxury) */
+            --forest-dark: #0D1F16;          /* Deep Forest Green Base */
+            --luxury-gold: #DFBA6B;         /* Bright Imperial Gold */
+            --pure-black: #060A07;          /* Pitch Dark Accent */
+            
+            /* Body Sections Palette (Clean & Bright Premium) */
+            --clean-white: #FFFFFF;         /* Crisp Background */
+            --steel-silver: #EEF4F8;        /* Light Premium Silver-Blue */
+            --navy-premium: #0B2545;        /* Deep Navy for Sharp Typography */
+            --sky-accent: #134074;          /* Secondary Contrast Accent Blue */
+            --text-dark: #1D2A44;           /* High Readability Slate */
+            --text-light: #64748B;          /* Muted Secondary Text */
+            --border-clean: #D1DCE5;        /* Crisp Division Lines */
+
+            /* Footer Palette (Fresh Premium Slate) */
+            --charcoal-slate: #1E252B;      /* Premium Dark Gray Base */
+            --charcoal-card: #283139;       /* Lighter Slate for Forms/Boxes */
+            --soft-white: #E2E8F0;          /* Soft Text for Dark Footer */
         }
 
         * {
@@ -30,329 +40,24 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-light);
+            background-color: var(--clean-white);
             color: var(--text-dark);
-            line-height: 1.6;
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        h1, h2, h3, .brand-name {
-            font-family: 'Cinzel', serif;
-            letter-spacing: 2px;
-        }
-
-        /* --- HERO SECTION (Luxury Theme) --- */
-        .hero {
-            position: relative;
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('images/hero-bg.jpg') no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-            padding: 20px;
-        }
-
-        .hero-logo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 2px solid var(--gold);
-            margin-bottom: 25px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-            transition: transform 0.5s ease;
-        }
-
-        .hero-logo:hover {
-            transform: scale(1.05);
-        }
-
-        .hero-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--gold);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 30px;
-            font-weight: 300;
-            letter-spacing: 1px;
-            color: var(--text-light);
-        }
-
-        .cta-btn {
-            display: inline-block;
-            padding: 12px 35px;
-            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
-            color: var(--bg-dark);
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 30px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-            background: linear-gradient(135deg, var(--light-gold), var(--gold));
-        }
-
-        /* --- MANIFESTO SECTION --- */
-        .manifesto {
-            padding: 80px 20px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .manifesto h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .manifesto h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background-color: var(--gold);
-        }
-
-        .manifesto p {
-            font-size: 1.1rem;
-            color: #555;
-            font-style: italic;
-            line-height: 1.8;
-        }
-
-        /* --- CATALOGUE SECTION (Clean/Readable Theme) --- */
-        .catalogue {
-            padding: 60px 20px 80px;
-            background-color: #F0F0F0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background-color: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .card-img {
-            height: 250px;
-            background-color: #ddd;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .card:hover .card-img img {
-            transform: scale(1.05);
-        }
-
-        .card-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--text-dark);
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .order-btn {
-            display: block;
-            text-align: center;
-            padding: 10px 20px;
-            background-color: var(--bg-dark);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .order-btn:hover {
-            background-color: var(--gold);
-            color: var(--bg-dark);
-        }
-
-        /* --- FOOTER / CONTACT SECTION --- */
-        footer {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            padding: 60px 20px 30px;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            border-bottom: 1px solid #222;
-            padding-bottom: 40px;
-        }
-
-        .footer-about h3, .footer-contact h3 {
-            color: var(--gold);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .footer-about p {
-            font-size: 0.95rem;
-            color: #aaa;
-            margin-bottom: 20px;
-        }
-
-        .social-icons a {
-            color: var(--text-light);
-            font-size: 1.3rem;
-            margin-right: 15px;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--gold);
-        }
-
-        .contact-info p {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-info i {
-            color: var(--gold);
-            margin-right: 12px;
-            width: 15px;
-        }
-
-        .footer-form h3 {
-            color: var(--gold);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            color: #aaa;
-            margin-bottom: 5px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 10px;
-            background-color: #151515;
-            border: 1px solid #333;
-            color: var(--white);
-            border-radius: 4px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
-            color: var(--bg-dark);
-            border: none;
-            padding: 10px 20px;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background: linear-gradient(135deg, var(--light-gold), var(--gold));
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            font-size: 0.85rem;
-            color: #666;
-        }
-
-        /* --- ANIMATIONS --- */
+        /* --- ADVANCED ANIMATION TIMINGS & UTILITIES --- */
         .reveal-section {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform, opacity;
         }
 
         .reveal-section.active {
@@ -360,134 +65,758 @@
             transform: translateY(0);
         }
 
-        /* --- RESPONSIVE DESIGN --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1rem; }
-            .manifesto h2 { font-size: 1.8rem; }
-            .section-title { font-size: 2rem; }
+        /* Top Interactive Announcement Banner */
+        .launch-banner {
+            background-color: var(--forest-dark);
+            color: var(--luxury-gold);
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--luxury-gold);
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .launch-banner:hover {
+            background-color: var(--luxury-gold);
+            color: var(--pure-black);
+        }
+
+        /* Connected Signature Cursive Style */
+        .cjp-cursive {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: var(--luxury-gold);
+            text-transform: none !important;
+            font-weight: 400;
+            letter-spacing: 0px !important;
+            display: block;
+            margin-bottom: -0.2rem;
+        }
+        
+        .cjp-cursive-dark {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3.5rem;
+            color: var(--sky-accent);
+            text-transform: none !important;
+            font-weight: 400;
+            display: block;
+            margin-bottom: -0.5rem;
+            text-align: center;
+        }
+
+        /* Top Navigation Bar */
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem 5%;
+            background: var(--clean-white);
+            width: 100%;
+            border-bottom: 3px solid var(--navy-premium);
+            gap: 1rem;
+            position: static;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--navy-premium);
+            text-decoration: none;
+        }
+
+        .logo-regional {
+            font-size: 0.9rem;
+            color: var(--sky-accent);
+            letter-spacing: 1px;
+            margin-top: 0.2rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--navy-premium);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--navy-premium);
+        }
+
+        /* HERO HOME SECTION: Luxurious Dark Theme */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 1rem;
+            background: radial-gradient(circle at center, var(--forest-dark) 0%, var(--pure-black) 100%);
+            border-bottom: 5px solid var(--luxury-gold);
+            color: var(--clean-white);
+            position: relative;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 850px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        @keyframes heroFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .brand-logo-frame {
+            margin-bottom: 1.5rem;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid var(--luxury-gold);
+            padding: 0.4rem;
+            background: var(--pure-black);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .brand-logo-frame:hover {
+            transform: scale(1.08) rotate(3deg);
+        }
+
+        .brand-logo-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            color: var(--clean-white);
+        }
+
+        .hero h1 span {
+            color: var(--luxury-gold);
+            display: block;
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1rem;
+            color: var(--luxury-gold);
+            letter-spacing: 4px;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 4px;
+            background: rgba(223, 186, 107, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--luxury-gold);
+            color: var(--pure-black);
+            box-shadow: 0 8px 30px rgba(223, 186, 107, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Main Content Sections Layout */
+        section {
+            padding: 6rem 1rem;
+        }
+
+        #legacy {
+            background-color: var(--steel-silver);
+            color: var(--text-dark);
+        }
+
+        #collection {
+            background-color: var(--clean-white);
+            color: var(--text-dark);
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.25rem;
+            text-align: center;
+            letter-spacing: 2px;
+            color: var(--navy-premium);
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+            font-weight: 900;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: var(--navy-premium);
+            margin: 0.6rem auto 0;
+        }
+
+        /* Legacy Layout Structure */
+        .legacy-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .legacy-text h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--navy-premium);
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+        }
+
+        .legacy-text p {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* PREMIUM GOLDEN TEMPLE BOX WITH PULSING GLOW */
+        .legacy-image-box {
+            background: radial-gradient(circle at center, #11281c 0%, var(--forest-dark) 100%);
+            border: 2px solid var(--luxury-gold);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(13, 31, 22, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .legacy-image-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(223, 186, 107, 0.25);
+        }
+
+        .harmandir-silhouette {
+            width: 160px;
+            height: auto;
+            fill: none;
+            stroke: var(--luxury-gold);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 10px rgba(223, 186, 107, 0.5));
+            transition: filter 0.4s ease;
+        }
+
+        .legacy-image-box:hover .harmandir-silhouette {
+            filter: drop-shadow(0 0 18px rgba(223, 186, 107, 0.8));
+        }
+
+        .legacy-badge-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
+            color: var(--luxury-gold);
+            font-weight: 700;
+            border-top: 1px solid rgba(223, 186, 107, 0.3);
+            padding-top: 1rem;
+            width: 60%;
+        }
+
+        /* Product Grid and Luxury Hover Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--steel-silver);
+            border: 1px solid var(--border-clean);
+            text-align: center;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                        box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                        border-color 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 45px rgba(11, 37, 69, 0.12), 0 0 15px rgba(223, 186, 107, 0.2);
+            border-color: var(--luxury-gold);
+        }
+
+        .card-body {
+            padding: 2.5rem 1.75rem;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid var(--border-clean);
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.04);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.85rem;
+            color: var(--navy-premium);
+            font-weight: 700;
+        }
+
+        .card-accent {
+            color: var(--sky-accent);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .card p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .card-action {
+            padding: 0 1.75rem 2.5rem;
+        }
+
+        .whatsapp-btn {
+            display: block;
+            background-color: var(--navy-premium);
+            color: var(--clean-white);
+            text-decoration: none;
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #25D366;
+            color: white;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transform: translateY(-1px);
+        }
+
+        /* Instagram Social Section */
+        .instagram-section {
+            background-color: var(--steel-silver);
+            text-align: center;
+            padding: 5rem 1rem;
+            border-top: 1px solid var(--border-clean);
+        }
+
+        .insta-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+            color: white;
+            text-decoration: none;
+            padding: 1.1rem 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            box-shadow: 0 8px 20px rgba(221, 42, 123, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .insta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(221, 42, 123, 0.5);
+        }
+
+        /* Dual-Language Support Box Layout */
+        .language-support-box {
+            background-color: var(--clean-white);
+            border-top: 2px solid var(--border-clean);
+            border-bottom: 2px solid var(--border-clean);
+            padding: 4rem 2rem;
+        }
+
+        .lang-container-box {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lang-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .lang-column h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--navy-premium);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .lang-column p {
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Slate Dark Premium Footer Area */
+        footer {
+            background-color: var(--charcoal-slate);
+            color: var(--soft-white);
+            padding: 5rem 1rem 3rem;
+            border-top: 4px solid var(--luxury-gold);
+        }
+
+        .footer-heading {
+            font-family: 'Cinzel', serif;
+            color: var(--luxury-gold);
+            font-size: 1.4rem;
+            letter-spacing: 1.5px;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .address-text {
+            color: var(--soft-white);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .phone-link-box {
+            display: block;
+            background-color: var(--charcoal-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--clean-white);
+            text-decoration: none;
+            padding: 1.1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .phone-link-box:hover {
+            background-color: var(--charcoal-slate);
+            border-color: var(--luxury-gold);
+            color: var(--luxury-gold);
+        }
+
+        .hours-info-box {
+            background-color: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--soft-white);
+            padding: 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.75rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--luxury-gold);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: var(--clean-white);
+            border: 1px solid var(--border-clean);
+            color: var(--text-dark);
+            padding: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .submit-btn {
+            background-color: var(--luxury-gold);
+            color: var(--charcoal-slate);
+            border: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 1.1rem 2rem;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--clean-white);
+            color: var(--charcoal-slate);
+            box-shadow: 0 5px 15px rgba(223, 186, 107, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="hero-logo">
-            <img src="images/logo.jpg.webp" alt="S.K. KARA Logo">
+    <div class="launch-banner">
+        Official Digital Catalogue Launched Globally Straight from Amritsar
+    </div>
+
+    <nav>
+        <div class="logo-container">
+            <a href="#" class="logo">S.K. KARA</a>
+            <div class="logo-regional">S.K. ENTERPRISES</div>
         </div>
-        <h1>S.K. KARA</h1>
-        <p>Crafting Premium, Multi-Generational Handcrafted Sikh Karas from the Holy City of Amritsar</p>
-        <a href="#catalogue" class="cta-btn">Explore Digital Catalog</a>
+        <ul class="nav-links">
+            <li><a href="#legacy">Our Legacy</a></li>
+            <li><a href="#collection">Premium Collection</a></li>
+            <li><a href="#contact">Inquiries</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="brand-logo-frame">
+                <img src="images/logo.jpg" alt="S.K. KARA Logo">
+            </div>
+            <h1>S.K. KARA<span class="cjp-cursive">Legacy of Iron & Steel</span></h1>
+            <p class="subtitle">Amritsar Craftsmanship</p>
+            <a href="#collection" class="cta-btn">View Digital Collection</a>
+        </div>
     </header>
 
-    <!-- MANIFESTO SECTION -->
-    <section class="manifesto reveal-section">
-        <h2>Our Legacy Manifesto</h2>
-        <p>"It is not just a piece of iron or steel; it is a symbol of absolute strength, infinite protection, and deep-rooted heritage. Passed down through generations, our Karas represent the traditional values of Amritsar’s finest craftsmanship, engineered with modern precision to be worn with ultimate pride."</p>
+    <section id="legacy" class="reveal-section">
+        <h2 class="section-title">The Multi-Generational Legacy</h2>
+        <div class="legacy-container">
+            <div class="legacy-text">
+                <h3>Crafted in the Holy City</h3>
+                <p>Deeply rooted in the heritage of Amritsar, our family-run brand bridges multi-generational metalworking knowledge with absolute precision. Every Kara we manufacture reflects standard structural integrity and premium aesthetic finish, serving as a powerful symbol of strength and protection.</p>
+                <p>Passed down proudly through generations, our handcrafted Karas are forged to withstand the test of modern everyday life while keeping traditional identity vibrant.</p>
+            </div>
+            <div class="legacy-image-box">
+                <svg class="harmandir-silhouette" viewBox="0 0 100 50">
+                    <path d="M10,45 L90,45 M20,45 L20,35 L80,35 L80,45 M30,35 L30,25 L70,25 L70,35 M40,25 L40,15 L60,15 L60,25 M45,15 L45,10 C45,7 55,7 55,10 L55,15 M50,7 L50,2" />
+                </svg>
+                <div class="legacy-badge-title">Amritsar Forged</div>
+            </div>
+        </div>
     </section>
 
-    <!-- CATALOGUE SECTION -->
-    <main id="catalogue" class="catalogue reveal-section">
-        <h2 class="section-title">The Premium Collection</h2>
+    <section id="collection" class="reveal-section">
+        <h2 class="section-title">The Digital Catalog</h2>
         <div class="grid">
-            <!-- Product 1 -->
             <article class="card">
-                <div class="card-img">
-                    <img src="images/loha-gajra.jpg" alt="Loha Gajra Kara">
+                <div>
+                    <img src="images/product1.jpg" alt="Heavy Loha Gajra Kara" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-accent">Traditional Iron</div>
+                        <h3>Heavy Loha Gajra Kara</h3>
+                        <p>Authentic, masterfully grooved classic iron lines engineered with massive weight distribution for traditional styling.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Loha Gajra Kara</h3>
-                    <p>Traditional heavy iron Gajra design with distinct, prominent grooved patterns. A timeless classic reflecting true strength.</p>
-                    <a href="https://wa.me/9814056600" class="order-btn" target="_blank"><i class="fab fa-whatsapp"></i> Inquire via WhatsApp</a>
+                <div class="card-action">
+                    <a href="https://wa.me/9814056600?text=I'm%20interested%20in%20the%20Heavy%20Loha%20Gajra%20Kara" class="whatsapp-btn" target="_blank">Inquire via WhatsApp</a>
                 </div>
             </article>
 
-            <!-- Product 2 -->
             <article class="card">
-                <div class="card-img">
-                    <img src="images/pure-iron.jpg" alt="Pure Sarbloh Kara">
+                <div>
+                    <img src="images/product2.jpg" alt="Pure Sarbloh Warrior Kara" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-accent">Pure Warrior Core</div>
+                        <h3>Pure Sarbloh Kara</h3>
+                        <p>Raw traditional iron, hand-finished safely to maintain historical authenticity, giving ultimate structural protection.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Pure Sarbloh Kara</h3>
-                    <p>Authentic, pure raw iron Kara. Hand-shaped to perfection maintaining the traditional warrior aesthetic.</p>
-                    <a href="https://wa.me/9814056600" class="order-btn" target="_blank"><i class="fab fa-whatsapp"></i> Inquire via WhatsApp</a>
+                <div class="card-action">
+                    <a href="https://wa.me/9814056600?text=I'm%20interested%20in%20the%20Pure%20Sarbloh%20Kara" class="whatsapp-btn" target="_blank">Inquire via WhatsApp</a>
                 </div>
             </article>
 
-            <!-- Product 3 -->
             <article class="card">
-                <div class="card-img">
-                    <img src="images/stainless-steel.jpg" alt="Premium Stainless Steel Kara">
+                <div>
+                    <img src="images/product3.jpg" alt="Premium Stainless Steel Mirror Finish" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-accent">Modern Luxury Steel</div>
+                        <h3>Stainless Steel Kara</h3>
+                        <p>High-grade luxury stainless steel polished with scratch-resistant premium mirror finishing built for long-lasting daily wear.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Stainless Steel Kara</h3>
-                    <p>High-grade, scratch-resistant stainless steel with a mirror-finish polish. Built for elegant everyday wear.</p>
-                    <a href="https://wa.me/9814056600" class="order-btn" target="_blank"><i class="fab fa-whatsapp"></i> Inquire via WhatsApp</a>
+                <div class="card-action">
+                    <a href="https://wa.me/9814056600?text=I'm%20interested%20in%20the%20Stainless%20Steel%20Kara" class="whatsapp-btn" target="_blank">Inquire via WhatsApp</a>
                 </div>
             </article>
         </div>
-    </main>
+    </section>
 
-    <!-- FOOTER / CONTACT SECTION -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-about">
-                <h3 class="brand-name">S.K. KARA</h3>
-                <p>Bringing our family's trusted, multi-generational craftsmanship straight from the manufacturing unit online. Experience authentic, high-quality Karas globally.</p>
-                <div class="social-icons">
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+    <section class="instagram-section reveal-section">
+        <span class="cjp-cursive-dark">Stay Connected</span>
+        <h2 class="section-title" style="margin-bottom: 2rem; margin-top: 1rem;">Follow Our Craft Journey</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--text-dark);">See our manufacturing updates, traditional forging processes, and new layout releases daily on Instagram.</p>
+        <a href="#" class="insta-btn" target="_blank">Follow @SKKARA</a>
+    </section>
+
+    <div class="language-support-box reveal-section">
+        <div class="lang-container-box">
+            <div class="lang-row">
+                <div class="lang-column">
+                    <h3>ਪ੍ਰਮਾਣਿਕ ਅੰਮ੍ਰਿਤਸਰੀ ਕਾਰੀਗਰੀ</h3>
+                    <p>ਸਾਡੀ ਵਰਕਸ਼ਾਪ ਪੀੜ੍ਹੀਆਂ ਦੀ ਮੈਟਲਵਰਕਿੰਗ ਪਰੰਪਰਾ ਨੂੰ ਬਰਕਰਾਰ ਰੱਖਦੀ ਹੈ। ਹਰ ਇੱਕ ਕੜਾ ਪੂਰੀ ਸ਼ੁੱਧਤਾ, ਉੱਚ-ਗੁਣਵੱਤਾ ਵਾਲੇ ਲੋਹੇ ਅਤੇ ਸਟੇਨਲੈਸ ਸਟੀਲ ਨਾਲ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ, ਜੋ ਸਦੀਵੀ ਤਾਕਤ, ਸੁਰੱਖਿਆ ਅਤੇ ਸਿੱਖ ਵਿਰਾਸਤ ਦਾ ਪ੍ਰਤੀਕ ਹੈ।</p>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div class="footer-contact">
-                <h3>Get In Touch</h3>
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Amritsar, Punjab, India</p>
-                    <p><i class="fas fa-phone-alt"></i> +91 98140-56600</p>
-                    <p><i class="fas fa-envelope"></i> contact@skkara.com</p>
+    <footer id="contact">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 4rem; padding: 0 1rem;">
+            <div>
+                <h3 class="footer-heading" style="margin-top: 0;">S.K. KARA</h3>
+                <p class="address-text">East Mohan Nagar, Industrial Area,<br>Amritsar, Punjab, India</p>
+                
+                <h3 class="footer-heading">Direct Order Desks</h3>
+                <a href="tel:+919814056600" class="phone-link-box">Call Unit: +91 98140-56600</a>
+                
+                <div class="hours-info-box">
+                    <strong>Manufacturing Operations:</strong><br>
+                    Monday - Saturday: 9:00 AM - 7:00 PM IST
                 </div>
             </div>
-
-            <div class="footer-form">
-                <h3>B2B / Custom Inquiries</h3>
+            
+            <div>
+                <h3 class="footer-heading" style="margin-top: 0;">B2B & Custom Bulk Inquiries</h3>
                 <form action="mailto:contact@skkara.com" method="post" enctype="text/plain">
                     <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
+                        <label for="client-name">Full Name / Business Title</label>
+                        <input type="text" id="client-name" name="name" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Your Email / Phone</label>
-                        <input type="text" id="email" name="email" class="form-control" required>
+                        <label for="client-contact">WhatsApp Number / Email Address</label>
+                        <input type="text" id="client-contact" name="contact" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Inquiry Details</label>
-                        <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+                        <label for="client-message">Specify Requirements (Sizes, Materials, Order Quantities)</label>
+                        <textarea id="client-message" name="message" class="form-control" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Email Inquiry</button>
+                    <button type="submit" class="submit-btn">Submit Factory Request</button>
                 </form>
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2026 S.K. KARA. All Rights Reserved. Crafted with pride.
+        
+        <div style="text-align: center; margin-top: 5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; color: var(--text-light);">
+            &copy; 2026 S.K. KARA. All Rights Reserved. Manufacturing Unit Presence Powered Locally.
         </div>
     </footer>
 
-    <!-- SCROLL REVEAL JAVASCRIPT -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const sections = document.querySelectorAll('.reveal-section');
-            const observerOptions = { threshold: 0.15 };
+            const options = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
 
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observer = new IntersectionObserver(function(entries, observer) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
                         observer.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
+            }, options);
 
             sections.forEach(section => observer.observe(section));
         });
