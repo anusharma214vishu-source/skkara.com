@@ -915,4 +915,49 @@
     <!-- Script to keep the year automatically updated -->
     <script>
         document.getElementById("current-year").textContent = new Date().getFullYear();
+        /* Premium Footer Styling */
+.site-footer {
+    background-color: #0d0d0d; /* Deep obsidian black */
+    color: #a3a3a3; /* Elegant muted silver/grey text */
+    padding: 30px 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #1a1a1a; /* Very subtle top border line */
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Clean spacing between lines */
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between; /* Pushes copyright to left and GSTIN to right on computers */
+    }
+}
+
+.copyright-text {
+    margin: 0;
+    font-weight: 400;
+}
+
+.gstin-text {
+    margin: 0;
+    color: #8c8c8c;
+}
+
+.gst-number {
+    font-family: monospace; /* Makes the GST ID perfectly readable */
+    letter-spacing: 1px;
+    color: #d4af37; /* Subtle premium gold tint for the GST number */
+}
     </script>
