@@ -901,16 +901,18 @@
             </div>
         </div>
 
-      <footer>
-        <div class="footer-content">
-            <p>© <span id="current-year"></span> S.K. KARA. All Rights Reserved.</p>
-            <p class="gstin-text">GSTIN: 03XXXXX1234X1Z2</p> <!-- Replace with your actual GSTIN -->
+      <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <p class="copyright-text">© <span id="current-year"></span> S.K. ENTERPRISES. All Rights Reserved.</p>
+            </div>
+            <div class="footer-legal">
+                <p class="gstin-text">GSTIN: <span class="gst-number">XXXXXXXXXXXXXXX</span></p>
+            </div>
         </div>
     </footer>
 
-    <!-- This tiny script makes sure the year updates itself automatically every Jan 1st -->
+    <!-- Script to keep the year automatically updated -->
     <script>
         document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
-</body>
-</html>
